@@ -1,2 +1,2 @@
-web: otree psbprova
-worker: otree psbprova
+web: otree 
+worker: otree 
