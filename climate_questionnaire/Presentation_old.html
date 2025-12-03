@@ -1,0 +1,79 @@
+{{ block title }}
+{{ if en }}
+    Welcome to this survey
+{{ elif fr }}
+    XXX
+{{ endif }}
+{{ endblock }}
+
+{{ block content }}
+
+<div class="card bg-light mb-3">
+    <div class="card-body">
+        {{ if fr }}
+        <p></p>
+        <p></p>
+        {{ elif en }}
+
+        <h3>Participant Information Statement</h3>
+        <br>
+        <p>
+            <b>What does the study involve?</b>
+            This study consists of a simple task and short questionnaires.
+
+            Your response will remain completely anonymous.
+
+            There are no right or wrong answers; we are simply interested in your honest views, whatever they may be.
+            <br><br>
+
+            <b>Who is carrying out the study?</b>
+                The study is being conducted by a team of research at different universities in France (Paris School of Business, University of Montpellier). For any question, you can contact a.guido@psbedu.paris. <br><br>
+
+            <b>How much time will the study take?</b>
+            The questionnaire lasts approximately 5 to 10 minutes, and you can stop at any time. <br><br>
+
+            <b>Will the study benefit me?</b>
+            Respondents who complete the study will receive the posted remuneration into their Prolific account. This study may include bonus payments.<br><br>
+
+            <b>What about my data?</b>
+            All aspects of the study, including results, will be anonymous and only the researchers will have access to all the responses.
+
+
+        </p>
+        <p>
+            To continue, please click on "Next". If you do not wish to participate, you can close this page.
+            Thank you for your time and contribution.
+        </p>
+        {{ endif }}
+    </div>
+</div>
+
+<button class="btn btn-primary mx-1" name="skip" value="False">
+    {{ if en }} Next {{ elif fr }} Suivant {{ endif }}
+</button>
+<!--<button class="btn btn-danger" name="skip" value="True">
+    {{ if en }} Skip {{ elif fr }} Passer {{ endif }}
+</button>-->
+
+{{ endblock }}
+
+{{ block scripts }}
+<script>
+    function fill_auto() {
+        setTimeout(function () {
+            if (Math.random() > 0.5) {
+                document.querySelector('button[name="skip"][value="True"]').click();
+            } else {
+                document.querySelector('button[name="skip"][value="False"]').click();
+            }
+        }, 2000);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        if (js_vars.fill_auto) {
+            fill_auto();
+        }
+
+    });
+</script>
+{{ endblock }}
