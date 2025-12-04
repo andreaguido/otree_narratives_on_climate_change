@@ -127,9 +127,10 @@ class Player(BasePlayer):
     narrative_elicitation = models.LongStringField(
         label=_(dict(
             en=(
-                "In your opinion, how do you explain the facts attributed to climate change (e.g., the reported rise in global temperatures and more extreme weather events)? <br><br>"
-                "What are, according to you, the <b>causes</b> of the facts attributed to climate change?  Describe in your own words whether and how these causes are related to each other. <br><br>"
-                "In answering this question, please explain your reasoning in full sentences, describing the contributing factors and their possible links. There is no good or wrong answer, respond according to your sincere opinion. [min. 50 words]"),
+                "In your opinion, what explains the facts described in the text before (such as the reported rise in global temperatures and more extreme weather events)? <br><br>"
+                "Please describe the <b>causes</b> of the facts attributed to climate change, and <b>explain</b> how these causes contribute to these facts and might be connected to each other.  <br><br> "
+                "Explain your reasoning in full sentences. "
+                "There is no good or wrong answer, respond according to your sincere opinion. <br> [min. 50 words]"),
             fr=("Veuillez s'il vous plaît expliquer votre raisonnement avec des phrases entières, en décrivant les "
                 "facteurs qui contribuent au changement climatique, et les potentiels liens entre eux.")
         ))

@@ -9,7 +9,7 @@ DEMO_PAGE_INTRO_HTML = """ """
 SECRET_KEY = '5249757042491'
 SESSION_CONFIG_DEFAULTS = dict(
     real_world_currency_per_point=1.00,
-    participation_fee=5.00,
+    participation_fee=0.00,
     fill_auto=False,
     test=False
 )
