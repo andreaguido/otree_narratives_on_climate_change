@@ -23,7 +23,7 @@ SESSION_CONFIGS = [
         name = 'only_climate_change',
         app_sequence=['climate_questionnaire'],
         num_demo_participants=1,
-        prolific_link = "http://www.andreaguido.com",
+        #prolific_link = "",
         prolific = True,
         url_validate = "",
         url_return = ""
@@ -32,9 +32,8 @@ SESSION_CONFIGS = [
 ]
 
 ROOMS = [
-dict(
-        name='prolific_1',
-        display_name='Prolific 1',
-        use_secure_urls=True
-    ),
+    dict(
+            name='prolific_1',
+            display_name='Prolific 1'
+        )
 ]
