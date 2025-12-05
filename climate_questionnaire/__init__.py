@@ -130,7 +130,7 @@ class Player(BasePlayer):
                 "In your opinion, what explains the facts described in the text before (such as the reported rise in global temperatures and more extreme weather events)? <br><br>"
                 "Please describe the <b>causes</b> of the facts attributed to climate change, and <b>explain</b> how these causes contribute to these facts and might be connected to each other.  <br><br> "
                 "Explain your reasoning in full sentences. "
-                "There is no good or wrong answer, respond according to your sincere opinion. <br> [min. 50 words]"),
+                "There is no good or wrong answer, respond according to your sincere and personal opinion. <br> [min. 50 words]"),
             fr=("Veuillez s'il vous plaît expliquer votre raisonnement avec des phrases entières, en décrivant les "
                 "facteurs qui contribuent au changement climatique, et les potentiels liens entre eux.")
         ))

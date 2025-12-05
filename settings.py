@@ -30,3 +30,11 @@ SESSION_CONFIGS = [
 
 )
 ]
+
+ROOMS = [
+dict(
+        name='prolific_1',
+        display_name='Prolific 1',
+        use_secure_urls=True
+    ),
+]
