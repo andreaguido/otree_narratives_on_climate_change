@@ -160,7 +160,7 @@ class Player(BasePlayer):
 
     is_selected = models.BooleanField(initial=False)
     random_row = models.IntegerField(initial=None)
-    random_amount = models.IntegerField(initial=None)
+    random_amount = models.FloatField(initial=None)
     payoff_mpl = models.FloatField()
 
     # Policy --------------------------
