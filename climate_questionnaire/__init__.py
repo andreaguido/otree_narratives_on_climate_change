@@ -64,6 +64,26 @@ def get_scale_agreement():
         [1, _(dict(en="Somewhat agree", fr="XXX"))],
         [2, _(dict(en="Strongly agree", fr="XXX"))]
     ]
+def get_scale_income():
+    return [
+        [0, _(dict(en="From 0$ to 1250$", fr="XXX"))],
+        [1, _(dict(en="From 1250$ to 2000$", fr="XXX"))],
+        [2, _(dict(en="From 2000$ to 4000$", fr="XXX"))],
+        [3, _(dict(en="From 4000$ to 6000$", fr="XXX"))],
+        [4, _(dict(en="From 6000$ to 8000$", fr="XXX"))],
+        [5, _(dict(en="From 8000$ to 12,500$", fr="XXX"))],
+        [6, _(dict(en="More tan 12,500$", fr="XXX"))],
+        [999, _(dict(en="I prefer not to say", fr="XXX"))]
+    ]
+def get_scale_education():
+    return [
+        [0, _(dict(en="Primary or lower secondary education", fr="XXX"))],
+        [1, _(dict(en="Upper secondary education", fr="XXX"))],
+        [2, _(dict(en="Non-university post-secondary education", fr="XXX"))],
+        [3, _(dict(en="Undergraduate education (bachelor)", fr="XXX"))],
+        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="XXX"))],
+        [999, _(dict(en="I prefer not to say", fr="XXX"))]
+    ]
 def get_options_bdm():
     return [
         ['A', 'Option A'],
@@ -732,6 +752,25 @@ class Player(BasePlayer):
         ))
     )
 
+    # Demographics
+    ## Income
+    income = models.IntegerField(
+        label= _(dict(
+            en="Thinking about your household, what would you estimate is its total net monthly "
+               "income on average (after taxes and deductions)? Please include salaries, pensions, family allowances, "
+               "unemployment benefits, or any other regular income."
+        )),
+        choices=get_scale_income()
+    )
+
+    ## Education
+    education = models.IntegerField(
+        label = _(dict(
+          en="What is the highest education level that you have achieved?"
+        )),
+        choices=get_scale_education()
+    )
+
 def payoff_mpl(player: Player):
     #players = self.get_players()
 
@@ -954,6 +993,14 @@ class Prolific_Page(MyPage):
         return existing
     pass
 
+class Demographics(MyPage):
+    form_model = 'player'
+    form_fields = ['income', 'education']
+
+    @staticmethod
+    def is_displayed(player: Player):
+        return player.skip == False
+
 class End(MyPage):
     @staticmethod
     def vars_for_template(player: Player):
@@ -971,4 +1018,5 @@ page_sequence = [Presentation,
                  ClimateKnowledge, MediaConsumption,
                  ClimateExpectations,
                  ClimateConcern,
+                 Demographics,
                  End]
