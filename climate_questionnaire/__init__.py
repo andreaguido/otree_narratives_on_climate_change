@@ -66,13 +66,13 @@ def get_scale_agreement():
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From 0$ to 1250$", fr="XXX"))],
-        [1, _(dict(en="From 1250$ to 2000$", fr="XXX"))],
-        [2, _(dict(en="From 2000$ to 4000$", fr="XXX"))],
-        [3, _(dict(en="From 4000$ to 6000$", fr="XXX"))],
-        [4, _(dict(en="From 6000$ to 8000$", fr="XXX"))],
-        [5, _(dict(en="From 8000$ to 12,500$", fr="XXX"))],
-        [6, _(dict(en="More tan 12,500$", fr="XXX"))],
+        [0, _(dict(en="From 0£ to 1250£", fr="XXX"))],
+        [1, _(dict(en="From 1250£ to 2000£", fr="XXX"))],
+        [2, _(dict(en="From 2000£ to 4000£", fr="XXX"))],
+        [3, _(dict(en="From 4000£ to 6000£", fr="XXX"))],
+        [4, _(dict(en="From 6000£ to 8000£", fr="XXX"))],
+        [5, _(dict(en="From 8000£ to 12,500£", fr="XXX"))],
+        [6, _(dict(en="More than 12,500£", fr="XXX"))],
         [999, _(dict(en="I prefer not to say", fr="XXX"))]
     ]
 def get_scale_education():
