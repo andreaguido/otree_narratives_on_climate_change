@@ -34,6 +34,10 @@ SESSION_CONFIGS = [
 ROOMS = [
     dict(
             name='prolific_1',
-            display_name='Prolific 1'
+            display_name='Prolific 1 - Young'
+        ),
+    dict(
+            name='prolific_2',
+            display_name='Prolific 2 - Adults'
         )
 ]
