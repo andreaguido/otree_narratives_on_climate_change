@@ -521,7 +521,7 @@ class Player(BasePlayer):
 #            dict(
 #                en="Would you be willing to subscribe to a newsletter that covers top stories on climate policy "
 #                   "from sources across the political spectrum?",
-#                fr="Seriez-vous prêt(e) à vous abonner à une newsletter couvrant les principales actualités sur "
+#                fr="Seriez-vous prêt(e) à vous abonner à une newsletter couvrant les princiinpales actualités sur "
 #                   "les politiques climatiques provenant de sources de tout le spectre politique ?"
 #            )
 #        ),
