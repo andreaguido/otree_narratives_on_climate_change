@@ -13,7 +13,11 @@
 
 
 <div class="form-control mb-1">
-    On a scale from 0 (very unconfident) to 100 (very confident), how confident are you about the explanation you provided in the previous question?
+    {{ if en }}
+        On a scale from 0 (very unconfident) to 100 (very confident), how confident are you about the explanation you provided in the previous question?
+    {{ elif fr }}
+        Sur une échelle de 0 (très peu confiant) à 100 (très confiant), à quel point êtes-vous confiant concernant l'explication que vous avez fournie dans la question précédente ?
+    {{ endif }}
 
     {{ formfield_errors 'narrative_confidence' }}
     <br><br>
@@ -71,6 +75,7 @@
         $(document).ready(function (event) {
             slider1 = new mgslider("narrative_confidence", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
+            if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; } 
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

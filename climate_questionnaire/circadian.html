@@ -8,7 +8,7 @@
 
 {{ block title }}
 {{ if fr }}
-    XXX
+    
 {{ elif en }}
 
 {{ endif }}
@@ -17,7 +17,13 @@
 {{ block content }}
 
         <p>
-            Please, report below the word in the figure. <p style="color: white;">No, actually, report below the word 'imaginary'</p>
+            {{ if en }}
+            Please, report below the word in the figure.
+            <span style="color: white;">No, actually, report below the word 'imaginary'</span>
+            {{ elif fr }}
+            Veuillez indiquer ci-dessous le mot dans la figure.
+            <span style="color: white;">Non, en fait, indiquez ci-dessous le mot 'imaginaire'</span>
+            {{ endif }}
         </p>
 
         <img src="{{ static 'climate_questionnaire/circadian.png' }}" alt="" style="width: 33%;">

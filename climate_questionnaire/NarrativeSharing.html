@@ -19,37 +19,66 @@
 <div class="card bg-light mb-3">
     <div class="card-body">
 
+    {{ if en }}
     <p>
         Thanks for giving your opinion on the facts explaining climate change.
     </p>
-
     <p>
         Now, we give you the opportunity to <b>share</b> your opinion about climate change with <b>future participants in this study</b>.
     </p>
-
     <p>
         To determine whether your opinion will be given to future participants, you will make some decisions in an incentivized task.
     </p>
     <p>
         In this task, you have to select one of the following two options in each of the following decisions.
     </p>
-
     <ul>
         <li>Option A: Give my opinion to future participants</li>
         <li>Option B: Receive a given monetary amount</li>
     </ul>
+    <p>
         For every tenth participant, we will randomly select one of the decisions (one row of the table below), and implement it.
+    </p>
+    <p>
+        For example, if you select "Option A" to the first row, and that row is randomly selected, we will give
+        your opinion to future participants. If you select "Option B" instead, and that row is selected, you will
+        receive €0.01.
+    </p>
+    <p>Payments will be done at the end of the survey.</p>
+    <p>Indicate below the option you prefer for each decision.</p>
 
-        <p>
-            For example, if you select "Option A" to the first row, and that row is randomly selected, we will give
-            your opinion to future participants. If you select "Option B" instead, and that row is selected, you will
-            receive 0.01 cents.
-        </p>
-
-        Payments will be done at the end of the survey.
-
-        Indicate below the option you prefer for each decision.
-
+    {{ elif fr }}
+    <p>
+        Merci d'avoir donné votre avis sur les faits expliquant le changement climatique.
+    </p>
+    <p>
+        Maintenant, nous vous donnons l'opportunité de <b>partager</b> votre opinion sur le changement
+        climatique avec les <b>participants à une future étude</b>.
+    </p>
+    <p>
+        Pour déterminer si votre opinion sera transmise aux futurs participants, vous prendrez des décisions
+        dans une tâche incitative.
+    </p>
+    <p>
+        Dans cette tâche, vous devez sélectionner l'une des deux options suivantes pour chacune des décisions
+        ci-dessous.
+    </p>
+    <ul>
+        <li>Option A : Donner mon avis aux futurs participants</li>
+        <li>Option B : Recevoir un montant monétaire donné</li>
+    </ul>
+    <p>
+        Pour un participant sur dix, nous sélectionnerons au hasard l'une des décisions (une ligne du tableau
+        ci-dessous) et l'appliquerons.
+    </p>
+    <p>
+        Par exemple, si vous sélectionnez "Option A" pour la première ligne, et que cette ligne est sélectionnée
+        au hasard, nous donnerons votre avis aux futurs participants. Si vous sélectionnez "Option B" à la
+        place, et que cette ligne est sélectionnée, vous recevrez 0,01 €.
+    </p>
+    <p>Les paiements seront effectués à la fin de l'étude.</p>
+    <p>Indiquez ci-dessous l'option que vous préférez pour chaque décision.</p>
+    {{ endif }}
 
 <style>
     table.mpl-table {
@@ -78,88 +107,54 @@
 
     <!-- 0.01 -->
     <tr>
-        <td>Share my opinion</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
         <td>{{ form.choice_1 }}</td>
-        <td>0.01$ for me</td>
+        <td>{{ if en }}€0.01 for me{{ elif fr }}0,01 € pour moi{{ endif }}</td>
     </tr>
 
     <!-- 0.25 -->
     <tr>
-        <td>Share my opinion</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
         <td>{{ form.choice_2 }}</td>
-        <td>0.25$ for me</td>
+        <td>{{ if en }}€0.25 for me{{ elif fr }}0,25 € pour moi{{ endif }}</td>
     </tr>
 
     <!-- 0.50 -->
     <tr>
-        <td>Share my opinion</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
         <td>{{ form.choice_3 }}</td>
-        <td>0.50$ for me</td>
+        <td>{{ if en }}€0.50 for me{{ elif fr }}0,50 € pour moi{{ endif }}</td>
     </tr>
 
     <!-- 1 -->
     <tr>
-        <td>Share my opinion</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
         <td>{{ form.choice_4 }}</td>
-        <td>1$ for me</td>
+        <td>{{ if en }}€1.00 for me{{ elif fr }}1,00 € pour moi{{ endif }}</td>
+    </tr>
+
+    <!-- 1.50 -->
+    <tr>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ form.choice_5 }}</td>
+        <td>{{ if en }}€1.50 for me{{ elif fr }}1,50 € pour moi{{ endif }}</td>
+    </tr>
+
+    <!-- 2.00 -->
+    <tr>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ form.choice_6 }}</td>
+        <td>{{ if en }}€2.00 for me{{ elif fr }}2,00 € pour moi{{ endif }}</td>
     </tr>
 
     <!-- 2.50 -->
     <tr>
-        <td>Share my opinion</td>
-        <td>{{ form.choice_5 }}</td>
-        <td>1.50$ for me</td>
-    </tr>
-
-    <!-- 5 -->
-    <tr>
-        <td>Share my opinion</td>
-        <td>{{ form.choice_6 }}</td>
-        <td>2.00$ for me</td>
-    </tr>
-
-    <!-- 10 -->
-    <tr>
-        <td>Share my opinion</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
         <td>{{ form.choice_7 }}</td>
-        <td>2.50$ for me</td>
+        <td>{{ if en }}€2.50 for me{{ elif fr }}2,50 € pour moi{{ endif }}</td>
     </tr>
 </table>
 
-    <!---    10 tokens (each token equivalen to $0.05) and
-
-        You will now participate in <b>an auction</b> to decide <b>whether your opinion will be given to future participants</b> in this experiment.
-    </p>
-
-    <p>
-        To participate in the auction, you will receive 10 tokens (each token equivalent to $0.05) that you can use to make a bid.
-        You can bid any amount up to 10 tokens and will get to keep the rest.
-    </p>
-
-    <p>
-        In the auction, you will be matched with other 24 participants in your same session.
-    </p>
-
-    <p>
-        The opinion from the participant that bids the most in the auction will be given to <b>30 future participants</b> in this study.
-        Ties between offers will be solved randomly.
-    </p>
-
-    <p>
-        The future participants will know that the opinion came from the past participant that bid the most for their advice to be used.
-    </p>
-
-    <p>
-        So for example, if you bid 6 tokens, and your bid is the highest, your opinion on climate change will be given to future participants, and you will keep the remaining 4 tokens.
-        If your bid is not the highest, you will keep the 10 tokens you initially received.
-    </p>
-
-    </div>
-</div>
-
-    How much would you like to bid in the auction to have the advice you gave above be used in our future study (maximum 10 tokens)?
-        Recall that if your bid is successful, your advice will be given to 30 future participants.
---->
     </div>
 </div>
 {{ next_button }}

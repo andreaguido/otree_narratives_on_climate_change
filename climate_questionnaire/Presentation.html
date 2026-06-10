@@ -26,7 +26,39 @@
 
                 <div class="text-start">
                     {{ if fr }}
+                    <h3>Déclaration d'information aux participants</h3>
+                    <br>
+                    <p>
+                        <b>En quoi consiste l'étude ?</b>
+                        Cette étude comprend une tâche simple et de courts questionnaires.
 
+                        Vos réponses resteront totalement anonymes.
+
+                        Il n'y a pas de bonnes ou mauvaises réponses ; nous souhaitons simplement connaître vos opinions sincères, quelles qu'elles soient.
+                        <br><br>
+
+                        <b>Qui réalise cette étude ?</b>
+                        L'étude est menée par une équipe de chercheurs de différentes universités en France (Paris School of Business, Université de Montpellier). Pour toute question, vous pouvez contacter a.guido@psbedu.paris. <br><br>
+
+                        <b>Combien de temps cela prendra-t-il ?</b>
+                        Le questionnaire dure environ 5 à 10 minutes, et vous pouvez vous arrêter à tout moment. <br><br>
+
+                        <b>Quel est l'intérêt pour moi ?</b>
+                        Les participants qui complètent l'étude recevront la rémunération indiquée sur leur compte Prolific. Cette étude peut inclure des paiements bonus.<br><br>
+
+                        <b>Qu'en est-il de mes données ?</b>
+                        Tous les aspects de l'étude, y compris les résultats, seront anonymes et seuls les chercheurs auront accès à l'ensemble des réponses.
+                    </p>
+                    <p>
+                        Pour continuer, veuillez cliquer sur « Commencer le questionnaire ».
+                    </p>
+
+                    <hr class="my-4">
+
+                    <p class="text-muted-small">
+                        Si vous ne souhaitez pas participer, vous pouvez cliquer sur le bouton
+                        <i>{{ if subsession.prolific }} Sortir {{ else }} Passer {{ endif }}</i> ci-dessous.
+                    </p>
 
                     {{ elif en }}
                     <h3>Participant Information Statement</h3>

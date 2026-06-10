@@ -7,10 +7,10 @@
 {{ endblock }}
 
 {{ block title }}
-{{ if fr }}
-    XXX
-{{ elif en }}
+{{ if en }}
     What is climate change?
+{{ elif fr }}
+    Qu'est-ce que le changement climatique ?
 {{ endif }}
 {{ endblock }}
 
@@ -22,27 +22,40 @@
         <p>
             In what follows you will read a text reporting a common definition of climate change with some examples and facts. Please, read it carefully. You will then be asked some questions on this topic.
         </p>
+        {{ elif fr }}
+        <p>
+            Dans ce qui suit, vous lirez un texte présentant une définition courante du changement climatique avec
+            quelques exemples et faits. Veuillez le lire attentivement. On vous posera ensuite quelques questions sur ce sujet.
+        </p>
+        {{ endif }}
     </div>
 </div>
 
 <div class="card bg-light mb-3">
     <div class="card-body">
+        {{ if en }}
         <p>
             Climate change is commonly referred to long-term shifts in temperatures and extreme weather patterns. Recently, you may have noticed that climate change has been getting some attention in the news and public discourse.
         </p>
         <p>
             An example of phenomena linked to climate change is the fact that average temperatures today are between 1.34°C and 1.41°C higher than those observed in the period 1850-1900. Besides temperature increase, other examples are the presence of more frequent and intense extreme weather events, rising sea levels, and shrinking ice sheets.
         </p>
-
         {{ elif fr }}
         <p>
-            XXX
+            Le changement climatique est communément défini comme des modifications à long terme des températures et des
+            modèles météorologiques extrêmes.
+            Récemment, vous avez peut-être remarqué que le changement climatique a retenu l'attention dans les
+            actualités et le discours public.
+        </p>
+        <p>
+            Un exemple de phénomène lié au changement climatique est le fait que les températures moyennes aujourd'hui
+            sont entre 1,34°C et 1,41°C plus élevées que celles observées pendant la période 1850-1900. Outre
+            l'augmentation de la température, d'autres exemples sont la présence d'événements météorologiques extrêmes
+            plus fréquents et intenses, l'élévation du niveau de la mer et la fonte des calottes glaciaires.
         </p>
         {{ endif }}
     </div>
 </div>
-
-{{ formfields }}
 
 {{ next_button }}
 

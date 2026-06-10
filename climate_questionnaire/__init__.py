@@ -32,10 +32,9 @@ def get_scale_policy():
 
 def get_scale_certainty():
     return [
-        [-2, _(dict(en="Very uncertain", fr="XXX"))],
-        [-1, _(dict(en="Uncertain", fr="XXX"))],
-        [1, _(dict(en="Certain", fr="XXX"))],
-        [2, _(dict(en="Very certain", fr="XXX"))],
+        [-2, _(dict(en="Very uncertain", fr="Très incertain"))],
+        [-1, _(dict(en="Uncertain", fr="Incertain"))],
+        [1, _(dict(en="Certain", fr="Certain"))],
     ]
 
 def get_scale_frequency_info():
@@ -66,13 +65,13 @@ def get_scale_agreement():
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From 0$ to 1250$", fr="XXX"))],
-        [1, _(dict(en="From 1250$ to 2000$", fr="XXX"))],
-        [2, _(dict(en="From 2000$ to 4000$", fr="XXX"))],
-        [3, _(dict(en="From 4000$ to 6000$", fr="XXX"))],
-        [4, _(dict(en="From 6000$ to 8000$", fr="XXX"))],
-        [5, _(dict(en="From 8000$ to 12,500$", fr="XXX"))],
-        [6, _(dict(en="More tan 12,500$", fr="XXX"))],
+        [0, _(dict(en="From A$0 to A$1,250", fr="XXX"))],
+        [1, _(dict(en="From A$1,250 to A$2,000", fr="XXX"))],
+        [2, _(dict(en="From A$2,000 to A$4,000", fr="XXX"))],
+        [3, _(dict(en="From A$4,000 to A$6,000", fr="XXX"))],
+        [4, _(dict(en="From A$6,000 to A$8,000", fr="XXX"))],
+        [5, _(dict(en="From A$8,000 to A$12,500", fr="XXX"))],
+        [6, _(dict(en="More than A$12,500", fr="XXX"))],
         [999, _(dict(en="I prefer not to say", fr="XXX"))]
     ]
 def get_scale_education():
@@ -151,8 +150,13 @@ class Player(BasePlayer):
                 "Please describe the <b>causes</b> of the facts attributed to climate change, and <b>explain</b> how these causes contribute to these facts and might be connected to each other.  <br><br> "
                 "Explain your reasoning in full sentences. "
                 "There is no good or wrong answer, respond according to your sincere and personal opinion. <br> [min. 50 words]"),
-            fr=("Veuillez s'il vous plaît expliquer votre raisonnement avec des phrases entières, en décrivant les "
-                "facteurs qui contribuent au changement climatique, et les potentiels liens entre eux.")
+            fr=("Selon vous, quelles sont les causes des faits décrits dans le texte précédent (comme la hausse des "
+            "températures mondiales et l'augmentation des événements météorologiques extrêmes) ? <br><br>"
+            "Veuillez décrire les <b>causes</b> des faits attribués au changement climatique, et "
+            "<b>expliquer</b> comment ces causes contribuent à ces faits et pourraient être liées entre elles. <br><br> "
+            "Expliquez votre raisonnement avec des phrases complètes. "
+            "Il n'y a pas de bonne ou de mauvaise réponse, répondez selon votre opinion sincère et personnelle. <br> "
+            "[min. 50 mots]")
         ))
     )
     narrative_confidence = models.IntegerField(
@@ -219,7 +223,8 @@ class Player(BasePlayer):
     expectations_policy_economy = models.IntegerField(
         label=_(
             dict(
-                en="<b>The solution I mentioned would have a positive effect on my country’s economy and employment</b>"
+                en="<b>The solution I mentioned would have a positive effect on my country’s economy and employment</b>",
+                fr="XXX"
             )
         ),
         choices = get_scale_agreement(),
@@ -228,7 +233,8 @@ class Player(BasePlayer):
     expectations_policy_cc = models.IntegerField(
         label=_(
             dict(
-                en="<b>The solution I mentioned would help limit and/or mitigate the consequences of climate change</b>"
+                en="<b>The solution I mentioned would help limit and/or mitigate the consequences of climate change</b>",
+                fr="XXX"
             )
         ),
         choices=get_scale_agreement(),
@@ -237,7 +243,8 @@ class Player(BasePlayer):
     expectations_policy_household = models.IntegerField(
         label=_(
             dict(
-                en="<b>My household will win or lose financially from the solution I mentioned</b>"
+                en="<b>My household will win or lose financially from the solution I mentioned</b>",
+                fr="XXX"
             )
         ),
         choices=[
@@ -253,7 +260,8 @@ class Player(BasePlayer):
     agreement_policy = models.IntegerField(
         label=_(
             dict(
-                en="<b>Do you support or oppose the solution you provided?</b>"
+                en="<b>Do you support or oppose the solution you provided?</b>",
+                fr="XXX"
             )
         ),
         choices=[
@@ -748,7 +756,8 @@ class Player(BasePlayer):
     # Circadian (anti-bot page)
     circadian = models.StringField(
         label= _(dict(
-            en=""
+            en="",
+            fr=""
         ))
     )
 
@@ -758,7 +767,8 @@ class Player(BasePlayer):
         label= _(dict(
             en="Thinking about your household, what would you estimate is its total net monthly "
                "income on average (after taxes and deductions)? Please include salaries, pensions, family allowances, "
-               "unemployment benefits, or any other regular income."
+               "unemployment benefits, or any other regular income.",
+            fr="XXX"
         )),
         choices=get_scale_income()
     )
@@ -766,7 +776,8 @@ class Player(BasePlayer):
     ## Education
     education = models.IntegerField(
         label = _(dict(
-          en="What is the highest education level that you have achieved?"
+          en="What is the highest education level that you have achieved?",
+          fr="XXX"
         )),
         choices=get_scale_education()
     )
