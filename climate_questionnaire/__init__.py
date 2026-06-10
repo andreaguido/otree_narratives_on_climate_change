@@ -845,7 +845,10 @@ class NarrativeElicitation_question(MyPage):
         word_count = len(text.split())
 
         if word_count < 50:
-            return f"Please write at least 50 words (you wrote {word_count})."
+            return _(dict(
+                en=f"Please write at least 50 words (you wrote {word_count}).",
+                fr=f"Veuillez écrire au moins 50 mots (vous en avez écrit {word_count})."
+            ))
 #        if len(values['narrative_elicitation']) < 50:
 #            return "Please write at least 50 characters."
 
@@ -897,7 +900,10 @@ class Policy(MyPage):
         word_count = len(text.split())
 
         if word_count < 25:
-            return f"Please write at least 25 words (you wrote {word_count})."
+            return _(dict(
+                en=f"Please write at least 25 words (you wrote {word_count}).",
+                fr=f"Veuillez écrire au moins 25 mots (vous en avez écrit {word_count})."
+            ))
 
 class Policy_question_certain(MyPage):
     form_model = 'player'
