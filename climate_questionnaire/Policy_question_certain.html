@@ -10,8 +10,15 @@
 
 <div class="card bg-light mb-3">
     <div class="card-body">
-        On a scale from 0 (very unconfident) to 100 (very confident), how confident are you about the answer you provided in the previous question on what measures and solutions your government should consider to fight climate change?
+        {{ if en }}
 
+            On a scale from 0 (very unconfident) to 100 (very confident), how confident are you about the answer you provided in the previous question on what measures and solutions your government should consider to fight climate change?
+        {{ elif fr }}
+            Sur une échelle de 0 (très peu confiant) à 100 (très confiant), à quel point êtes-vous confiant
+           concernant la réponse que vous avez fournie dans la question précédente sur les mesures et solutions que
+           votre gouvernement devrait envisager pour lutter contre le changement climatique ?
+
+        {{ endif }}
         {{ formfield_errors 'confidence_policy' }}
         <br><br>
 
@@ -69,6 +76,7 @@
         $(document).ready(function (event) {
             slider1 = new mgslider("confidence_policy", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
+            if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

@@ -18,7 +18,16 @@
 
 <div class="card bg-light mb-3">
     <div class="card-body">
-        This is your answer to the question on <i>what you think your country's government should do regarding climate change</i>:
+        {{ if en }}
+
+            This is your answer to the question on <i>what you think your country's government should do regarding climate change</i>:
+
+        {{ elif fr }}
+
+            Voici votre réponse à la question sur <i>ce que vous pensez que le gouvernement de votre pays devrait faire
+            concernant le changement climatique</i> :
+
+        {{ endif }}
         <div class="form-control mb-1">
             {{ player.policy_narrative }}
         </div>
@@ -28,7 +37,14 @@
 <div class="card bg-light mb-3">
     <div class="card-body">
         <p>
+            {{ if en }}
             Based on your answer, to what extent do you agree or disagree with the following statement?
+            {{ elif fr }}
+            En vous basant sur votre réponse, dans quelle mesure êtes-vous d'accord ou pas d'accord avec l'énoncé
+            suivant ?
+            {{ endif }}
+
+
         </p>
         {{ formfield "expectations_policy_economy" }}
         {{ formfield "expectations_policy_cc" }}

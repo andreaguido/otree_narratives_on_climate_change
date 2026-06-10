@@ -35,53 +35,54 @@ def get_scale_certainty():
         [-2, _(dict(en="Very uncertain", fr="Très incertain"))],
         [-1, _(dict(en="Uncertain", fr="Incertain"))],
         [1, _(dict(en="Certain", fr="Certain"))],
+        [2, _(dict(en="Very certain", fr="Très certain"))],
     ]
 
 def get_scale_frequency_info():
     return [
-            [5, _(dict(en="Daily", fr="XXX"))],
-            [4, _(dict(en="Twice per week", fr="XXX"))],
-            [3, _(dict(en="Once per week", fr="XXX"))],
-            [2, _(dict(en="Twice per month", fr="XXX"))],
-            [1, _(dict(en="Once per month", fr="XXX"))],
-            [0, _(dict(en="Never", fr="XXX"))]
+            [5, _(dict(en="Daily", fr="Quotidiennement"))],
+            [4, _(dict(en="Twice per week", fr="Deux fois par semaine"))],
+            [3, _(dict(en="Once per week", fr="Une fois par semaine"))],
+            [2, _(dict(en="Twice per month", fr="Deux fois par mois"))],
+            [1, _(dict(en="Once per month", fr="Une fois par mois"))],
+            [0, _(dict(en="Never", fr="Jamais"))]
         ]
 
 def get_scale_expectations():
     return [
-        [-2, _(dict(en="Very unlikely", fr="XXX"))],
-        [-1, _(dict(en="Somewhat unlikely", fr="XXX"))],
-        [1, _(dict(en="Somewhat likely", fr="XXX"))],
-        [2, _(dict(en="Very likely", fr="XXX"))]
+        [-2, _(dict(en="Very unlikely", fr="Très improbable"))],
+        [-1, _(dict(en="Somewhat unlikely", fr="Plutôt improbable"))],
+        [1, _(dict(en="Somewhat likely", fr="Plutôt probable"))],
+        [2, _(dict(en="Very likely", fr="Très probable"))]
     ]
 
 def get_scale_agreement():
     return [
-        [-2, _(dict(en="Strongly disagree", fr="XXX"))],
-        [-1, _(dict(en="Somewhat disagree", fr="XXX"))],
-        [0, _(dict(en="Neither agree nor disagree", fr="XXX"))],
-        [1, _(dict(en="Somewhat agree", fr="XXX"))],
-        [2, _(dict(en="Strongly agree", fr="XXX"))]
+        [-2, _(dict(en="Strongly disagree", fr="Fortement en désaccord"))],
+        [-1, _(dict(en="Somewhat disagree", fr="Plutôt en désaccord"))],
+        [0, _(dict(en="Neither agree nor disagree", fr="Ni d'accord ni en désaccord"))],
+        [1, _(dict(en="Somewhat agree", fr="Plutôt d'accord"))],
+        [2, _(dict(en="Strongly agree", fr="Fortement d'accord"))]
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From A$0 to A$1,250", fr="XXX"))],
-        [1, _(dict(en="From A$1,250 to A$2,000", fr="XXX"))],
-        [2, _(dict(en="From A$2,000 to A$4,000", fr="XXX"))],
-        [3, _(dict(en="From A$4,000 to A$6,000", fr="XXX"))],
-        [4, _(dict(en="From A$6,000 to A$8,000", fr="XXX"))],
-        [5, _(dict(en="From A$8,000 to A$12,500", fr="XXX"))],
-        [6, _(dict(en="More than A$12,500", fr="XXX"))],
-        [999, _(dict(en="I prefer not to say", fr="XXX"))]
+        [0, _(dict(en="From $0 to $1,250", fr="De 0€ à 1 250€"))],
+        [1, _(dict(en="From $1,250 to $2,000", fr="De 1 250€ à 2 000€"))],
+        [2, _(dict(en="From $2,000 to $4,000", fr="De 2 000€ à 4 000€"))],
+        [3, _(dict(en="From $4,000 to $6,000", fr="De 4 000€ à 6 000€"))],
+        [4, _(dict(en="From $6,000 to $8,000", fr="De 6 000€ à 8 000€"))],
+        [5, _(dict(en="From $8,000 to $12,500", fr="De 8 000€ à 12 500€"))],
+        [6, _(dict(en="More than A$12,500", fr="Plus de 12 500€"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
     ]
 def get_scale_education():
     return [
-        [0, _(dict(en="Primary or lower secondary education", fr="XXX"))],
-        [1, _(dict(en="Upper secondary education", fr="XXX"))],
-        [2, _(dict(en="Non-university post-secondary education", fr="XXX"))],
-        [3, _(dict(en="Undergraduate education (bachelor)", fr="XXX"))],
-        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="XXX"))],
-        [999, _(dict(en="I prefer not to say", fr="XXX"))]
+        [0, _(dict(en="Primary or lower secondary education", fr="Primaire ou collège"))],
+        [1, _(dict(en="Upper secondary education", fr="Lycée (Baccalauréat)"))],
+        [2, _(dict(en="Non-university post-secondary education", fr="Formation post-secondaire non universitaire"))],
+        [3, _(dict(en="Undergraduate education (bachelor)", fr="Licence (Bachelor)"))],
+        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
     ]
 def get_options_bdm():
     return [
@@ -192,12 +193,12 @@ class Player(BasePlayer):
         choices=[
             [1, _(dict(en="Yes", fr="Oui"))],
             [0, _(dict(en="No", fr="Non"))],
-            [-1, _(dict(en="I don't know/I do not want to answer", fr="Non"))]
+            [-1, _(dict(en="I don't know/I do not want to answer", fr="Je ne sais pas / souhaite pas répondre"))]
         ],
         label=_(
             dict(
                 en="In your opinion, do you think your country should fight climate change?",
-                fr="XXX"
+                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -224,7 +225,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would have a positive effect on my country’s economy and employment</b>",
-                fr="XXX"
+                fr="<b>La solution que j’ai mentionnée aurait un effet positif sur l’économie et l’emploi de mon pays</b>"
             )
         ),
         choices = get_scale_agreement(),
@@ -234,7 +235,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would help limit and/or mitigate the consequences of climate change</b>",
-                fr="XXX"
+                fr="<b>La solution que j’ai mentionnée aiderait à limiter et/ou atténuer les conséquences du changement climatique</b>"
             )
         ),
         choices=get_scale_agreement(),
@@ -244,15 +245,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>My household will win or lose financially from the solution I mentioned</b>",
-                fr="XXX"
+                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>"
             )
         ),
         choices=[
-            [-2, "Lose a lot"],
-            [-1, "Lose"],
-            [0, "Neither win or lose"],
-            [1, "Win"],
-            [2, "Win a lot"],
+            [-2, _(dict(en="Lose a lot", fr="Perdre beaucoup"))],
+            [-1, _(dict(en="Lose", fr="Perdre"))],
+            [0, _(dict(en="Neither win or lose", fr="Ni gagner ni perdre"))],
+            [1, _(dict(en="Win", fr="Gagner"))],
+            [2, _(dict(en="Win a lot", fr="Gagner beaucoup"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -261,15 +262,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>Do you support or oppose the solution you provided?</b>",
-                fr="XXX"
+                fr="<b>Êtes-vous favorable ou opposé(e) à la solution que vous avez fournie ?</b>"
             )
         ),
         choices=[
-            [-2, "Strongly oppose"],
-            [-1, "Somewhat oppose"],
-            [0, "Neither support nor oppose"],
-            [1, "Somewhat support"],
-            [2, "Strongly support"],
+            [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)"))],
+            [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)"))],
+            [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)"))],
+            [1, _(dict(en="Somewhat support", fr="Plutôt favorable"))],
+            [2, _(dict(en="Strongly support", fr="Fortement favorable"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -322,7 +323,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr="XXX"
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -332,7 +333,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news <b>about climate change</b>? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr=""
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités <b>sur le changement climatique</b> ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -666,7 +667,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Severe droughts and heatwaves",
-                fr="XXX"
+                fr="Sécheresses sévères et vagues de chaleur"
             )
         ),
         choices=get_scale_expectations(),
@@ -676,7 +677,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More frequent volcanic eruptions",
-                fr="XXX"
+                fr="Éruptions volcaniques plus fréquentes"
             )
         ),
         choices=get_scale_expectations(),
@@ -686,17 +687,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Rising sea levels",
-                fr="XXX"
-            )
-        ),
-        choices=get_scale_expectations(),
-        widget=widgets.RadioSelectHorizontal
-    )
-    expectations_droughts = models.StringField(
-        label=_(
-            dict(
-                en="Severe droughts and heatwaves",
-                fr="XXX"
+                fr="Montée du niveau de la mer"
             )
         ),
         choices=get_scale_expectations(),
@@ -706,7 +697,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Lower agricultural production",
-                fr="XXX"
+                fr="Baisse de la production agricole"
             )
         ),
         choices=get_scale_expectations(),
@@ -716,7 +707,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Drop in standards of living",
-                fr="XXX"
+                fr="Baisse du niveau de vie"
             )
         ),
         choices=get_scale_expectations(),
@@ -726,7 +717,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Larger migration flows",
-                fr="XXX"
+                fr="Flux migratoires plus importants"
             )
         ),
         choices=get_scale_expectations(),
@@ -736,7 +727,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More armed conflicts",
-                fr="XXX"
+                fr="Davantage de conflits armés"
             )
         ),
         choices=get_scale_expectations(),
@@ -746,7 +737,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Extinction of humankind",
-                fr="XXX"
+                fr="Extinction de l'humanité"
             )
         ),
         choices=get_scale_expectations(),
@@ -768,7 +759,9 @@ class Player(BasePlayer):
             en="Thinking about your household, what would you estimate is its total net monthly "
                "income on average (after taxes and deductions)? Please include salaries, pensions, family allowances, "
                "unemployment benefits, or any other regular income.",
-            fr="XXX"
+            fr="En pensant à votre foyer, quel est selon vous son revenu net mensuel total moyen (après impôts et "
+               "déductions) ? Veuillez inclure les salaires, retraites, allocations familiales, indemnités de chômage "
+               "ou tout autre revenu régulier."
         )),
         choices=get_scale_income()
     )
@@ -777,7 +770,7 @@ class Player(BasePlayer):
     education = models.IntegerField(
         label = _(dict(
           en="What is the highest education level that you have achieved?",
-          fr="XXX"
+          fr="Quel est le niveau d'études le plus élevé que vous ayez atteint ?"
         )),
         choices=get_scale_education()
     )

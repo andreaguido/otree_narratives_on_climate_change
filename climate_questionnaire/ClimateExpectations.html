@@ -25,17 +25,19 @@
     <p>{{ if en }}
         If nothing is done to limit climate change, how likely do you think it is that climate change will lead to the following events?
         {{ elif fr }}
-        XXX
+                Si rien n'est fait pour limiter le changement climatique, selon vous, quelle est la probabilité que le
+        changement climatique entraîne les événements suivants ?
+
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} XXX {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} XXX {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} XXX {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} XXX {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
