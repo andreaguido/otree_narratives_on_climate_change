@@ -363,7 +363,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio or podcasts"
+                fr="Radio ou podcasts"
             )
         ),
         choices=range(1, 8),
@@ -423,7 +423,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio"
+                fr="Radio ou podcasts"
             )
         ),
         choices=range(1, 8),
