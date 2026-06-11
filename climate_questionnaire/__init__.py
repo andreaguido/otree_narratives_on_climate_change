@@ -727,7 +727,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More armed conflicts",
-                fr="Davantage de conflits armés"
+                fr="Plus de conflits armés"
             )
         ),
         choices=get_scale_expectations(),
