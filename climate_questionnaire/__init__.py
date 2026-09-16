@@ -66,13 +66,13 @@ def get_scale_agreement():
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From KSh 0 to KSh 80,000", fr="De 0€ à 1 250€"))],
-        [1, _(dict(en="From KSh 80,000 to KSh 130,000", fr="De 1 250€ à 2 000€"))],
-        [2, _(dict(en="From KSh 130,000 to KSh 250,000", fr="De 2 000€ à 4 000€"))],
-        [3, _(dict(en="From KSh 250,000 to KSh 380,000", fr="De 4 000€ à 6 000€"))],
-        [4, _(dict(en="From KSh 380,000 to KSh 510,000", fr="De 6 000€ à 8 000€"))],
-        [5, _(dict(en="From KSh 510,000 to KSh 790,000", fr="De 8 000€ à 12 500€"))],
-        [6, _(dict(en="More than KSh 790,000", fr="Plus de 12 500€"))],
+        [0, _(dict(en="From KSh 0 to KSh 50,000", fr="De 0€ à 1 250€"))],
+        [1, _(dict(en="From KSh 50,000 to KSh 125,000", fr="De 1 250€ à 2 000€"))],
+        [2, _(dict(en="From KSh 125,000 to KSh 250,000", fr="De 2 000€ à 4 000€"))],
+        [3, _(dict(en="From KSh 250,000 to KSh 350,000", fr="De 4 000€ à 6 000€"))],
+        [4, _(dict(en="From KSh 350,000 to KSh 500,000", fr="De 6 000€ à 8 000€"))],
+        [5, _(dict(en="From KSh 500,000 to KSh 800,000", fr="De 8 000€ à 12 500€"))],
+        [6, _(dict(en="More than KSh 800,000", fr="Plus de 12 500€"))],
         [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
     ]
 def get_scale_education():
