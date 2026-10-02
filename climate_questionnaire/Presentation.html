@@ -9,6 +9,8 @@
         Welcome to this survey
     {{ elif fr }}
         Bienvenue dans ce questionnaire
+    {{ elif pt }}
+        Bem-vindo(a) a esta pesquisa
     {{ endif }}
 </div>
 {{ endblock }}
@@ -96,6 +98,40 @@
                         If you do not wish to participate, you can click on the
                         <i>{{ if subsession.prolific }} Request return {{ else }} Skip {{ endif }}</i> button below.
                     </p>
+                    {{ elif pt }}
+                    <h3>Termo de informação ao participante</h3>
+                    <br>
+                    <p>
+                        <b>Em que consiste o estudo?</b>
+                        Este estudo consiste em uma tarefa simples e questionários curtos.
+
+                        Suas respostas permanecerão totalmente anônimas.
+
+                        Não há respostas certas ou erradas; queremos apenas conhecer suas opiniões sinceras, quaisquer que sejam.
+                        <br><br>
+
+                        <b>Quem está realizando o estudo?</b>
+                        O estudo é conduzido por uma equipe de pesquisadores de diferentes universidades na França (Paris School of Business, Université de Montpellier). Em caso de dúvidas, entre em contato pelo e-mail a.guido@psbedu.paris. <br><br>
+
+                        <b>Quanto tempo vai durar?</b>
+                        O questionário dura aproximadamente de 5 a 10 minutos, e você pode parar a qualquer momento. <br><br>
+
+                        <b>O que eu ganho participando?</b>
+                        Os participantes que concluírem o estudo receberão a remuneração anunciada em sua conta Prolific. Este estudo pode incluir pagamentos de bônus.<br><br>
+
+                        <b>E os meus dados?</b>
+                        Todos os aspectos do estudo, incluindo os resultados, serão anônimos, e somente os pesquisadores terão acesso ao conjunto das respostas.
+                    </p>
+                    <p>
+                        Para continuar, clique em "Iniciar o questionário".
+                    </p>
+
+                    <hr class="my-4">
+
+                    <p class="text-muted-small">
+                        Se você não quiser participar, pode clicar no botão
+                        <i>{{ if subsession.prolific }} Desistir {{ else }} Pular {{ endif }}</i> abaixo.
+                    </p>
                     {{ endif }}
                 </div>
             </div>
@@ -106,22 +142,22 @@
             {{ if subsession.prolific }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Request return {{ elif fr }} Sortir {{ endif }}
+                    {{ if en }} Request return {{ elif fr }} Sortir {{ elif pt }} Desistir {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ endif }}
+                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ elif pt }} Iniciar o questionário {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
 
             {{ else }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ endif }}
+                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ elif pt }} Não participar {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Participate {{ elif fr }} Participer {{ endif }}
+                    {{ if en }} Participate {{ elif fr }} Participer {{ elif pt }} Participar {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
             {{ endif }}

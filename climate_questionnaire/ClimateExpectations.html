@@ -28,16 +28,18 @@
                 Si rien n'est fait pour limiter le changement climatique, selon vous, quelle est la probabilité que le
         changement climatique entraîne les événements suivants ?
 
+        {{ elif pt }}
+        Se nada for feito para limitar as mudanças climáticas, qual a probabilidade, na sua opinião, de que elas levem aos seguintes eventos?
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ elif pt }} Muito improvável {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ elif pt }} Um pouco improvável {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ elif pt }} Um pouco provável {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ elif pt }} Muito provável {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -62,6 +64,8 @@
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif pt }}
+    Verifique se todas as posições são diferentes.
     {{ endif }}
 </p>
 {{ endblock }}

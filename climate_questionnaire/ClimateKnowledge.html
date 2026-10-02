@@ -38,6 +38,13 @@
         émet le moins). Les émissions de gaz à effet de serre d'un produit sont celles émises à toutes les étapes
         impliquées dans sa production et sa distribution.
     </p>
+    {{ elif pt }}
+    <p>
+        Na próxima pergunta, pedimos que você ordene os itens de acordo com as emissões de gases de efeito estufa que produzem,
+        da melhor forma que puder (sendo 1 o item que mais emite e 3 o item que menos emite).
+        As emissões de gases de efeito estufa de um produto são aquelas emitidas em todas as etapas de sua produção e
+        distribuição.
+    </p>
     {{ endif }}
     {{ formfield "rank_coal" }} {{ formfield "rank_gas" }} {{ formfield "rank_nuclear" }}
     </div>
@@ -50,6 +57,8 @@
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif pt }}
+    Verifique se todas as posições são diferentes.
     {{ endif }}
 </p>
 {{ endblock }}
