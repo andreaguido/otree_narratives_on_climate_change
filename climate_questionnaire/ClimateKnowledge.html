@@ -38,6 +38,13 @@
         émet le moins). Les émissions de gaz à effet de serre d'un produit sont celles émises à toutes les étapes
         impliquées dans sa production et sa distribution.
     </p>
+    {{ elif es }}
+    <p>
+        En la siguiente pregunta, le pedimos que ordene los elementos según las emisiones de gases de efecto invernadero que generan,
+        de acuerdo con lo que usted sepa (donde 1 es el elemento que más emite y 3 el que menos emite).
+        Las emisiones de gases de efecto invernadero de un producto son las que se generan en todas las etapas de su producción y
+        distribución.
+    </p>
     {{ endif }}
     {{ formfield "rank_coal" }} {{ formfield "rank_gas" }} {{ formfield "rank_nuclear" }}
     </div>
@@ -50,6 +57,8 @@
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif es }}
+    Asegúrese de que todas las posiciones sean distintas.
     {{ endif }}
 </p>
 {{ endblock }}

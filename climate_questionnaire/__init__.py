@@ -7,94 +7,94 @@ doc = """
 Narratives on Climate Change
 """
 
-language = {"en": False, "fr": False, LANGUAGE_CODE: True}
+language = {"en": False, "fr": False, "es": False, LANGUAGE_CODE: True}
 _ = lambda x: x[LANGUAGE_CODE]
 
 
 def get_scale_action():
     return [
-        [-2, _(dict(en="Not at all", fr="Pas du tout"))],
-        [-1, _(dict(en="-1", fr="-1"))],
-        [0, _(dict(en="Moderately", fr="Modérément"))],
-        [1, _(dict(en="1", fr="1"))],
-        [2, _(dict(en="A great deal", fr="Énormément"))]
+        [-2, _(dict(en="Not at all", fr="Pas du tout", es="Nada"))],
+        [-1, _(dict(en="-1", fr="-1", es="-1"))],
+        [0, _(dict(en="Moderately", fr="Modérément", es="Moderadamente"))],
+        [1, _(dict(en="1", fr="1", es="1"))],
+        [2, _(dict(en="A great deal", fr="Énormément", es="Muchísimo"))]
     ]
 
 
 def get_scale_policy():
     return [
-        [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)"))],
-        [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)"))],
-        [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)"))],
-        [1, _(dict(en="Somewhat support", fr="Plutôt favorable"))],
-        [2, _(dict(en="Strongly support", fr="Fortement favorable"))]
+        [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)", es="Totalmente en contra"))],
+        [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)", es="Algo en contra"))],
+        [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)", es="Ni a favor ni en contra"))],
+        [1, _(dict(en="Somewhat support", fr="Plutôt favorable", es="Algo a favor"))],
+        [2, _(dict(en="Strongly support", fr="Fortement favorable", es="Totalmente a favor"))]
     ]
 
 def get_scale_certainty():
     return [
-        [-2, _(dict(en="Very uncertain", fr="Très incertain"))],
-        [-1, _(dict(en="Uncertain", fr="Incertain"))],
-        [1, _(dict(en="Certain", fr="Certain"))],
-        [2, _(dict(en="Very certain", fr="Très certain"))],
+        [-2, _(dict(en="Very uncertain", fr="Très incertain", es="Muy inseguro(a)"))],
+        [-1, _(dict(en="Uncertain", fr="Incertain", es="Inseguro(a)"))],
+        [1, _(dict(en="Certain", fr="Certain", es="Seguro(a)"))],
+        [2, _(dict(en="Very certain", fr="Très certain", es="Muy seguro(a)"))],
     ]
 
 def get_scale_frequency_info():
     return [
-            [5, _(dict(en="Daily", fr="Quotidiennement"))],
-            [4, _(dict(en="Twice per week", fr="Deux fois par semaine"))],
-            [3, _(dict(en="Once per week", fr="Une fois par semaine"))],
-            [2, _(dict(en="Twice per month", fr="Deux fois par mois"))],
-            [1, _(dict(en="Once per month", fr="Une fois par mois"))],
-            [0, _(dict(en="Never", fr="Jamais"))]
+            [5, _(dict(en="Daily", fr="Quotidiennement", es="Diariamente"))],
+            [4, _(dict(en="Twice per week", fr="Deux fois par semaine", es="Dos veces por semana"))],
+            [3, _(dict(en="Once per week", fr="Une fois par semaine", es="Una vez por semana"))],
+            [2, _(dict(en="Twice per month", fr="Deux fois par mois", es="Dos veces al mes"))],
+            [1, _(dict(en="Once per month", fr="Une fois par mois", es="Una vez al mes"))],
+            [0, _(dict(en="Never", fr="Jamais", es="Nunca"))]
         ]
 
 def get_scale_expectations():
     return [
-        [-2, _(dict(en="Very unlikely", fr="Très improbable"))],
-        [-1, _(dict(en="Somewhat unlikely", fr="Plutôt improbable"))],
-        [1, _(dict(en="Somewhat likely", fr="Plutôt probable"))],
-        [2, _(dict(en="Very likely", fr="Très probable"))]
+        [-2, _(dict(en="Very unlikely", fr="Très improbable", es="Muy improbable"))],
+        [-1, _(dict(en="Somewhat unlikely", fr="Plutôt improbable", es="Algo improbable"))],
+        [1, _(dict(en="Somewhat likely", fr="Plutôt probable", es="Algo probable"))],
+        [2, _(dict(en="Very likely", fr="Très probable", es="Muy probable"))]
     ]
 
 def get_scale_agreement():
     return [
-        [-2, _(dict(en="Strongly disagree", fr="Fortement en désaccord"))],
-        [-1, _(dict(en="Somewhat disagree", fr="Plutôt en désaccord"))],
-        [0, _(dict(en="Neither agree nor disagree", fr="Ni d'accord ni en désaccord"))],
-        [1, _(dict(en="Somewhat agree", fr="Plutôt d'accord"))],
-        [2, _(dict(en="Strongly agree", fr="Fortement d'accord"))]
+        [-2, _(dict(en="Strongly disagree", fr="Fortement en désaccord", es="Totalmente en desacuerdo"))],
+        [-1, _(dict(en="Somewhat disagree", fr="Plutôt en désaccord", es="Algo en desacuerdo"))],
+        [0, _(dict(en="Neither agree nor disagree", fr="Ni d'accord ni en désaccord", es="Ni de acuerdo ni en desacuerdo"))],
+        [1, _(dict(en="Somewhat agree", fr="Plutôt d'accord", es="Algo de acuerdo"))],
+        [2, _(dict(en="Strongly agree", fr="Fortement d'accord", es="Totalmente de acuerdo"))]
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From $0 to $1,250", fr="De 0€ à 1 250€"))],
-        [1, _(dict(en="From $1,250 to $2,000", fr="De 1 250€ à 2 000€"))],
-        [2, _(dict(en="From $2,000 to $4,000", fr="De 2 000€ à 4 000€"))],
-        [3, _(dict(en="From $4,000 to $6,000", fr="De 4 000€ à 6 000€"))],
-        [4, _(dict(en="From $6,000 to $8,000", fr="De 6 000€ à 8 000€"))],
-        [5, _(dict(en="From $8,000 to $12,500", fr="De 8 000€ à 12 500€"))],
-        [6, _(dict(en="More than A$12,500", fr="Plus de 12 500€"))],
-        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
+        [0, _(dict(en="From MX$0 to MX$18,000", fr="De 0€ à 1 250€", es="De $0 a $18,000 MXN"))],
+        [1, _(dict(en="From MX$18,000 to MX$30,000", fr="De 1 250€ à 2 000€", es="De $18,000 a $30,000 MXN"))],
+        [2, _(dict(en="From MX$30,000 to MX$60,000", fr="De 2 000€ à 4 000€", es="De $30,000 a $60,000 MXN"))],
+        [3, _(dict(en="From MX$60,000 to MX$85,000", fr="De 4 000€ à 6 000€", es="De $60,000 a $85,000 MXN"))],
+        [4, _(dict(en="From MX$85,000 to MX$120,000", fr="De 6 000€ à 8 000€", es="De $85,000 a $120,000 MXN"))],
+        [5, _(dict(en="From MX$120,000 to MX$180,000", fr="De 8 000€ à 12 500€", es="De $120,000 a $180,000 MXN"))],
+        [6, _(dict(en="More than MX$180,000", fr="Plus de 12 500€", es="Más de $180,000 MXN"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre", es="Prefiero no responder"))]
     ]
 def get_scale_education():
     return [
-        [0, _(dict(en="Primary or lower secondary education", fr="Primaire ou collège"))],
-        [1, _(dict(en="Upper secondary education", fr="Lycée (Baccalauréat)"))],
-        [2, _(dict(en="Non-university post-secondary education", fr="Formation post-secondaire non universitaire"))],
-        [3, _(dict(en="Undergraduate education (bachelor)", fr="Licence (Bachelor)"))],
-        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat"))],
-        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
+        [0, _(dict(en="Primary or lower secondary education", fr="Primaire ou collège", es="Primaria o secundaria"))],
+        [1, _(dict(en="Upper secondary education", fr="Lycée (Baccalauréat)", es="Preparatoria o bachillerato"))],
+        [2, _(dict(en="Non-university post-secondary education", fr="Formation post-secondaire non universitaire", es="Carrera técnica posterior al bachillerato (no universitaria)"))],
+        [3, _(dict(en="Undergraduate education (bachelor)", fr="Licence (Bachelor)", es="Licenciatura"))],
+        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat", es="Posgrado (maestría o doctorado)"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre", es="Prefiero no responder"))]
     ]
 def get_options_bdm():
     return [
-        ['A', 'Option A'],
-        ['B', 'Option B']
+        ['A', _(dict(en='Option A', fr='Option A', es='Opción A'))],
+        ['B', _(dict(en='Option B', fr='Option B', es='Opción B'))]
     ]
 class C(BaseConstants):
     NAME_IN_URL = 'clquest'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
     ROW_INDICES = [0,     1,    2,  3] # rows of the MPL table
-    AMOUNTS =     [0.01, 0.25, 0.5, 1] # amounts of the MPL table
+    AMOUNTS =     [0.15, 3.5, 7.0, 15.0] # amounts of the MPL table, in MXN (PPP-equiv. of EUR [0.01, 0.25, 0.5, 1])
 
 class Subsession(BaseSubsession):
     prolific = models.BooleanField()
@@ -133,13 +133,13 @@ class Player(BasePlayer):
     # Narrative elicitation -----------
     climate_exists = models.BooleanField(
         choices=[
-            [True, _(dict(en="Yes", fr="Oui"))],
-            [False, _(dict(en="No", fr="Non"))]
+            [True, _(dict(en="Yes", fr="Oui", es="Sí"))],
+            [False, _(dict(en="No", fr="Non", es="No"))]
         ],
         label=_(
             dict(
                 en="Do you think climate change is a real phenomenon?",
-                fr="Pensez-vous que le changement climatique soit un phénomène réel ?"
+                fr="Pensez-vous que le changement climatique soit un phénomène réel ?", es="¿Cree usted que el cambio climático es un fenómeno real?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -157,7 +157,7 @@ class Player(BasePlayer):
             "<b>expliquer</b> comment ces causes contribuent à ces faits et pourraient être liées entre elles. <br><br> "
             "Expliquez votre raisonnement avec des phrases complètes. "
             "Il n'y a pas de bonne ou de mauvaise réponse, répondez selon votre opinion sincère et personnelle. <br> "
-            "[min. 50 mots]")
+            "[min. 50 mots]"), es="En su opinión, ¿qué explica los hechos descritos en el texto anterior (como el aumento reportado de las temperaturas globales y fenómenos meteorológicos más extremos)? <br><br>Describa las <b>causas</b> de los hechos atribuidos al cambio climático y <b>explique</b> cómo estas causas contribuyen a dichos hechos y cómo podrían estar relacionadas entre sí. <br><br> Explique su razonamiento con oraciones completas. No hay respuestas correctas o incorrectas; responda según su opinión sincera y personal. <br> [mín. 50 palabras]"
         ))
     )
     narrative_confidence = models.IntegerField(
@@ -165,7 +165,7 @@ class Player(BasePlayer):
             en=(
                 ""),
             fr=(""
-                "")
+                ""), es=""
         ))
     )
 
@@ -191,14 +191,14 @@ class Player(BasePlayer):
     # Policy --------------------------
     policy_fight = models.IntegerField(
         choices=[
-            [1, _(dict(en="Yes", fr="Oui"))],
-            [0, _(dict(en="No", fr="Non"))],
-            [-1, _(dict(en="I don't know/I do not want to answer", fr="Je ne sais pas / souhaite pas répondre"))]
+            [1, _(dict(en="Yes", fr="Oui", es="Sí"))],
+            [0, _(dict(en="No", fr="Non", es="No"))],
+            [-1, _(dict(en="I don't know/I do not want to answer", fr="Je ne sais pas / souhaite pas répondre", es="No sé / prefiero no responder"))]
         ],
         label=_(
             dict(
                 en="In your opinion, do you think your country should fight climate change?",
-                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?"
+                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?", es="En su opinión, ¿su país debería combatir el cambio climático?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -207,7 +207,7 @@ class Player(BasePlayer):
     policy_narrative = models.LongStringField(
         label=_(dict(
             en=(""),
-            fr=("")
+            fr=(""), es=""
         ))
     )
 
@@ -216,7 +216,7 @@ class Player(BasePlayer):
         label=_(dict(
             en=(
                 ""),
-            fr=("")
+            fr=(""), es=""
         )),
     )
 
@@ -225,7 +225,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would have a positive effect on my country’s economy and employment</b>",
-                fr="<b>La solution que j’ai mentionnée aurait un effet positif sur l’économie et l’emploi de mon pays</b>"
+                fr="<b>La solution que j’ai mentionnée aurait un effet positif sur l’économie et l’emploi de mon pays</b>", es="<b>La solución que mencioné tendría un efecto positivo en la economía y el empleo de mi país</b>"
             )
         ),
         choices = get_scale_agreement(),
@@ -235,7 +235,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would help limit and/or mitigate the consequences of climate change</b>",
-                fr="<b>La solution que j’ai mentionnée aiderait à limiter et/ou atténuer les conséquences du changement climatique</b>"
+                fr="<b>La solution que j’ai mentionnée aiderait à limiter et/ou atténuer les conséquences du changement climatique</b>", es="<b>La solución que mencioné ayudaría a limitar y/o mitigar las consecuencias del cambio climático</b>"
             )
         ),
         choices=get_scale_agreement(),
@@ -245,15 +245,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>My household will win or lose financially from the solution I mentioned</b>",
-                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>"
+                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>", es="<b>Mi hogar ganará o perderá económicamente con la solución que mencioné</b>"
             )
         ),
         choices=[
-            [-2, _(dict(en="Lose a lot", fr="Perdre beaucoup"))],
-            [-1, _(dict(en="Lose", fr="Perdre"))],
-            [0, _(dict(en="Neither win or lose", fr="Ni gagner ni perdre"))],
-            [1, _(dict(en="Win", fr="Gagner"))],
-            [2, _(dict(en="Win a lot", fr="Gagner beaucoup"))],
+            [-2, _(dict(en="Lose a lot", fr="Perdre beaucoup", es="Perder mucho"))],
+            [-1, _(dict(en="Lose", fr="Perdre", es="Perder"))],
+            [0, _(dict(en="Neither win or lose", fr="Ni gagner ni perdre", es="Ni ganar ni perder"))],
+            [1, _(dict(en="Win", fr="Gagner", es="Ganar"))],
+            [2, _(dict(en="Win a lot", fr="Gagner beaucoup", es="Ganar mucho"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -262,15 +262,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>Do you support or oppose the solution you provided?</b>",
-                fr="<b>Êtes-vous favorable ou opposé(e) à la solution que vous avez fournie ?</b>"
+                fr="<b>Êtes-vous favorable ou opposé(e) à la solution que vous avez fournie ?</b>", es="<b>¿Está a favor o en contra de la solución que propuso?</b>"
             )
         ),
         choices=[
-            [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)"))],
-            [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)"))],
-            [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)"))],
-            [1, _(dict(en="Somewhat support", fr="Plutôt favorable"))],
-            [2, _(dict(en="Strongly support", fr="Fortement favorable"))],
+            [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)", es="Totalmente en contra"))],
+            [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)", es="Algo en contra"))],
+            [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)", es="Ni a favor ni en contra"))],
+            [1, _(dict(en="Somewhat support", fr="Plutôt favorable", es="Algo a favor"))],
+            [2, _(dict(en="Strongly support", fr="Fortement favorable", es="Totalmente a favor"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -280,22 +280,22 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="How knowledgeable do you consider yourself about climate change?",
-                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?",
+                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?", es="¿Qué tan informado(a) se considera sobre el cambio climático?",
             )
         ),
         choices=[
-            [0, _(dict(en="Not at all", fr="Pas du tout"))],
-            [1, _(dict(en="A little", fr="Un peu"))],
-            [2, _(dict(en="Moderately", fr="Modérément"))],
-            [3, _(dict(en="A lot", fr="Beaucoup"))],
-            [4, _(dict(en="A great deal", fr="Énormément"))]
+            [0, _(dict(en="Not at all", fr="Pas du tout", es="Nada"))],
+            [1, _(dict(en="A little", fr="Un peu", es="Un poco"))],
+            [2, _(dict(en="Moderately", fr="Modérément", es="Moderadamente"))],
+            [3, _(dict(en="A lot", fr="Beaucoup", es="Mucho"))],
+            [4, _(dict(en="A great deal", fr="Énormément", es="Muchísimo"))]
         ],
         widget=widgets.RadioSelectHorizontal,
     )
     rank_coal = models.IntegerField(
         label=_(dict(
             en="Rank of Coal-fired power station",
-            fr="Classement de la centrale à charbon"
+            fr="Classement de la centrale à charbon", es="Posición de la central eléctrica de carbón"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -303,7 +303,7 @@ class Player(BasePlayer):
     rank_gas = models.IntegerField(
         label=_(dict(
             en="Rank of Gas-fired power plant",
-            fr="Classement de la centrale à gaz"
+            fr="Classement de la centrale à gaz", es="Posición de la central eléctrica de gas"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -311,7 +311,7 @@ class Player(BasePlayer):
     rank_nuclear = models.IntegerField(
         label=_(dict(
             en="Rank of Nuclear power plant",
-            fr="Classement de la centrale nucléaire"
+            fr="Classement de la centrale nucléaire", es="Posición de la central nuclear"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -323,7 +323,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité.", es="En los últimos 3 meses, ¿con qué frecuencia se informó y/o consultó noticias? Por información y noticias nos referimos a noticias nacionales, internacionales y regionales/locales, así como a otros hechos noticiosos."
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -333,7 +333,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news <b>about climate change</b>? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités <b>sur le changement climatique</b> ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités <b>sur le changement climatique</b> ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité.", es="En los últimos 3 meses, ¿con qué frecuencia se informó y/o consultó noticias <b>sobre el cambio climático</b>? Por información y noticias nos referimos a noticias nacionales, internacionales y regionales/locales, así como a otros hechos noticiosos."
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -343,7 +343,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", es="Televisión (por ejemplo, noticieros nacionales, canales de noticias por cable)"
             )
         ),
         choices=range(1, 8),
@@ -353,7 +353,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Printed Newspapers",
-                fr="Journaux imprimés"
+                fr="Journaux imprimés", es="Periódicos impresos"
             )
         ),
         choices=range(1, 8),
@@ -363,7 +363,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio ou podcasts"
+                fr="Radio ou podcasts", es="Radio o pódcasts"
             )
         ),
         choices=range(1, 8),
@@ -373,7 +373,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Social media platforms",
-                fr="Plateformes de médias sociaux"
+                fr="Plateformes de médias sociaux", es="Redes sociales"
             )
         ),
         choices=range(1, 8),
@@ -383,7 +383,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="News media websites or apps",
-                fr="Actualités en ligne"
+                fr="Actualités en ligne", es="Sitios web o aplicaciones de noticias"
             )
         ),
         choices=range(1, 8),
@@ -393,7 +393,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Newsletters or email subscriptions",
-                fr="Newsletters ou abonnements par e-mail"
+                fr="Newsletters ou abonnements par e-mail", es="Boletines o suscripciones por correo electrónico"
             )
         ),
         choices=range(1, 8),
@@ -403,7 +403,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", es="Televisión (por ejemplo, noticieros nacionales, canales de noticias por cable)"
             )
         ),
         choices=range(1, 8),
@@ -413,7 +413,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Printed Newspapers",
-                fr="Journaux imprimés"
+                fr="Journaux imprimés", es="Periódicos impresos"
             )
         ),
         choices=range(1, 8),
@@ -423,7 +423,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio ou podcasts"
+                fr="Radio ou podcasts", es="Radio o pódcasts"
             )
         ),
         choices=range(1, 8),
@@ -433,7 +433,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Social media platforms",
-                fr="Plateformes de médias sociaux"
+                fr="Plateformes de médias sociaux", es="Redes sociales"
             )
         ),
         choices=range(1, 8),
@@ -443,7 +443,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="News media websites or apps",
-                fr="Actualités en ligne"
+                fr="Actualités en ligne", es="Sitios web o aplicaciones de noticias"
             )
         ),
         choices=range(1, 8),
@@ -453,7 +453,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Newsletters or email subscriptions",
-                fr="Newsletters ou abonnements par e-mail"
+                fr="Newsletters ou abonnements par e-mail", es="Boletines o suscripciones por correo electrónico"
             )
         ),
         choices=range(1, 8),
@@ -547,16 +547,16 @@ class Player(BasePlayer):
     # Concern -------------------------
     climate_threat = models.IntegerField(
         choices=[
-            [3, _(dict(en="Very serious threat", fr="Une menace très sérieuse"))],
-            [2, _(dict(en="Somewhat serious threat", fr="Une menace assez sérieuse"))],
-            [1, _(dict(en="Not a threat at all", fr="Pas une menace du tout"))],
-            [0, _(dict(en="Don’t know", fr="Ne sais pas"))]
+            [3, _(dict(en="Very serious threat", fr="Une menace très sérieuse", es="Una amenaza muy seria"))],
+            [2, _(dict(en="Somewhat serious threat", fr="Une menace assez sérieuse", es="Una amenaza algo seria"))],
+            [1, _(dict(en="Not a threat at all", fr="Pas une menace du tout", es="Ninguna amenaza"))],
+            [0, _(dict(en="Don’t know", fr="Ne sais pas", es="No sé"))]
         ],
         label=_(
             dict(
                 en="Do you think climate change will be a threat to people in your country in the next 20 years?",
                 fr="Pensez-vous que le changement climatique sera une menace pour les gens de votre pays dans les "
-                   "20 prochaines années ?"
+                   "20 prochaines années ?", es="¿Cree usted que el cambio climático será una amenaza para las personas de su país en los próximos 20 años?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -566,7 +566,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit flying",
-                fr="Limiter les vols"
+                fr="Limiter les vols", es="Viajar menos en avión"
             )
         ),
         choices=get_scale_action(),
@@ -576,7 +576,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit driving",
-                fr="Limiter la conduite"
+                fr="Limiter la conduite", es="Manejar menos"
             )
         ),
         choices=get_scale_action(),
@@ -586,7 +586,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Have an electric vehicle",
-                fr="Posséder un véhicule électrique"
+                fr="Posséder un véhicule électrique", es="Tener un vehículo eléctrico"
             )
         ),
         choices=get_scale_action(),
@@ -596,7 +596,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit beef consumption",
-                fr="Limiter la consommation de bœuf"
+                fr="Limiter la consommation de bœuf", es="Reducir el consumo de carne de res"
             )
         ),
         choices=get_scale_action(),
@@ -606,7 +606,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit heating or cooling your home",
-                fr="Limiter le chauffage ou la climatisation de votre maison"
+                fr="Limiter le chauffage ou la climatisation de votre maison", es="Reducir el uso de calefacción o aire acondicionado en su casa"
             )
         ),
         choices=get_scale_action(),
@@ -617,7 +617,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A tax on flying (that increases ticket prices by 20%)",
-                fr="Une taxe sur les vols (qui augmente les prix des billets de 20%)"
+                fr="Une taxe sur les vols (qui augmente les prix des billets de 20%)", es="Un impuesto a los vuelos (que aumente el precio de los boletos en 20%)"
             )
         ),
         choices=get_scale_policy(),
@@ -627,7 +627,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A national tax on fossil fuels (increasing gasoline prices by 40 cents per gallon)",
-                fr="Une taxe nationale sur les combustibles fossiles (augmentant les prix de l'essence de 40 centimes par gallon)"
+                fr="Une taxe nationale sur les combustibles fossiles (augmentant les prix de l'essence de 40 centimes par gallon)", es="Un impuesto nacional a los combustibles fósiles (que aumente el precio de la gasolina en 40 centavos por galón)"
             )
         ),
         choices=get_scale_policy(),
@@ -637,7 +637,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A ban of polluting vehicles in dense areas, like city centers",
-                fr="Une interdiction des véhicules polluants dans les zones denses, comme les centres-villes"
+                fr="Une interdiction des véhicules polluants dans les zones denses, comme les centres-villes", es="La prohibición de vehículos contaminantes en zonas densamente pobladas, como los centros de las ciudades"
             )
         ),
         choices=get_scale_policy(),
@@ -647,7 +647,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Subsidies for low-carbon technologies (renewable energy, carbon capture...)",
-                fr="Des subventions pour les technologies à faible émission de carbone (énergies renouvelables, capture de carbone...)"
+                fr="Des subventions pour les technologies à faible émission de carbone (énergies renouvelables, capture de carbone...)", es="Subsidios para tecnologías bajas en carbono (energías renovables, captura de carbono...)"
             )
         ),
         choices=get_scale_policy(),
@@ -657,7 +657,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A contribution to a global climate fund to finance clean energy in low-income countries",
-                fr="Une contribution à un fonds climatique mondial pour financer l'énergie propre dans les pays à faible revenu"
+                fr="Une contribution à un fonds climatique mondial pour financer l'énergie propre dans les pays à faible revenu", es="Una contribución a un fondo climático mundial para financiar energía limpia en países de bajos ingresos"
             )
         ),
         choices=get_scale_policy(),
@@ -667,7 +667,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Severe droughts and heatwaves",
-                fr="Sécheresses sévères et vagues de chaleur"
+                fr="Sécheresses sévères et vagues de chaleur", es="Sequías severas y olas de calor"
             )
         ),
         choices=get_scale_expectations(),
@@ -677,7 +677,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More frequent volcanic eruptions",
-                fr="Éruptions volcaniques plus fréquentes"
+                fr="Éruptions volcaniques plus fréquentes", es="Erupciones volcánicas más frecuentes"
             )
         ),
         choices=get_scale_expectations(),
@@ -687,7 +687,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Rising sea levels",
-                fr="Montée du niveau de la mer"
+                fr="Montée du niveau de la mer", es="Aumento del nivel del mar"
             )
         ),
         choices=get_scale_expectations(),
@@ -697,7 +697,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Lower agricultural production",
-                fr="Baisse de la production agricole"
+                fr="Baisse de la production agricole", es="Menor producción agrícola"
             )
         ),
         choices=get_scale_expectations(),
@@ -707,7 +707,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Drop in standards of living",
-                fr="Baisse du niveau de vie"
+                fr="Baisse du niveau de vie", es="Caída del nivel de vida"
             )
         ),
         choices=get_scale_expectations(),
@@ -717,7 +717,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Larger migration flows",
-                fr="Flux migratoires plus importants"
+                fr="Flux migratoires plus importants", es="Mayores flujos migratorios"
             )
         ),
         choices=get_scale_expectations(),
@@ -727,7 +727,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More armed conflicts",
-                fr="Plus de conflits armés"
+                fr="Plus de conflits armés", es="Más conflictos armados"
             )
         ),
         choices=get_scale_expectations(),
@@ -737,7 +737,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Extinction of humankind",
-                fr="Extinction de l'humanité"
+                fr="Extinction de l'humanité", es="Extinción de la humanidad"
             )
         ),
         choices=get_scale_expectations(),
@@ -748,7 +748,7 @@ class Player(BasePlayer):
     circadian = models.StringField(
         label= _(dict(
             en="",
-            fr=""
+            fr="", es=""
         ))
     )
 
@@ -761,7 +761,7 @@ class Player(BasePlayer):
                "unemployment benefits, or any other regular income.",
             fr="En pensant à votre foyer, quel est selon vous son revenu net mensuel total moyen (après impôts et "
                "déductions) ? Veuillez inclure les salaires, retraites, allocations familiales, indemnités de chômage "
-               "ou tout autre revenu régulier."
+               "ou tout autre revenu régulier.", es="Pensando en su hogar, ¿cuál estima que es su ingreso mensual neto total promedio (después de impuestos y deducciones)? Incluya sueldos, pensiones, apoyos familiares o sociales, seguro de desempleo o cualquier otro ingreso regular."
         )),
         choices=get_scale_income()
     )
@@ -770,7 +770,7 @@ class Player(BasePlayer):
     education = models.IntegerField(
         label = _(dict(
           en="What is the highest education level that you have achieved?",
-          fr="Quel est le niveau d'études le plus élevé que vous ayez atteint ?"
+          fr="Quel est le niveau d'études le plus élevé que vous ayez atteint ?", es="¿Cuál es el nivel de estudios más alto que ha completado?"
         )),
         choices=get_scale_education()
     )
@@ -847,7 +847,7 @@ class NarrativeElicitation_question(MyPage):
         if word_count < 50:
             return _(dict(
                 en=f"Please write at least 50 words (you wrote {word_count}).",
-                fr=f"Veuillez écrire au moins 50 mots (vous en avez écrit {word_count})."
+                fr=f"Veuillez écrire au moins 50 mots (vous en avez écrit {word_count}).", es=f"Escriba al menos 50 palabras (usted escribió {word_count})."
             ))
 #        if len(values['narrative_elicitation']) < 50:
 #            return "Please write at least 50 characters."
@@ -902,7 +902,7 @@ class Policy(MyPage):
         if word_count < 25:
             return _(dict(
                 en=f"Please write at least 25 words (you wrote {word_count}).",
-                fr=f"Veuillez écrire au moins 25 mots (vous en avez écrit {word_count})."
+                fr=f"Veuillez écrire au moins 25 mots (vous en avez écrit {word_count}).", es=f"Escriba al menos 25 palabras (usted escribió {word_count})."
             ))
 
 class Policy_question_certain(MyPage):

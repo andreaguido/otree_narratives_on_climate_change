@@ -42,7 +42,7 @@
     <p>
         For example, if you select "Option A" to the first row, and that row is randomly selected, we will give
         your opinion to future participants. If you select "Option B" instead, and that row is selected, you will
-        receive €0.01.
+        receive MX$0.15.
     </p>
     <p>Payments will be done at the end of the survey.</p>
     <p>Indicate below the option you prefer for each decision.</p>
@@ -78,6 +78,34 @@
     </p>
     <p>Les paiements seront effectués à la fin de l'étude.</p>
     <p>Indiquez ci-dessous l'option que vous préférez pour chaque décision.</p>
+    {{ elif es }}
+    <p>
+        Gracias por dar su opinión sobre los hechos que explican el cambio climático.
+    </p>
+    <p>
+        Ahora le damos la oportunidad de <b>compartir</b> su opinión sobre el cambio climático con <b>futuros participantes de este estudio</b>.
+    </p>
+    <p>
+        Para determinar si su opinión se transmitirá a futuros participantes, tomará algunas decisiones en una tarea remunerada.
+    </p>
+    <p>
+        En esta tarea, debe elegir una de las dos opciones siguientes en cada una de las decisiones de abajo.
+    </p>
+    <ul>
+        <li>Opción A: Transmitir mi opinión a futuros participantes</li>
+        <li>Opción B: Recibir una cantidad de dinero determinada</li>
+    </ul>
+    <p>
+        Para uno de cada diez participantes, seleccionaremos al azar una de las decisiones (una fila de la tabla de abajo) y la aplicaremos.
+    </p>
+    <p>
+        Por ejemplo, si elige la "Opción A" en la primera fila y esa fila es seleccionada al azar, transmitiremos su
+        opinión a futuros participantes. Si, en cambio, elige la "Opción B" y esa fila es seleccionada, recibirá
+        $0.15 MXN.
+    </p>
+    <p>Los pagos se realizarán al final de la encuesta.</p>
+    <p>Indique abajo la opción que prefiere en cada decisión.</p>
+
     {{ endif }}
 
 <style>
@@ -100,58 +128,58 @@
 
 <table class="mpl-table">
     <tr>
-        <td class="header">Option A</td>
+        <td class="header">{{ if es }}Opción A{{ else }}Option A{{ endif }}</td>
         <td></td>
-        <td class="header">Option B</td>
+        <td class="header">{{ if es }}Opción B{{ else }}Option B{{ endif }}</td>
     </tr>
 
-    <!-- 0.01 -->
+    <!-- MX$0.15 (PPP-equiv. of €0.01, World Bank 2024 GDP PPP factors) -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif es }}Compartir mi opinión{{ endif }}</td>
         <td>{{ form.choice_1 }}</td>
-        <td>{{ if en }}€0.01 for me{{ elif fr }}0,01 € pour moi{{ endif }}</td>
+        <td>{{ if en }}MX$0.15 for me{{ elif fr }}0,01 € pour moi{{ elif es }}$0.15 MXN para mí{{ endif }}</td>
     </tr>
 
-    <!-- 0.25 -->
+    <!-- MX$3.50 (PPP-equiv. of €0.25) -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif es }}Compartir mi opinión{{ endif }}</td>
         <td>{{ form.choice_2 }}</td>
-        <td>{{ if en }}€0.25 for me{{ elif fr }}0,25 € pour moi{{ endif }}</td>
+        <td>{{ if en }}MX$3.50 for me{{ elif fr }}0,25 € pour moi{{ elif es }}$3.50 MXN para mí{{ endif }}</td>
     </tr>
 
-    <!-- 0.50 -->
+    <!-- MX$7 (PPP-equiv. of €0.50) -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif es }}Compartir mi opinión{{ endif }}</td>
         <td>{{ form.choice_3 }}</td>
-        <td>{{ if en }}€0.50 for me{{ elif fr }}0,50 € pour moi{{ endif }}</td>
+        <td>{{ if en }}MX$7 for me{{ elif fr }}0,50 € pour moi{{ elif es }}$7 MXN para mí{{ endif }}</td>
     </tr>
 
-    <!-- 1 -->
+    <!-- MX$15 (PPP-equiv. of €1.00) -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif es }}Compartir mi opinión{{ endif }}</td>
         <td>{{ form.choice_4 }}</td>
-        <td>{{ if en }}€1.00 for me{{ elif fr }}1,00 € pour moi{{ endif }}</td>
+        <td>{{ if en }}MX$15 for me{{ elif fr }}1,00 € pour moi{{ elif es }}$15 MXN para mí{{ endif }}</td>
     </tr>
 
-    <!-- 1.50 -->
+    <!-- MX$22 (PPP-equiv. of €1.50) -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif es }}Compartir mi opinión{{ endif }}</td>
         <td>{{ form.choice_5 }}</td>
-        <td>{{ if en }}€1.50 for me{{ elif fr }}1,50 € pour moi{{ endif }}</td>
+        <td>{{ if en }}MX$22 for me{{ elif fr }}1,50 € pour moi{{ elif es }}$22 MXN para mí{{ endif }}</td>
     </tr>
 
-    <!-- 2.00 -->
+    <!-- MX$29 (PPP-equiv. of €2.00) -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif es }}Compartir mi opinión{{ endif }}</td>
         <td>{{ form.choice_6 }}</td>
-        <td>{{ if en }}€2.00 for me{{ elif fr }}2,00 € pour moi{{ endif }}</td>
+        <td>{{ if en }}MX$29 for me{{ elif fr }}2,00 € pour moi{{ elif es }}$29 MXN para mí{{ endif }}</td>
     </tr>
 
-    <!-- 2.50 -->
+    <!-- MX$36 (PPP-equiv. of €2.50) -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif es }}Compartir mi opinión{{ endif }}</td>
         <td>{{ form.choice_7 }}</td>
-        <td>{{ if en }}€2.50 for me{{ elif fr }}2,50 € pour moi{{ endif }}</td>
+        <td>{{ if en }}MX$36 for me{{ elif fr }}2,50 € pour moi{{ elif es }}$36 MXN para mí{{ endif }}</td>
     </tr>
 </table>
 

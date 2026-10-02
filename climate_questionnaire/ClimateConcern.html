@@ -22,17 +22,19 @@
         {{ elif fr }}
         Voici des comportements que les experts disent pouvoir aider à réduire les émissions de gaz à effet de serre.
         Dans quelle mesure seriez-vous prêt(e) à &hellip;
+        {{ elif es }}
+        Estos son algunos comportamientos que, según los expertos, ayudarían a reducir las emisiones de gases de efecto invernadero. ¿En qué medida estaría dispuesto(a) a &hellip;
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ elif es }} Nada {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ elif es }} Moderadamente {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ elif es }} Muchísimo {{ endif }}</th>
         </tr>
         </thead>
         <tbody>

@@ -18,6 +18,9 @@
            concernant la réponse que vous avez fournie dans la question précédente sur les mesures et solutions que
            votre gouvernement devrait envisager pour lutter contre le changement climatique ?
 
+        {{ elif es }}
+
+            En una escala de 0 (nada seguro) a 100 (muy seguro), ¿qué tan seguro(a) está de la respuesta que dio en la pregunta anterior sobre qué medidas y soluciones debería considerar su gobierno para combatir el cambio climático?
         {{ endif }}
         {{ formfield_errors 'confidence_policy' }}
         <br><br>
@@ -77,6 +80,7 @@
             slider1 = new mgslider("confidence_policy", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
             if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
+            if (js_vars.es) { slider1.yourvalue = "Su valor"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>
