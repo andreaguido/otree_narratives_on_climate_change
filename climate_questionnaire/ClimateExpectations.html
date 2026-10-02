@@ -28,16 +28,18 @@
                 Si rien n'est fait pour limiter le changement climatique, selon vous, quelle est la probabilité que le
         changement climatique entraîne les événements suivants ?
 
+        {{ elif de }}
+        Wenn nichts unternommen wird, um den Klimawandel zu begrenzen: Wie wahrscheinlich ist es Ihrer Meinung nach, dass der Klimawandel zu den folgenden Ereignissen führt?
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ elif de }} Sehr unwahrscheinlich {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ elif de }} Eher unwahrscheinlich {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ elif de }} Eher wahrscheinlich {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ elif de }} Sehr wahrscheinlich {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -62,6 +64,8 @@
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif de }}
+    Bitte stellen Sie sicher, dass jeder Rang nur einmal vergeben wird.
     {{ endif }}
 </p>
 {{ endblock }}

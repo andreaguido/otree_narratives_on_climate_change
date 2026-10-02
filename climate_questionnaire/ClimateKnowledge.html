@@ -38,6 +38,13 @@
         émet le moins). Les émissions de gaz à effet de serre d'un produit sont celles émises à toutes les étapes
         impliquées dans sa production et sa distribution.
     </p>
+    {{ elif de }}
+    <p>
+        Bei der nächsten Frage bitten wir Sie, die Elemente nach bestem Wissen nach ihren Treibhausgasemissionen zu ordnen
+        (wobei 1 das Element mit den höchsten und 3 das Element mit den niedrigsten Emissionen ist).
+        Die Treibhausgasemissionen eines Produkts umfassen alle Emissionen, die in sämtlichen Schritten seiner Herstellung und
+        seines Vertriebs entstehen.
+    </p>
     {{ endif }}
     {{ formfield "rank_coal" }} {{ formfield "rank_gas" }} {{ formfield "rank_nuclear" }}
     </div>
@@ -50,6 +57,8 @@
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif de }}
+    Bitte stellen Sie sicher, dass jeder Rang nur einmal vergeben wird.
     {{ endif }}
 </p>
 {{ endblock }}

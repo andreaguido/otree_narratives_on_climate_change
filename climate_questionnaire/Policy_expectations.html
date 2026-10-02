@@ -27,6 +27,10 @@
             Voici votre réponse à la question sur <i>ce que vous pensez que le gouvernement de votre pays devrait faire
             concernant le changement climatique</i> :
 
+        {{ elif de }}
+
+            Dies ist Ihre Antwort auf die Frage, <i>was die Regierung Ihres Landes Ihrer Meinung nach in Bezug auf den Klimawandel tun sollte</i>:
+
         {{ endif }}
         <div class="form-control mb-1">
             {{ player.policy_narrative }}
@@ -42,6 +46,8 @@
             {{ elif fr }}
             En vous basant sur votre réponse, dans quelle mesure êtes-vous d'accord ou pas d'accord avec l'énoncé
             suivant ?
+            {{ elif de }}
+            Inwieweit stimmen Sie, ausgehend von Ihrer Antwort, den folgenden Aussagen zu oder nicht zu?
             {{ endif }}
 
 

@@ -9,6 +9,8 @@
         Welcome to this survey
     {{ elif fr }}
         Bienvenue dans ce questionnaire
+    {{ elif de }}
+        Willkommen zu dieser Umfrage
     {{ endif }}
 </div>
 {{ endblock }}
@@ -96,6 +98,40 @@
                         If you do not wish to participate, you can click on the
                         <i>{{ if subsession.prolific }} Request return {{ else }} Skip {{ endif }}</i> button below.
                     </p>
+                    {{ elif de }}
+                    <h3>Teilnehmerinformation</h3>
+                    <br>
+                    <p>
+                        <b>Worum geht es in der Studie?</b>
+                        Diese Studie besteht aus einer einfachen Aufgabe und kurzen Fragebögen.
+
+                        Ihre Antworten bleiben vollständig anonym.
+
+                        Es gibt keine richtigen oder falschen Antworten; uns interessiert lediglich Ihre ehrliche Meinung, wie auch immer sie aussieht.
+                        <br><br>
+
+                        <b>Wer führt die Studie durch?</b>
+                        Die Studie wird von einem Forschungsteam verschiedener Universitäten in Frankreich (Paris School of Business, Université de Montpellier) durchgeführt. Bei Fragen wenden Sie sich bitte an a.guido@psbedu.paris. <br><br>
+
+                        <b>Wie lange dauert die Studie?</b>
+                        Der Fragebogen dauert etwa 5 bis 10 Minuten, und Sie können jederzeit abbrechen. <br><br>
+
+                        <b>Was habe ich davon?</b>
+                        Teilnehmende, die die Studie abschließen, erhalten die ausgeschriebene Vergütung auf ihr Prolific-Konto. Diese Studie kann Bonuszahlungen beinhalten.<br><br>
+
+                        <b>Was passiert mit meinen Daten?</b>
+                        Alle Aspekte der Studie, einschließlich der Ergebnisse, sind anonym, und nur die Forschenden haben Zugang zu allen Antworten.
+                    </p>
+                    <p>
+                        Um fortzufahren, klicken Sie bitte auf „Fragebogen starten“.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <p class="text-muted-small">
+                        Wenn Sie nicht teilnehmen möchten, können Sie unten auf die Schaltfläche
+                        <i>{{ if subsession.prolific }} Rückgabe anfordern {{ else }} Überspringen {{ endif }}</i> klicken.
+                    </p>
                     {{ endif }}
                 </div>
             </div>
@@ -106,22 +142,22 @@
             {{ if subsession.prolific }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Request return {{ elif fr }} Sortir {{ endif }}
+                    {{ if en }} Request return {{ elif fr }} Sortir {{ elif de }} Rückgabe anfordern {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ endif }}
+                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ elif de }} Fragebogen starten {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
 
             {{ else }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ endif }}
+                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ elif de }} Nicht teilnehmen {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Participate {{ elif fr }} Participer {{ endif }}
+                    {{ if en }} Participate {{ elif fr }} Participer {{ elif de }} Teilnehmen {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
             {{ endif }}

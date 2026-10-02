@@ -22,17 +22,19 @@
         {{ elif fr }}
         Voici des comportements que les experts disent pouvoir aider à réduire les émissions de gaz à effet de serre.
         Dans quelle mesure seriez-vous prêt(e) à &hellip;
+        {{ elif de }}
+        Im Folgenden finden Sie Verhaltensweisen, die laut Fachleuten helfen würden, Treibhausgasemissionen zu senken. Inwieweit wären Sie bereit, &hellip;
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ elif de }} Überhaupt nicht {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ elif de }} Mäßig {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ elif de }} Sehr stark {{ endif }}</th>
         </tr>
         </thead>
         <tbody>

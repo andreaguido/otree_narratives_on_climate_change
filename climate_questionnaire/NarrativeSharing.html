@@ -78,6 +78,34 @@
     </p>
     <p>Les paiements seront effectués à la fin de l'étude.</p>
     <p>Indiquez ci-dessous l'option que vous préférez pour chaque décision.</p>
+    {{ elif de }}
+    <p>
+        Vielen Dank, dass Sie Ihre Meinung zu den Fakten, die den Klimawandel erklären, mitgeteilt haben.
+    </p>
+    <p>
+        Nun geben wir Ihnen die Möglichkeit, Ihre Meinung zum Klimawandel mit <b>zukünftigen Teilnehmenden dieser Studie</b> zu <b>teilen</b>.
+    </p>
+    <p>
+        Ob Ihre Meinung an zukünftige Teilnehmende weitergegeben wird, hängt von einigen Entscheidungen ab, die Sie in einer vergüteten Aufgabe treffen.
+    </p>
+    <p>
+        In dieser Aufgabe wählen Sie bei jeder der folgenden Entscheidungen eine der beiden folgenden Optionen.
+    </p>
+    <ul>
+        <li>Option A: Meine Meinung an zukünftige Teilnehmende weitergeben</li>
+        <li>Option B: Einen bestimmten Geldbetrag erhalten</li>
+    </ul>
+    <p>
+        Für jeden zehnten Teilnehmenden wählen wir zufällig eine der Entscheidungen (eine Zeile der folgenden Tabelle) aus und setzen sie um.
+    </p>
+    <p>
+        Wenn Sie zum Beispiel in der ersten Zeile „Option A“ wählen und diese Zeile zufällig ausgewählt wird, geben wir
+        Ihre Meinung an zukünftige Teilnehmende weiter. Wenn Sie stattdessen „Option B“ wählen und diese Zeile ausgewählt
+        wird, erhalten Sie 0,01 €.
+    </p>
+    <p>Die Auszahlungen erfolgen am Ende der Umfrage.</p>
+    <p>Geben Sie unten für jede Entscheidung die von Ihnen bevorzugte Option an.</p>
+
     {{ endif }}
 
 <style>
@@ -107,51 +135,51 @@
 
     <!-- 0.01 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif de }}Meine Meinung teilen{{ endif }}</td>
         <td>{{ form.choice_1 }}</td>
-        <td>{{ if en }}€0.01 for me{{ elif fr }}0,01 € pour moi{{ endif }}</td>
+        <td>{{ if en }}€0.01 for me{{ elif fr }}0,01 € pour moi{{ elif de }}0,01 € für mich{{ endif }}</td>
     </tr>
 
     <!-- 0.25 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif de }}Meine Meinung teilen{{ endif }}</td>
         <td>{{ form.choice_2 }}</td>
-        <td>{{ if en }}€0.25 for me{{ elif fr }}0,25 € pour moi{{ endif }}</td>
+        <td>{{ if en }}€0.25 for me{{ elif fr }}0,25 € pour moi{{ elif de }}0,25 € für mich{{ endif }}</td>
     </tr>
 
     <!-- 0.50 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif de }}Meine Meinung teilen{{ endif }}</td>
         <td>{{ form.choice_3 }}</td>
-        <td>{{ if en }}€0.50 for me{{ elif fr }}0,50 € pour moi{{ endif }}</td>
+        <td>{{ if en }}€0.50 for me{{ elif fr }}0,50 € pour moi{{ elif de }}0,50 € für mich{{ endif }}</td>
     </tr>
 
     <!-- 1 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif de }}Meine Meinung teilen{{ endif }}</td>
         <td>{{ form.choice_4 }}</td>
-        <td>{{ if en }}€1.00 for me{{ elif fr }}1,00 € pour moi{{ endif }}</td>
+        <td>{{ if en }}€1.00 for me{{ elif fr }}1,00 € pour moi{{ elif de }}1,00 € für mich{{ endif }}</td>
     </tr>
 
     <!-- 1.50 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif de }}Meine Meinung teilen{{ endif }}</td>
         <td>{{ form.choice_5 }}</td>
-        <td>{{ if en }}€1.50 for me{{ elif fr }}1,50 € pour moi{{ endif }}</td>
+        <td>{{ if en }}€1.50 for me{{ elif fr }}1,50 € pour moi{{ elif de }}1,50 € für mich{{ endif }}</td>
     </tr>
 
     <!-- 2.00 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif de }}Meine Meinung teilen{{ endif }}</td>
         <td>{{ form.choice_6 }}</td>
-        <td>{{ if en }}€2.00 for me{{ elif fr }}2,00 € pour moi{{ endif }}</td>
+        <td>{{ if en }}€2.00 for me{{ elif fr }}2,00 € pour moi{{ elif de }}2,00 € für mich{{ endif }}</td>
     </tr>
 
     <!-- 2.50 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif de }}Meine Meinung teilen{{ endif }}</td>
         <td>{{ form.choice_7 }}</td>
-        <td>{{ if en }}€2.50 for me{{ elif fr }}2,50 € pour moi{{ endif }}</td>
+        <td>{{ if en }}€2.50 for me{{ elif fr }}2,50 € pour moi{{ elif de }}2,50 € für mich{{ endif }}</td>
     </tr>
 </table>
 

@@ -18,6 +18,9 @@
            concernant la réponse que vous avez fournie dans la question précédente sur les mesures et solutions que
            votre gouvernement devrait envisager pour lutter contre le changement climatique ?
 
+        {{ elif de }}
+
+            Wie sicher sind Sie sich auf einer Skala von 0 (sehr unsicher) bis 100 (sehr sicher) bei Ihrer Antwort auf die vorherige Frage, welche Maßnahmen und Lösungen Ihre Regierung zur Bekämpfung des Klimawandels in Betracht ziehen sollte?
         {{ endif }}
         {{ formfield_errors 'confidence_policy' }}
         <br><br>
@@ -77,6 +80,7 @@
             slider1 = new mgslider("confidence_policy", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
             if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
+            if (js_vars.de) { slider1.yourvalue = "Ihr Wert"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>
