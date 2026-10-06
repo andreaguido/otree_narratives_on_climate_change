@@ -245,7 +245,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>My household will win or lose financially from the solution I mentioned</b>",
-                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>", pt="<b>Meu domicílio ganhará ou perderá financeiramente com a solução que mencionei</b>"
+                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>", pt="<b>O meu domicílio ganhará ou perderá financeiramente com a solução que mencionei</b>"
             )
         ),
         choices=[
