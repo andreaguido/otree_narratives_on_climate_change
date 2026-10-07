@@ -15,16 +15,19 @@ SESSION_CONFIG_DEFAULTS = dict(
 )
 DEBUG = False
 
-LANGUAGE_CODE = 'fr'
-REAL_WORLD_CURRENCY_CODE = 'USD'
-REAL_WORLD_CURRENCY_NAME = 'Euro'
+# oTree and wtforms have no Romanian locale: oTree runs in English,
+# the questionnaire text is selected by SURVEY_LANGUAGE.
+LANGUAGE_CODE = 'en'
+SURVEY_LANGUAGE = 'ro'
+REAL_WORLD_CURRENCY_CODE = 'MDL'
+REAL_WORLD_CURRENCY_NAME = 'Moldovan Leu'
 SESSION_CONFIGS = [
     dict(
         name = 'only_climate_change',
         app_sequence=['climate_questionnaire'],
         num_demo_participants=1,
         #prolific_link = "",
-        prolific = True,
+        prolific = False,
         url_validate = "",
         url_return = ""
 
@@ -33,11 +36,7 @@ SESSION_CONFIGS = [
 
 ROOMS = [
     dict(
-            name='prolific_1',
-            display_name='Prolific 1 - Young'
-        ),
-    dict(
-            name='prolific_2',
-            display_name='Prolific 2 - Adult'
+            name='moldova_lab',
+            display_name='Moldova - Lab'
         )
 ]

@@ -18,6 +18,9 @@
            concernant la réponse que vous avez fournie dans la question précédente sur les mesures et solutions que
            votre gouvernement devrait envisager pour lutter contre le changement climatique ?
 
+        {{ elif ro }}
+
+            Pe o scară de la 0 (deloc sigur) la 100 (foarte sigur), cât de sigur(ă) sunteți de răspunsul dat la întrebarea anterioară, privind măsurile și soluțiile pe care guvernul dumneavoastră ar trebui să le ia în considerare pentru a combate schimbările climatice?
         {{ endif }}
         {{ formfield_errors 'confidence_policy' }}
         <br><br>
@@ -27,7 +30,7 @@
     </div>
 </div>
 
-{{ next_button }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 
@@ -77,6 +80,7 @@
             slider1 = new mgslider("confidence_policy", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
             if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
+            if (js_vars.ro) { slider1.yourvalue = "Valoarea dumneavoastră"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

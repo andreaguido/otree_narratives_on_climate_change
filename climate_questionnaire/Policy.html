@@ -40,6 +40,10 @@
 
                         En particulier, vous avez écrit :
 
+                {{ elif ro }}
+                        La prima întrebare v-ați explicat opinia despre cauzele schimbărilor climatice. <br><br>
+
+                        Mai exact, ați scris:
                 {{ endif }}
                     </p>
 
@@ -67,6 +71,11 @@
 
 
 
+                {{ elif ro }}
+        Pornind de la explicația dumneavoastră, ce <b>măsuri</b> și <b>soluții</b> credeți că ar trebui să ia în considerare guvernul țării dumneavoastră pentru a combate schimbările climatice? <br><br>
+
+                        Dacă considerați că nu ar trebui întreprins nimic împotriva schimbărilor climatice, vă rugăm să explicați de ce. [min. 25 de cuvinte]
+
                 {{ endif }}
 
 
@@ -77,7 +86,7 @@
 
 
 
-{{ next_button }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

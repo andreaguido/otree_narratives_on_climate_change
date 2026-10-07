@@ -9,6 +9,8 @@
         Welcome to this survey
     {{ elif fr }}
         Bienvenue dans ce questionnaire
+    {{ elif ro }}
+        Bun venit la acest chestionar
     {{ endif }}
 </div>
 {{ endblock }}
@@ -96,6 +98,40 @@
                         If you do not wish to participate, you can click on the
                         <i>{{ if subsession.prolific }} Request return {{ else }} Skip {{ endif }}</i> button below.
                     </p>
+                    {{ elif ro }}
+                    <h3>Informații pentru participanți</h3>
+                    <br>
+                    <p>
+                        <b>Despre ce este acest studiu?</b>
+                        Acest studiu constă într-o sarcină simplă și câteva chestionare scurte.
+
+                        Răspunsurile dumneavoastră vor rămâne complet anonime.
+
+                        Nu există răspunsuri corecte sau greșite; ne interesează doar opinia dumneavoastră sinceră, oricare ar fi ea.
+                        <br><br>
+
+                        <b>Cine realizează studiul?</b>
+                        Studiul este realizat de o echipă de cercetători de la mai multe universități din Franța (Paris School of Business, Université de Montpellier). Pentru orice întrebare, vă rugăm să scrieți la a.guido@psbedu.paris. <br><br>
+
+                        <b>Cât durează studiul?</b>
+                        Chestionarul durează aproximativ 5–10 minute și vă puteți retrage în orice moment. <br><br>
+
+                        <b>Ce primesc în schimb?</b>
+                        Participanții care finalizează studiul vor primi remunerația anunțată. Acest studiu poate include plăți suplimentare (bonusuri).<br><br>
+
+                        <b>Ce se întâmplă cu datele mele?</b>
+                        Toate aspectele studiului, inclusiv rezultatele, sunt anonime și doar cercetătorii au acces la toate răspunsurile.
+                    </p>
+                    <p>
+                        Pentru a continua, vă rugăm să faceți clic pe „{{ if subsession.prolific }}Începeți chestionarul{{ else }}Particip{{ endif }}”.
+                    </p>
+
+                    <hr class="my-4">
+
+                    <p class="text-muted-small">
+                        Dacă nu doriți să participați, puteți face clic pe butonul
+                        <i>{{ if subsession.prolific }} Solicitați returnarea {{ else }} Nu particip {{ endif }}</i> de mai jos.
+                    </p>
                     {{ endif }}
                 </div>
             </div>
@@ -106,22 +142,22 @@
             {{ if subsession.prolific }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Request return {{ elif fr }} Sortir {{ endif }}
+                    {{ if en }} Request return {{ elif fr }} Sortir {{ elif ro }} Solicitați returnarea {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ endif }}
+                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ elif ro }} Începeți chestionarul {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
 
             {{ else }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ endif }}
+                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ elif ro }} Nu particip {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Participate {{ elif fr }} Participer {{ endif }}
+                    {{ if en }} Participate {{ elif fr }} Participer {{ elif ro }} Particip {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
             {{ endif }}

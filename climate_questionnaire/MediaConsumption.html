@@ -21,6 +21,8 @@
         Au cours des 3 derniers mois, à quelle fréquence avez-vous utilisé les médias suivants pour vous informer ?
         Veuillez répondre sur une échelle de 1 à 7, où <b>1</b> correspond à un type de média que vous avez utilisé <b>rarement</b>,
         et <b>7</b> à un type de média que vous avez utilisé <b>fréquemment</b>.
+        {{ elif ro }}
+        În ultimele 3 luni, ați urmărit știri din următoarele surse? Vă rugăm să răspundeți pe o scară de la 1 la 7, unde <b>1</b> corespunde unui tip de media pe care l-ați folosit <b>rar</b>, iar <b>7</b> unui tip de media pe care l-ați folosit <b>frecvent</b>.
         {{ endif }}
     </p>
     <table class="table table-sm">
@@ -64,6 +66,9 @@
         Au cours des 3 derniers mois, avez-vous consommé des actualités <b>sur le changement climatique</b> à partir des sources suivantes ?
         Veuillez répondre sur une échelle de 1 à 7, où <b>1</b> correspond à un type de média que vous avez utilisé <b>rarement</b>,
         et <b>7</b> à un type de média que vous avez utilisé <b>fréquemment</b>.
+        {{ elif ro }}
+        În ultimele 3 luni, ați urmărit știri <b>despre schimbările climatice</b> din următoarele surse? Vă rugăm să răspundeți pe o scară de la 1 la 7, unde <b>1</b> corespunde unui tip de media pe care l-ați folosit <b>rar</b>, iar <b>7</b> unui tip de media pe care l-ați folosit <b>frecvent</b>.
+
         {{ endif }}
     </p>
     <table class="table table-sm">
@@ -92,7 +97,7 @@
     </table>
 </div>
 
-{{ next_button }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

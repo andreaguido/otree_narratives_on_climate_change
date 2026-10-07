@@ -22,17 +22,19 @@
         {{ elif fr }}
         Voici des comportements que les experts disent pouvoir aider à réduire les émissions de gaz à effet de serre.
         Dans quelle mesure seriez-vous prêt(e) à &hellip;
+        {{ elif ro }}
+        Mai jos sunt prezentate comportamente care, potrivit experților, ar contribui la reducerea emisiilor de gaze cu efect de seră. În ce măsură ați fi dispus(ă) să &hellip;
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ elif ro }} Deloc {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ elif ro }} Moderat {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ elif ro }} Foarte mult {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -50,7 +52,7 @@
     </table>
 </div>
 
-{{ next_button }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

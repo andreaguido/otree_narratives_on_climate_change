@@ -9,6 +9,8 @@
     Fin du questionnaire
     {{ elif en }}
     End of questionnaire
+    {{ elif ro }}
+    Sfârșitul chestionarului
     {{ endif }}
 </div>
 {{ endblock }}
@@ -27,7 +29,7 @@
                 </div>
 
                 <h4 class="mb-3">
-                    {{ if fr }}Participation annulée{{ else }}Participation cancelled{{ endif }}
+                    {{ if fr }}Participation annulée{{ elif ro }}Participare anulată{{ else }}Participation cancelled{{ endif }}
                 </h4>
 
                 <p class="text-muted">
@@ -35,6 +37,8 @@
                     Vous avez choisi de ne pas participer au questionnaire.
                     {{ elif en }}
                     You have chosen not to participate in the questionnaire.
+                    {{ elif ro }}
+                    Ați ales să nu participați la chestionar.
                     {{ endif }}
                 </p>
 
@@ -42,13 +46,13 @@
                 <div class="mt-5 d-grid gap-2 col-md-8 mx-auto">
                     <button type="button" class="btn btn-outline-danger" onclick="location.href='{{ url_return }}'">
                         <i class="bi bi-x-circle me-2"></i>
-                        {{ if fr }}Retourner la soumission (Prolific){{ else }}Return submission (Prolific){{ endif }}
+                        {{ if fr }}Retourner la soumission (Prolific){{ elif ro }}Returnați participarea (Prolific){{ else }}Return submission (Prolific){{ endif }}
                     </button>
                 </div>
                 {{ else }}
                 <p class="text-muted mt-4">
                     <em>
-                        {{ if fr }}Vous pouvez maintenant fermer cet onglet.{{ else }}You may now close this tab.{{
+                        {{ if fr }}Vous pouvez maintenant fermer cet onglet.{{ elif ro }}Acum puteți închide această filă.{{ else }}You may now close this tab.{{
                         endif }}
                     </em>
                 </p>
@@ -60,7 +64,7 @@
                 </div>
 
                 <h4 class="mb-3">
-                    {{ if fr }}Merci !{{ else }}Thank you!{{ endif }}
+                    {{ if fr }}Merci !{{ elif ro }}Vă mulțumim!{{ else }}Thank you!{{ endif }}
                 </h4>
 
                 <p class="lead">
@@ -68,6 +72,8 @@
                     Merci d'avoir participé à ce questionnaire !
                     {{ elif en }}
                     Thank you for participating in this questionnaire!
+                    {{ elif ro }}
+                    Vă mulțumim că ați participat la acest chestionar!
                     {{ endif }}
                 </p>
 
@@ -76,6 +82,8 @@
                     Vos réponses ont bien été enregistrées.
                     {{ elif en }}
                     Your answers have been successfully recorded.
+                    {{ elif ro }}
+                    Răspunsurile dumneavoastră au fost înregistrate cu succes.
                     {{ endif }}
                 </p>
 
@@ -83,12 +91,12 @@
                 <div class="mt-5 d-grid gap-2 col-md-8 mx-auto">
                     <button type="button" class="btn btn-primary btn-lg" onclick="location.href='{{ url_validate }}'">
                         <i class="bi bi-check-lg me-2"></i>
-                        {{ if fr }}Valider sur Prolific{{ else }}Complete on Prolific{{ endif }}
+                        {{ if fr }}Valider sur Prolific{{ elif ro }}Finalizați pe Prolific{{ else }}Complete on Prolific{{ endif }}
                     </button>
                 </div>
                 {{ else }}
                 <div class="mt-5 d-grid gap-2 col-md-6 mx-auto">
-                    {{ next_button }}
+                    {{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
                 </div>
                 {{ endif }}
 

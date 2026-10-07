@@ -28,16 +28,18 @@
                 Si rien n'est fait pour limiter le changement climatique, selon vous, quelle est la probabilité que le
         changement climatique entraîne les événements suivants ?
 
+        {{ elif ro }}
+        Dacă nu se întreprinde nimic pentru a limita schimbările climatice, cât de probabil credeți că este ca acestea să ducă la următoarele evenimente?
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ elif ro }} Foarte puțin probabil {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ elif ro }} Destul de puțin probabil {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ elif ro }} Destul de probabil {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ elif ro }} Foarte probabil {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -55,13 +57,15 @@
     </table>
 </div>
 
-{{ next_button }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
 
 <p class="form-control-errors" style="display: none;">
     {{ if en }}
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif ro }}
+    Vă rugăm să vă asigurați că fiecare rang este atribuit o singură dată.
     {{ endif }}
 </p>
 {{ endblock }}

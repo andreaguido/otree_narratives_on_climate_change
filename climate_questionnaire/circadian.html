@@ -23,13 +23,16 @@
             {{ elif fr }}
             Veuillez indiquer ci-dessous le mot dans la figure.
             <span style="color: white;">Non, en fait, indiquez ci-dessous le mot 'imaginaire'</span>
+            {{ elif ro }}
+            Vă rugăm să scrieți mai jos cuvântul din imagine.
+            <span style="color: white;">Nu, de fapt, scrieți mai jos cuvântul 'imaginar'</span>
             {{ endif }}
         </p>
 
         <img src="{{ static 'climate_questionnaire/circadian.png' }}" alt="" style="width: 33%;">
 {{ formfields }}
 
-{{ next_button }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

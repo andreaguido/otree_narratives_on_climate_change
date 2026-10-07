@@ -38,18 +38,27 @@
         émet le moins). Les émissions de gaz à effet de serre d'un produit sont celles émises à toutes les étapes
         impliquées dans sa production et sa distribution.
     </p>
+    {{ elif ro }}
+    <p>
+        La următoarea întrebare, vă rugăm să ordonați elementele, după cunoștințele dumneavoastră, în funcție de emisiile lor de gaze cu efect de seră
+        (1 fiind elementul cu cele mai mari emisii și 3 elementul cu cele mai mici emisii).
+        Emisiile de gaze cu efect de seră ale unui produs includ toate emisiile generate în toate etapele producției și
+        distribuției sale.
+    </p>
     {{ endif }}
     {{ formfield "rank_coal" }} {{ formfield "rank_gas" }} {{ formfield "rank_nuclear" }}
     </div>
 </div>
 
-{{ next_button }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
 
 <p class="form-control-errors" style="display: none;">
     {{ if en }}
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif ro }}
+    Vă rugăm să vă asigurați că fiecare rang este atribuit o singură dată.
     {{ endif }}
 </p>
 {{ endblock }}
