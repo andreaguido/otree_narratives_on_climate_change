@@ -1,100 +1,100 @@
 import random
 
 from otree.api import *
-from settings import LANGUAGE_CODE
+from settings import SURVEY_LANGUAGE as LANGUAGE_CODE
 
 doc = """
 Narratives on Climate Change
 """
 
-language = {"en": False, "fr": False, LANGUAGE_CODE: True}
+language = {"en": False, "fr": False, "vi": False, LANGUAGE_CODE: True}
 _ = lambda x: x[LANGUAGE_CODE]
 
 
 def get_scale_action():
     return [
-        [-2, _(dict(en="Not at all", fr="Pas du tout"))],
-        [-1, _(dict(en="-1", fr="-1"))],
-        [0, _(dict(en="Moderately", fr="Modérément"))],
-        [1, _(dict(en="1", fr="1"))],
-        [2, _(dict(en="A great deal", fr="Énormément"))]
+        [-2, _(dict(en="Not at all", fr="Pas du tout", vi="Không hề"))],
+        [-1, _(dict(en="-1", fr="-1", vi="-1"))],
+        [0, _(dict(en="Moderately", fr="Modérément", vi="Ở mức vừa phải"))],
+        [1, _(dict(en="1", fr="1", vi="1"))],
+        [2, _(dict(en="A great deal", fr="Énormément", vi="Rất nhiều"))]
     ]
 
 
 def get_scale_policy():
     return [
-        [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)"))],
-        [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)"))],
-        [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)"))],
-        [1, _(dict(en="Somewhat support", fr="Plutôt favorable"))],
-        [2, _(dict(en="Strongly support", fr="Fortement favorable"))]
+        [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)", vi="Hoàn toàn phản đối"))],
+        [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)", vi="Hơi phản đối"))],
+        [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)", vi="Không phản đối cũng không ủng hộ"))],
+        [1, _(dict(en="Somewhat support", fr="Plutôt favorable", vi="Hơi ủng hộ"))],
+        [2, _(dict(en="Strongly support", fr="Fortement favorable", vi="Hoàn toàn ủng hộ"))]
     ]
 
 def get_scale_certainty():
     return [
-        [-2, _(dict(en="Very uncertain", fr="Très incertain"))],
-        [-1, _(dict(en="Uncertain", fr="Incertain"))],
-        [1, _(dict(en="Certain", fr="Certain"))],
-        [2, _(dict(en="Very certain", fr="Très certain"))],
+        [-2, _(dict(en="Very uncertain", fr="Très incertain", vi="Rất không chắc chắn"))],
+        [-1, _(dict(en="Uncertain", fr="Incertain", vi="Không chắc chắn"))],
+        [1, _(dict(en="Certain", fr="Certain", vi="Chắc chắn"))],
+        [2, _(dict(en="Very certain", fr="Très certain", vi="Rất chắc chắn"))],
     ]
 
 def get_scale_frequency_info():
     return [
-            [5, _(dict(en="Daily", fr="Quotidiennement"))],
-            [4, _(dict(en="Twice per week", fr="Deux fois par semaine"))],
-            [3, _(dict(en="Once per week", fr="Une fois par semaine"))],
-            [2, _(dict(en="Twice per month", fr="Deux fois par mois"))],
-            [1, _(dict(en="Once per month", fr="Une fois par mois"))],
-            [0, _(dict(en="Never", fr="Jamais"))]
+            [5, _(dict(en="Daily", fr="Quotidiennement", vi="Hàng ngày"))],
+            [4, _(dict(en="Twice per week", fr="Deux fois par semaine", vi="Hai lần mỗi tuần"))],
+            [3, _(dict(en="Once per week", fr="Une fois par semaine", vi="Một lần mỗi tuần"))],
+            [2, _(dict(en="Twice per month", fr="Deux fois par mois", vi="Hai lần mỗi tháng"))],
+            [1, _(dict(en="Once per month", fr="Une fois par mois", vi="Một lần mỗi tháng"))],
+            [0, _(dict(en="Never", fr="Jamais", vi="Không bao giờ"))]
         ]
 
 def get_scale_expectations():
     return [
-        [-2, _(dict(en="Very unlikely", fr="Très improbable"))],
-        [-1, _(dict(en="Somewhat unlikely", fr="Plutôt improbable"))],
-        [1, _(dict(en="Somewhat likely", fr="Plutôt probable"))],
-        [2, _(dict(en="Very likely", fr="Très probable"))]
+        [-2, _(dict(en="Very unlikely", fr="Très improbable", vi="Rất khó xảy ra"))],
+        [-1, _(dict(en="Somewhat unlikely", fr="Plutôt improbable", vi="Hơi khó xảy ra"))],
+        [1, _(dict(en="Somewhat likely", fr="Plutôt probable", vi="Hơi có khả năng xảy ra"))],
+        [2, _(dict(en="Very likely", fr="Très probable", vi="Rất có khả năng xảy ra"))]
     ]
 
 def get_scale_agreement():
     return [
-        [-2, _(dict(en="Strongly disagree", fr="Fortement en désaccord"))],
-        [-1, _(dict(en="Somewhat disagree", fr="Plutôt en désaccord"))],
-        [0, _(dict(en="Neither agree nor disagree", fr="Ni d'accord ni en désaccord"))],
-        [1, _(dict(en="Somewhat agree", fr="Plutôt d'accord"))],
-        [2, _(dict(en="Strongly agree", fr="Fortement d'accord"))]
+        [-2, _(dict(en="Strongly disagree", fr="Fortement en désaccord", vi="Hoàn toàn không đồng ý"))],
+        [-1, _(dict(en="Somewhat disagree", fr="Plutôt en désaccord", vi="Hơi không đồng ý"))],
+        [0, _(dict(en="Neither agree nor disagree", fr="Ni d'accord ni en désaccord", vi="Không đồng ý cũng không phản đối"))],
+        [1, _(dict(en="Somewhat agree", fr="Plutôt d'accord", vi="Hơi đồng ý"))],
+        [2, _(dict(en="Strongly agree", fr="Fortement d'accord", vi="Hoàn toàn đồng ý"))]
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From $0 to $1,250", fr="De 0€ à 1 250€"))],
-        [1, _(dict(en="From $1,250 to $2,000", fr="De 1 250€ à 2 000€"))],
-        [2, _(dict(en="From $2,000 to $4,000", fr="De 2 000€ à 4 000€"))],
-        [3, _(dict(en="From $4,000 to $6,000", fr="De 4 000€ à 6 000€"))],
-        [4, _(dict(en="From $6,000 to $8,000", fr="De 6 000€ à 8 000€"))],
-        [5, _(dict(en="From $8,000 to $12,500", fr="De 8 000€ à 12 500€"))],
-        [6, _(dict(en="More than A$12,500", fr="Plus de 12 500€"))],
-        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
+        [0, _(dict(en="From 0 to 5,000,000 VND", fr="De 0€ à 1 250€", vi="Từ 0 đến 5.000.000 VND"))],
+        [1, _(dict(en="From 5,000,000 to 10,000,000 VND", fr="De 1 250€ à 2 000€", vi="Từ 5.000.000 đến 10.000.000 VND"))],
+        [2, _(dict(en="From 10,000,000 to 15,000,000 VND", fr="De 2 000€ à 4 000€", vi="Từ 10.000.000 đến 15.000.000 VND"))],
+        [3, _(dict(en="From 15,000,000 to 30,000,000 VND", fr="De 4 000€ à 6 000€", vi="Từ 15.000.000 đến 30.000.000 VND"))],
+        [4, _(dict(en="From 30,000,000 to 45,000,000 VND", fr="De 6 000€ à 8 000€", vi="Từ 30.000.000 đến 45.000.000 VND"))],
+        [5, _(dict(en="From 45,000,000 to 60,000,000 VND", fr="De 8 000€ à 12 500€", vi="Từ 45.000.000 đến 60.000.000 VND"))],
+        [6, _(dict(en="More than 60,000,000 VND", fr="Plus de 12 500€", vi="Hơn 60.000.000 VND"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre", vi="Tôi không muốn trả lời"))]
     ]
 def get_scale_education():
     return [
-        [0, _(dict(en="Primary or lower secondary education", fr="Primaire ou collège"))],
-        [1, _(dict(en="Upper secondary education", fr="Lycée (Baccalauréat)"))],
-        [2, _(dict(en="Non-university post-secondary education", fr="Formation post-secondaire non universitaire"))],
-        [3, _(dict(en="Undergraduate education (bachelor)", fr="Licence (Bachelor)"))],
-        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat"))],
-        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
+        [0, _(dict(en="Primary or lower secondary education", fr="Primaire ou collège", vi="Giáo dục tiểu học hoặc trung học cơ sở"))],
+        [1, _(dict(en="Upper secondary education", fr="Lycée (Baccalauréat)", vi="Giáo dục trung học phổ thông"))],
+        [2, _(dict(en="Non-university post-secondary education", fr="Formation post-secondaire non universitaire", vi="Giáo dục sau trung học không thuộc đại học"))],
+        [3, _(dict(en="Undergraduate education (bachelor)", fr="Licence (Bachelor)", vi="Giáo dục đại học (cử nhân)"))],
+        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat", vi="Giáo dục sau đại học (Thạc sĩ hoặc Tiến sĩ)"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre", vi="Tôi không muốn trả lời"))]
     ]
 def get_options_bdm():
     return [
-        ['A', 'Option A'],
-        ['B', 'Option B']
+        ['A', _(dict(en='Option A', fr='Option A', vi="Lựa chọn A"))],
+        ['B', _(dict(en='Option B', fr='Option B', vi="Lựa chọn B"))]
     ]
 class C(BaseConstants):
     NAME_IN_URL = 'clquest'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
-    ROW_INDICES = [0,     1,    2,  3] # rows of the MPL table
-    AMOUNTS =     [0.01, 0.25, 0.5, 1] # amounts of the MPL table
+    ROW_INDICES = [0, 1, 2, 3, 4, 5, 6] # rows of the MPL table (all 7 can be drawn, as in the lab sessions)
+    AMOUNTS = [50, 1500, 3000, 5000, 10500, 14000, 17000] # amounts of the MPL table, in VND, as in the Vietnam lab sessions (set by A. Guido 15 Dec 2025, PPP from USD [0.01, 0.25, 0.5, 1, 1.5, 2, 2.5])
 
 class Subsession(BaseSubsession):
     prolific = models.BooleanField()
@@ -133,13 +133,13 @@ class Player(BasePlayer):
     # Narrative elicitation -----------
     climate_exists = models.BooleanField(
         choices=[
-            [True, _(dict(en="Yes", fr="Oui"))],
-            [False, _(dict(en="No", fr="Non"))]
+            [True, _(dict(en="Yes", fr="Oui", vi="Có"))],
+            [False, _(dict(en="No", fr="Non", vi="Không"))]
         ],
         label=_(
             dict(
                 en="Do you think climate change is a real phenomenon?",
-                fr="Pensez-vous que le changement climatique soit un phénomène réel ?"
+                fr="Pensez-vous que le changement climatique soit un phénomène réel ?", vi="Bạn có nghĩ rằng biến đổi khí hậu là một hiện tượng có thật không?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -157,7 +157,7 @@ class Player(BasePlayer):
             "<b>expliquer</b> comment ces causes contribuent à ces faits et pourraient être liées entre elles. <br><br> "
             "Expliquez votre raisonnement avec des phrases complètes. "
             "Il n'y a pas de bonne ou de mauvaise réponse, répondez selon votre opinion sincère et personnelle. <br> "
-            "[min. 50 mots]")
+            "[min. 50 mots]"), vi="Theo bạn, nguyên nhân của các hiện tượng được miêu tả trong đoạn văn trước đó là gì? (chẳng hạn như các số liệu về mức tăng nhiệt độ trung bình toàn cầu và các hiện tượng thời tiết cực đoan)? <br><br>Vui lòng mô tả các <b>nguyên nhân</b> của những hiện tượng biến đổi khí hậu, và <b>giải thích</b> tại sao những nguyên nhân này góp phần tạo ra các hiện tượng đó, cũng như các nguyên nhân này có thể liên hệ với nhau như thế nào. <br><br> Hãy giải thích lập luận của bạn bằng các câu hoàn chỉnh. Không có câu trả lời đúng hay sai; hãy trả lời theo ý kiến cá nhân theo những gì bạn nghĩ của bạn. <br> [tối thiểu 50 từ]"
         ))
     )
     narrative_confidence = models.IntegerField(
@@ -165,7 +165,7 @@ class Player(BasePlayer):
             en=(
                 ""),
             fr=(""
-                "")
+                ""), vi=""
         ))
     )
 
@@ -191,14 +191,14 @@ class Player(BasePlayer):
     # Policy --------------------------
     policy_fight = models.IntegerField(
         choices=[
-            [1, _(dict(en="Yes", fr="Oui"))],
-            [0, _(dict(en="No", fr="Non"))],
-            [-1, _(dict(en="I don't know/I do not want to answer", fr="Je ne sais pas / souhaite pas répondre"))]
+            [1, _(dict(en="Yes", fr="Oui", vi="Có"))],
+            [0, _(dict(en="No", fr="Non", vi="Không"))],
+            [-1, _(dict(en="I don't know/I do not want to answer", fr="Je ne sais pas / souhaite pas répondre", vi="Tôi không biết/Tôi không muốn trả lời"))]
         ],
         label=_(
             dict(
                 en="In your opinion, do you think your country should fight climate change?",
-                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?"
+                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?", vi="Theo bạn, đất nước bạn có nên đấu tranh chống biến đổi khí hậu không?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -207,7 +207,7 @@ class Player(BasePlayer):
     policy_narrative = models.LongStringField(
         label=_(dict(
             en=(""),
-            fr=("")
+            fr=(""), vi=""
         ))
     )
 
@@ -216,7 +216,7 @@ class Player(BasePlayer):
         label=_(dict(
             en=(
                 ""),
-            fr=("")
+            fr=(""), vi=""
         )),
     )
 
@@ -225,7 +225,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would have a positive effect on my country’s economy and employment</b>",
-                fr="<b>La solution que j’ai mentionnée aurait un effet positif sur l’économie et l’emploi de mon pays</b>"
+                fr="<b>La solution que j’ai mentionnée aurait un effet positif sur l’économie et l’emploi de mon pays</b>", vi="Giải pháp mà tôi đã nêu sẽ có tác động tích cực đến kinh tế và tình hình việc làm ở nước tôi."
             )
         ),
         choices = get_scale_agreement(),
@@ -235,7 +235,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would help limit and/or mitigate the consequences of climate change</b>",
-                fr="<b>La solution que j’ai mentionnée aiderait à limiter et/ou atténuer les conséquences du changement climatique</b>"
+                fr="<b>La solution que j’ai mentionnée aiderait à limiter et/ou atténuer les conséquences du changement climatique</b>", vi="Giải pháp mà tôi đã nêu sẽ giúp hạn chế và/hoặc giảm nhẹ các hậu quả của biến đổi khí hậu."
             )
         ),
         choices=get_scale_agreement(),
@@ -245,15 +245,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>My household will win or lose financially from the solution I mentioned</b>",
-                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>"
+                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>", vi="Gia đình của tôi sẽ được lợi hoặc chịu thiệt về tài chính từ giải pháp mà tôi đã nêu."
             )
         ),
         choices=[
-            [-2, _(dict(en="Lose a lot", fr="Perdre beaucoup"))],
-            [-1, _(dict(en="Lose", fr="Perdre"))],
-            [0, _(dict(en="Neither win or lose", fr="Ni gagner ni perdre"))],
-            [1, _(dict(en="Win", fr="Gagner"))],
-            [2, _(dict(en="Win a lot", fr="Gagner beaucoup"))],
+            [-2, _(dict(en="Lose a lot", fr="Perdre beaucoup", vi="Mất rất nhiều"))],
+            [-1, _(dict(en="Lose", fr="Perdre", vi="Mất"))],
+            [0, _(dict(en="Neither win or lose", fr="Ni gagner ni perdre", vi="Không lãi cũng không lỗ"))],
+            [1, _(dict(en="Win", fr="Gagner", vi="Được lợi"))],
+            [2, _(dict(en="Win a lot", fr="Gagner beaucoup", vi="Được lợi rất nhiều"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -262,15 +262,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>Do you support or oppose the solution you provided?</b>",
-                fr="<b>Êtes-vous favorable ou opposé(e) à la solution que vous avez fournie ?</b>"
+                fr="<b>Êtes-vous favorable ou opposé(e) à la solution que vous avez fournie ?</b>", vi="Bạn ủng hộ hay phản đối giải pháp mà bạn đã đề xuất?"
             )
         ),
         choices=[
-            [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)"))],
-            [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)"))],
-            [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)"))],
-            [1, _(dict(en="Somewhat support", fr="Plutôt favorable"))],
-            [2, _(dict(en="Strongly support", fr="Fortement favorable"))],
+            [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)", vi="Hoàn toàn phản đối"))],
+            [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)", vi="Hơi phản đối"))],
+            [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)", vi="Không phản đối cũng không ủng hộ"))],
+            [1, _(dict(en="Somewhat support", fr="Plutôt favorable", vi="Hơi ủng hộ"))],
+            [2, _(dict(en="Strongly support", fr="Fortement favorable", vi="Hoàn toàn ủng hộ"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -280,22 +280,22 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="How knowledgeable do you consider yourself about climate change?",
-                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?",
+                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?", vi="Bạn đánh giá kiến thức về biến đổi khí hậu của mình như thế nào?",
             )
         ),
         choices=[
-            [0, _(dict(en="Not at all", fr="Pas du tout"))],
-            [1, _(dict(en="A little", fr="Un peu"))],
-            [2, _(dict(en="Moderately", fr="Modérément"))],
-            [3, _(dict(en="A lot", fr="Beaucoup"))],
-            [4, _(dict(en="A great deal", fr="Énormément"))]
+            [0, _(dict(en="Not at all", fr="Pas du tout", vi="Không hề"))],
+            [1, _(dict(en="A little", fr="Un peu", vi="Một chút"))],
+            [2, _(dict(en="Moderately", fr="Modérément", vi="Ở mức vừa phải"))],
+            [3, _(dict(en="A lot", fr="Beaucoup", vi="Nhiều"))],
+            [4, _(dict(en="A great deal", fr="Énormément", vi="Rất nhiều"))]
         ],
         widget=widgets.RadioSelectHorizontal,
     )
     rank_coal = models.IntegerField(
         label=_(dict(
             en="Rank of Coal-fired power station",
-            fr="Classement de la centrale à charbon"
+            fr="Classement de la centrale à charbon", vi="Xếp hạng của nhà máy điện than"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -303,7 +303,7 @@ class Player(BasePlayer):
     rank_gas = models.IntegerField(
         label=_(dict(
             en="Rank of Gas-fired power plant",
-            fr="Classement de la centrale à gaz"
+            fr="Classement de la centrale à gaz", vi="Xếp hạng của nhà máy điện khí"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -311,7 +311,7 @@ class Player(BasePlayer):
     rank_nuclear = models.IntegerField(
         label=_(dict(
             en="Rank of Nuclear power plant",
-            fr="Classement de la centrale nucléaire"
+            fr="Classement de la centrale nucléaire", vi="Xếp hạng của nhà máy điện hạt nhân"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -323,7 +323,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité.", vi="Trong 3 tháng vừa qua, bạn đã tiếp nhận thông tin và/hoặc tin tức với tần suất như thế nào? Ở đây, “thông tin và tin tức” bao gồm tin tức quốc gia, quốc tế, khu vực/địa phương, cũng như các tin tức, sự kiện khác."
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -333,7 +333,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news <b>about climate change</b>? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités <b>sur le changement climatique</b> ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités <b>sur le changement climatique</b> ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité.", vi="Trong 3 tháng vừa qua, bạn đã tiếp nhận thông tin và/hoặc tin tức <b>về biến đổi khí hậu</b> với tần suất như thế nào? Ở đây, “thông tin và tin tức” bao gồm tin tức quốc gia, quốc tế, khu vực/địa phương, cũng như các tin tức, sự kiện khác."
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -343,7 +343,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", vi="Truyền hình (ví dụ như tin thời sự quốc gia, tin trên đài truyền hình cáp)"
             )
         ),
         choices=range(1, 8),
@@ -353,7 +353,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Printed Newspapers",
-                fr="Journaux imprimés"
+                fr="Journaux imprimés", vi="Báo in"
             )
         ),
         choices=range(1, 8),
@@ -363,7 +363,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio ou podcasts"
+                fr="Radio ou podcasts", vi="Radio hoặc podcasts"
             )
         ),
         choices=range(1, 8),
@@ -373,7 +373,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Social media platforms",
-                fr="Plateformes de médias sociaux"
+                fr="Plateformes de médias sociaux", vi="Mạng xã hội"
             )
         ),
         choices=range(1, 8),
@@ -383,7 +383,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="News media websites or apps",
-                fr="Actualités en ligne"
+                fr="Actualités en ligne", vi="Tin tức trên các trang web truyền thông hoặc các ứng dụng điện thoại"
             )
         ),
         choices=range(1, 8),
@@ -393,7 +393,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Newsletters or email subscriptions",
-                fr="Newsletters ou abonnements par e-mail"
+                fr="Newsletters ou abonnements par e-mail", vi="Bảng tin được gởi qua thư hoặc qua tài khoản mail được đăng ký"
             )
         ),
         choices=range(1, 8),
@@ -403,7 +403,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", vi="Truyền hình (ví dụ như tin thời sự quốc gia, tin trên đài truyền hình cáp)"
             )
         ),
         choices=range(1, 8),
@@ -413,7 +413,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Printed Newspapers",
-                fr="Journaux imprimés"
+                fr="Journaux imprimés", vi="Báo in"
             )
         ),
         choices=range(1, 8),
@@ -423,7 +423,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio ou podcasts"
+                fr="Radio ou podcasts", vi="Radio hoặc podcasts"
             )
         ),
         choices=range(1, 8),
@@ -433,7 +433,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Social media platforms",
-                fr="Plateformes de médias sociaux"
+                fr="Plateformes de médias sociaux", vi="Mạng xã hội"
             )
         ),
         choices=range(1, 8),
@@ -443,7 +443,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="News media websites or apps",
-                fr="Actualités en ligne"
+                fr="Actualités en ligne", vi="Tin tức trên các trang web truyền thông hoặc các ứng dụng điện thoại"
             )
         ),
         choices=range(1, 8),
@@ -453,7 +453,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Newsletters or email subscriptions",
-                fr="Newsletters ou abonnements par e-mail"
+                fr="Newsletters ou abonnements par e-mail", vi="Bảng tin được gởi qua thư hoặc qua tài khoản mail được đăng ký"
             )
         ),
         choices=range(1, 8),
@@ -547,16 +547,16 @@ class Player(BasePlayer):
     # Concern -------------------------
     climate_threat = models.IntegerField(
         choices=[
-            [3, _(dict(en="Very serious threat", fr="Une menace très sérieuse"))],
-            [2, _(dict(en="Somewhat serious threat", fr="Une menace assez sérieuse"))],
-            [1, _(dict(en="Not a threat at all", fr="Pas une menace du tout"))],
-            [0, _(dict(en="Don’t know", fr="Ne sais pas"))]
+            [3, _(dict(en="Very serious threat", fr="Une menace très sérieuse", vi="Mối đe dọa rất nghiêm trọng"))],
+            [2, _(dict(en="Somewhat serious threat", fr="Une menace assez sérieuse", vi="Mối đe dọa tương đối nghiêm trọng"))],
+            [1, _(dict(en="Not a threat at all", fr="Pas une menace du tout", vi="Hoàn toàn không phải là mối đe dọa"))],
+            [0, _(dict(en="Don’t know", fr="Ne sais pas", vi="Không biết"))]
         ],
         label=_(
             dict(
                 en="Do you think climate change will be a threat to people in your country in the next 20 years?",
                 fr="Pensez-vous que le changement climatique sera une menace pour les gens de votre pays dans les "
-                   "20 prochaines années ?"
+                   "20 prochaines années ?", vi="Bạn có nghĩ rằng biến đổi khí hậu sẽ là một mối đe dọa đối với người dân ở Việt Nam trong 20 năm tới không?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -566,7 +566,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit flying",
-                fr="Limiter les vols"
+                fr="Limiter les vols", vi="Hạn chế đi máy bay"
             )
         ),
         choices=get_scale_action(),
@@ -576,7 +576,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit driving",
-                fr="Limiter la conduite"
+                fr="Limiter la conduite", vi="Hạn chế lái xe ô tô"
             )
         ),
         choices=get_scale_action(),
@@ -586,7 +586,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Have an electric vehicle",
-                fr="Posséder un véhicule électrique"
+                fr="Posséder un véhicule électrique", vi="Sở hữu một phương tiện chạy điện"
             )
         ),
         choices=get_scale_action(),
@@ -596,7 +596,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit beef consumption",
-                fr="Limiter la consommation de bœuf"
+                fr="Limiter la consommation de bœuf", vi="Hạn chế tiêu thụ thịt bò"
             )
         ),
         choices=get_scale_action(),
@@ -606,7 +606,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit heating or cooling your home",
-                fr="Limiter le chauffage ou la climatisation de votre maison"
+                fr="Limiter le chauffage ou la climatisation de votre maison", vi="Hạn chế sưởi ấm hoặc làm mát nhà của bạn"
             )
         ),
         choices=get_scale_action(),
@@ -617,7 +617,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A tax on flying (that increases ticket prices by 20%)",
-                fr="Une taxe sur les vols (qui augmente les prix des billets de 20%)"
+                fr="Une taxe sur les vols (qui augmente les prix des billets de 20%)", vi="Thuế đối với việc đi máy bay (làm tăng giá vé thêm 20%)"
             )
         ),
         choices=get_scale_policy(),
@@ -627,7 +627,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A national tax on fossil fuels (increasing gasoline prices by 40 cents per gallon)",
-                fr="Une taxe nationale sur les combustibles fossiles (augmentant les prix de l'essence de 40 centimes par gallon)"
+                fr="Une taxe nationale sur les combustibles fossiles (augmentant les prix de l'essence de 40 centimes par gallon)", vi="Thuế quốc gia đối với nhiên liệu hóa thạch (làm tăng giá xăng thêm 40 xu mỗi gallon)"
             )
         ),
         choices=get_scale_policy(),
@@ -637,7 +637,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A ban of polluting vehicles in dense areas, like city centers",
-                fr="Une interdiction des véhicules polluants dans les zones denses, comme les centres-villes"
+                fr="Une interdiction des véhicules polluants dans les zones denses, comme les centres-villes", vi="Cấm các phương tiện gây ô nhiễm tại các khu vực đông dân cư, như trung tâm thành phố"
             )
         ),
         choices=get_scale_policy(),
@@ -647,7 +647,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Subsidies for low-carbon technologies (renewable energy, carbon capture...)",
-                fr="Des subventions pour les technologies à faible émission de carbone (énergies renouvelables, capture de carbone...)"
+                fr="Des subventions pour les technologies à faible émission de carbone (énergies renouvelables, capture de carbone...)", vi="Trợ cấp cho các công nghệ phát thải thấp (năng lượng tái tạo, thu giữ carbon...)"
             )
         ),
         choices=get_scale_policy(),
@@ -657,7 +657,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A contribution to a global climate fund to finance clean energy in low-income countries",
-                fr="Une contribution à un fonds climatique mondial pour financer l'énergie propre dans les pays à faible revenu"
+                fr="Une contribution à un fonds climatique mondial pour financer l'énergie propre dans les pays à faible revenu", vi="Đóng góp vào một quỹ khí hậu toàn cầu để tài trợ năng lượng sạch tại các nước thu nhập thấp"
             )
         ),
         choices=get_scale_policy(),
@@ -667,7 +667,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Severe droughts and heatwaves",
-                fr="Sécheresses sévères et vagues de chaleur"
+                fr="Sécheresses sévères et vagues de chaleur", vi="Hạn hán nghiêm trọng và các đợt nắng nóng kéo dài"
             )
         ),
         choices=get_scale_expectations(),
@@ -677,7 +677,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More frequent volcanic eruptions",
-                fr="Éruptions volcaniques plus fréquentes"
+                fr="Éruptions volcaniques plus fréquentes", vi="Có nhiều vụ phun trào núi lửa hơn "
             )
         ),
         choices=get_scale_expectations(),
@@ -687,7 +687,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Rising sea levels",
-                fr="Montée du niveau de la mer"
+                fr="Montée du niveau de la mer", vi="Mực nước biển dâng cao"
             )
         ),
         choices=get_scale_expectations(),
@@ -697,7 +697,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Lower agricultural production",
-                fr="Baisse de la production agricole"
+                fr="Baisse de la production agricole", vi="Sản lượng nông nghiệp thấp hơn"
             )
         ),
         choices=get_scale_expectations(),
@@ -707,7 +707,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Drop in standards of living",
-                fr="Baisse du niveau de vie"
+                fr="Baisse du niveau de vie", vi="Chất lượng sống giảm"
             )
         ),
         choices=get_scale_expectations(),
@@ -717,7 +717,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Larger migration flows",
-                fr="Flux migratoires plus importants"
+                fr="Flux migratoires plus importants", vi="Dòng người di cư nhiều hơn"
             )
         ),
         choices=get_scale_expectations(),
@@ -727,7 +727,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More armed conflicts",
-                fr="Plus de conflits armés"
+                fr="Plus de conflits armés", vi="Các cuộc xung đột vũ trang xuất hiện nhiều hơn"
             )
         ),
         choices=get_scale_expectations(),
@@ -737,7 +737,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Extinction of humankind",
-                fr="Extinction de l'humanité"
+                fr="Extinction de l'humanité", vi="Loài người sẽ bị tuyệt chủng"
             )
         ),
         choices=get_scale_expectations(),
@@ -748,7 +748,7 @@ class Player(BasePlayer):
     circadian = models.StringField(
         label= _(dict(
             en="",
-            fr=""
+            fr="", vi=""
         ))
     )
 
@@ -761,7 +761,7 @@ class Player(BasePlayer):
                "unemployment benefits, or any other regular income.",
             fr="En pensant à votre foyer, quel est selon vous son revenu net mensuel total moyen (après impôts et "
                "déductions) ? Veuillez inclure les salaires, retraites, allocations familiales, indemnités de chômage "
-               "ou tout autre revenu régulier."
+               "ou tout autre revenu régulier.", vi="Khi nghĩ về thu nhập của gia đình bố mẹ bạn, bạn ước tính thu nhập ròng trung bình hàng tháng của họ là bao nhiêu (sau khi trừ thuế và các khoản khấu trừ)? Vui lòng bao gồm lương, lương hưu, trợ cấp gia đình, trợ cấp thất nghiệp hoặc bất kỳ nguồn thu nhập định kỳ nào khác."
         )),
         choices=get_scale_income()
     )
@@ -770,7 +770,7 @@ class Player(BasePlayer):
     education = models.IntegerField(
         label = _(dict(
           en="What is the highest education level that you have achieved?",
-          fr="Quel est le niveau d'études le plus élevé que vous ayez atteint ?"
+          fr="Quel est le niveau d'études le plus élevé que vous ayez atteint ?", vi="Bạn đã đạt được trình độ học vấn cao nhất là gì?"
         )),
         choices=get_scale_education()
     )
@@ -847,7 +847,7 @@ class NarrativeElicitation_question(MyPage):
         if word_count < 50:
             return _(dict(
                 en=f"Please write at least 50 words (you wrote {word_count}).",
-                fr=f"Veuillez écrire au moins 50 mots (vous en avez écrit {word_count})."
+                fr=f"Veuillez écrire au moins 50 mots (vous en avez écrit {word_count}).", vi=f"Vui lòng viết ít nhất 50 từ (bạn đã viết {word_count} từ)."
             ))
 #        if len(values['narrative_elicitation']) < 50:
 #            return "Please write at least 50 characters."
@@ -902,7 +902,7 @@ class Policy(MyPage):
         if word_count < 25:
             return _(dict(
                 en=f"Please write at least 25 words (you wrote {word_count}).",
-                fr=f"Veuillez écrire au moins 25 mots (vous en avez écrit {word_count})."
+                fr=f"Veuillez écrire au moins 25 mots (vous en avez écrit {word_count}).", vi=f"Vui lòng viết ít nhất 25 từ (bạn đã viết {word_count} từ)."
             ))
 
 class Policy_question_certain(MyPage):

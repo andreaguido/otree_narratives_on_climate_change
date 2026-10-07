@@ -15,9 +15,13 @@ SESSION_CONFIG_DEFAULTS = dict(
 )
 DEBUG = False
 
-LANGUAGE_CODE = 'fr'
-REAL_WORLD_CURRENCY_CODE = 'USD'
-REAL_WORLD_CURRENCY_NAME = 'Euro'
+# oTree and wtforms have no Vietnamese locale: oTree runs in English (as in the Vietnam lab sessions),
+# the questionnaire text is selected by SURVEY_LANGUAGE.
+LANGUAGE_CODE = 'en'
+SURVEY_LANGUAGE = 'vi'
+REAL_WORLD_CURRENCY_CODE = 'VND'
+REAL_WORLD_CURRENCY_DECIMAL_PLACES = 0
+REAL_WORLD_CURRENCY_NAME = 'Vietnamese Dong'
 SESSION_CONFIGS = [
     dict(
         name = 'only_climate_change',

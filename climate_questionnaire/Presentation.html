@@ -9,6 +9,8 @@
         Welcome to this survey
     {{ elif fr }}
         Bienvenue dans ce questionnaire
+    {{ elif vi }}
+        Chào mừng bạn đến với khảo sát này
     {{ endif }}
 </div>
 {{ endblock }}
@@ -96,6 +98,40 @@
                         If you do not wish to participate, you can click on the
                         <i>{{ if subsession.prolific }} Request return {{ else }} Skip {{ endif }}</i> button below.
                     </p>
+                    {{ elif vi }}
+                    <h3>Thông tin dành cho người tham gia</h3>
+                    <br>
+                    <p>
+                        <b>Nghiên cứu này gồm những gì?</b>
+                        Nghiên cứu này bao gồm một nhiệm vụ đơn giản và một số bảng câu hỏi ngắn.
+
+                        Câu trả lời của bạn sẽ được giữ hoàn toàn ẩn danh.
+
+                        Không có câu trả lời đúng hay sai; chúng tôi chỉ muốn biết quan điểm thật của bạn, dù đó là gì.
+                        <br><br>
+
+                        <b>Ai thực hiện nghiên cứu này?</b>
+                        Nghiên cứu được thực hiện bởi một nhóm nhà nghiên cứu thuộc các trường đại học khác nhau tại Pháp (Paris School of Business, Đại học Montpellier). Nếu có bất kỳ câu hỏi nào, bạn có thể liên hệ a.guido@psbedu.paris. <br><br>
+
+                        <b>Nghiên cứu kéo dài bao lâu?</b>
+                        Bảng câu hỏi kéo dài khoảng 5 đến 10 phút, và bạn có thể dừng lại bất cứ lúc nào. <br><br>
+
+                        <b>Tôi nhận được gì khi tham gia?</b>
+                        Những người hoàn thành nghiên cứu sẽ nhận được khoản thù lao đã công bố vào tài khoản Prolific của mình. Nghiên cứu này có thể có thêm các khoản tiền thưởng.<br><br>
+
+                        <b>Dữ liệu của tôi được xử lý như thế nào?</b>
+                        Mọi khía cạnh của nghiên cứu, bao gồm cả kết quả, đều được giữ ẩn danh và chỉ các nhà nghiên cứu mới có quyền truy cập toàn bộ câu trả lời.
+                    </p>
+                    <p>
+                        Để tiếp tục, vui lòng nhấn "Bắt đầu bảng câu hỏi".
+                    </p>
+
+                    <hr class="my-4">
+
+                    <p class="text-muted-small">
+                        Nếu bạn không muốn tham gia, bạn có thể nhấn nút
+                        <i>{{ if subsession.prolific }} Rút lui {{ else }} Bỏ qua {{ endif }}</i> bên dưới.
+                    </p>
                     {{ endif }}
                 </div>
             </div>
@@ -106,22 +142,22 @@
             {{ if subsession.prolific }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Request return {{ elif fr }} Sortir {{ endif }}
+                    {{ if en }} Request return {{ elif fr }} Sortir {{ elif vi }} Rút lui {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ endif }}
+                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ elif vi }} Bắt đầu bảng câu hỏi {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
 
             {{ else }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ endif }}
+                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ elif vi }} Không tham gia {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Participate {{ elif fr }} Participer {{ endif }}
+                    {{ if en }} Participate {{ elif fr }} Participer {{ elif vi }} Tham gia {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
             {{ endif }}

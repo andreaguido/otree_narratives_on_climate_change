@@ -22,17 +22,19 @@
         {{ elif fr }}
         Voici des comportements que les experts disent pouvoir aider à réduire les émissions de gaz à effet de serre.
         Dans quelle mesure seriez-vous prêt(e) à &hellip;
+        {{ elif vi }}
+        Dưới đây là một số hành vi mà các chuyên gia cho rằng sẽ giúp giảm phát thải khí nhà kính. Bạn sẵn sàng thực hiện những điều sau ở mức độ nào…?
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ elif vi }} Không hề {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ elif vi }} Ở mức độ vừa phải {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ endif }}</th>
+            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ elif vi }} Rất nhiều {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -50,7 +52,7 @@
     </table>
 </div>
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

@@ -11,6 +11,8 @@
     What is climate change?
 {{ elif fr }}
     Qu'est-ce que le changement climatique ?
+{{ elif vi }}
+    Biến đổi khí hậu là gì?
 {{ endif }}
 {{ endblock }}
 
@@ -26,6 +28,12 @@
         <p>
             Dans ce qui suit, vous lirez un texte présentant une définition courante du changement climatique avec
             quelques exemples et faits. Veuillez le lire attentivement. On vous posera ensuite quelques questions sur ce sujet.
+        </p>
+        {{ elif vi }}
+        <p>
+            Trong phần tiếp theo, bạn sẽ đọc một đoạn văn trình bày một định nghĩa phổ biến về biến đổi khí hậu, kèm
+            theo một số ví dụ và dữ kiện về vấn đề này. Vui lòng đọc kỹ đoạn văn.
+            Sau đó, bạn sẽ được hỏi một số câu hỏi về chủ đề này.
         </p>
         {{ endif }}
     </div>
@@ -52,11 +60,24 @@
             l'augmentation de la température, d'autres exemples sont la présence d'événements météorologiques extrêmes
             plus fréquents et intenses, l'élévation du niveau de la mer et la réduction des calottes glaciaires.
         </p>
+        {{ elif vi }}
+        <p>
+            Biến đổi khí hậu thường được hiểu là việc thay đổi nhiệt độ trong thời gian dài và các kiểu thời tiết cực
+            đoan.
+            Gần đây, bạn có thể đã nhận thấy rằng biến đổi khí hậu ngày càng được đề cập nhiều trên các phương tiện
+            truyền thông và trong các cuộc thảo luận trong đại chúng.
+        </p>
+        <p>
+            Một ví dụ về hiện tượng liên quan đến biến đổi khí hậu là nhiệt độ trung bình hiện nay cao hơn từ 1,34°C đến
+            1,41°C so với mức đo được trong giai đoạn 1850–1900.
+            Ngoài sự gia tăng nhiệt độ, các ví dụ khác bao gồm tần suất và cường độ các hiện tượng thời tiết cực đoan
+            càng ngày càng gia tăng, mực nước biển dâng lên và diện tích các tảng băng bị thu hẹp.
+        </p>
         {{ endif }}
     </div>
 </div>
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

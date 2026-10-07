@@ -27,6 +27,13 @@
             Voici votre réponse à la question sur <i>ce que vous pensez que le gouvernement de votre pays devrait faire
             concernant le changement climatique</i> :
 
+        {{ elif vi }}
+
+            <p>
+            Dưới đây là câu trả lời của bạn cho câu hỏi về việc <i>bạn nghĩ chính phủ nước bạn nên làm gì liên quan đến 
+            biến đổi khí hậu</i>:
+        </p>
+
         {{ endif }}
         <div class="form-control mb-1">
             {{ player.policy_narrative }}
@@ -42,6 +49,8 @@
             {{ elif fr }}
             En vous basant sur votre réponse, dans quelle mesure êtes-vous d'accord ou pas d'accord avec l'énoncé
             suivant ?
+            {{ elif vi }}
+            Dựa trên câu trả lời đó, bạn đồng ý hay không đồng ý với các phát biểu sau ở mức độ nào?
             {{ endif }}
 
 
@@ -57,7 +66,7 @@
     </div>
 </div>
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

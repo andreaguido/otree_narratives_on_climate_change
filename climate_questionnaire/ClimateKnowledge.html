@@ -38,18 +38,27 @@
         émet le moins). Les émissions de gaz à effet de serre d'un produit sont celles émises à toutes les étapes
         impliquées dans sa production et sa distribution.
     </p>
+    {{ elif vi }}
+    <p>
+            Ở câu hỏi tiếp theo, chúng tôi muốn bạn xếp hạng theo lượng phát thải khí nhà kính mà chúng tạo ra, 
+            theo hiểu biết của bạn (trong đó 1 là mục phát thải nhiều nhất và 3 là mục phát thải ít nhất). 
+            Phát thải khí nhà kính của một sản phẩm là lượng khí được thải ra được tính từ giai đoạn sản xuất 
+            đến phân phối sản phẩm đó ra thị trường.
+        </p>
     {{ endif }}
     {{ formfield "rank_coal" }} {{ formfield "rank_gas" }} {{ formfield "rank_nuclear" }}
     </div>
 </div>
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 <p class="form-control-errors" style="display: none;">
     {{ if en }}
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif vi }}
+    Vui lòng đảm bảo rằng tất cả các hạng mục đều là duy nhất.
     {{ endif }}
 </p>
 {{ endblock }}

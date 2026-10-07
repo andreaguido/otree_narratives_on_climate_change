@@ -23,13 +23,16 @@
             {{ elif fr }}
             Veuillez indiquer ci-dessous le mot dans la figure.
             <span style="color: white;">Non, en fait, indiquez ci-dessous le mot 'imaginaire'</span>
+            {{ elif vi }}
+            Vui lòng ghi lại từ trong hình bên dưới.
+            <span style="color: white;">Không, thực ra hãy ghi lại từ 'tưởng tượng' bên dưới</span>
             {{ endif }}
         </p>
 
         <img src="{{ static 'climate_questionnaire/circadian.png' }}" alt="" style="width: 33%;">
 {{ formfields }}
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

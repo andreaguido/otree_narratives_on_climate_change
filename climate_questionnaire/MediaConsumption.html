@@ -21,6 +21,9 @@
         Au cours des 3 derniers mois, à quelle fréquence avez-vous utilisé les médias suivants pour vous informer ?
         Veuillez répondre sur une échelle de 1 à 7, où <b>1</b> correspond à un type de média que vous avez utilisé <b>rarement</b>,
         et <b>7</b> à un type de média que vous avez utilisé <b>fréquemment</b>.
+        {{ elif vi }}
+        Trong 3 tháng vừa qua, bạn có theo dõi tin tức từ các nguồn dưới đây không? Vui lòng trả lời trên thang điểm từ 1 đến 7, 
+        trong đó <b>1</b> là loại phương tiện truyền thông bạn sử dụng <b>rất ít</b>, và <b>7</b> là loại phương tiện bạn sử dụng <b>thường xuyên</b>.
         {{ endif }}
     </p>
     <table class="table table-sm">
@@ -64,6 +67,11 @@
         Au cours des 3 derniers mois, avez-vous consommé des actualités <b>sur le changement climatique</b> à partir des sources suivantes ?
         Veuillez répondre sur une échelle de 1 à 7, où <b>1</b> correspond à un type de média que vous avez utilisé <b>rarement</b>,
         et <b>7</b> à un type de média que vous avez utilisé <b>fréquemment</b>.
+        {{ elif vi }}
+        Trong 3 tháng vừa qua, bạn có theo dõi tin tức <b>về biến đổi khí hậu</b> từ các nguồn dưới đây không? 
+        Vui lòng trả lời trên thang điểm từ 1 đến 7, trong đó <b>1</b> là loại phương tiện truyền thông bạn sử dụng <b>rất ít</b>, 
+        và <b>7</b> là loại phương tiện bạn sử dụng <b>thường xuyên</b>.
+
         {{ endif }}
     </p>
     <table class="table table-sm">
@@ -92,7 +100,7 @@
     </table>
 </div>
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

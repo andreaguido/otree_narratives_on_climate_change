@@ -18,6 +18,9 @@
            concernant la réponse que vous avez fournie dans la question précédente sur les mesures et solutions que
            votre gouvernement devrait envisager pour lutter contre le changement climatique ?
 
+        {{ elif vi }}
+
+            Trên thang điểm từ 0 (rất không tự tin) đến 100 (rất tự tin), bạn tự tin đến mức nào về câu trả lời bạn đã đưa ra ở câu hỏi trước liên quan đến các biện pháp và giải pháp mà chính phủ nên xem xét để chống biến đổi khí hậu?
         {{ endif }}
         {{ formfield_errors 'confidence_policy' }}
         <br><br>
@@ -27,7 +30,7 @@
     </div>
 </div>
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 
@@ -77,6 +80,7 @@
             slider1 = new mgslider("confidence_policy", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
             if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
+            if (js_vars.pt) { slider1.yourvalue = "Seu valor"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

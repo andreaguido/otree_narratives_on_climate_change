@@ -40,6 +40,13 @@
 
                         En particulier, vous avez écrit :
 
+                {{ elif vi }}
+                        <p>
+            Ở câu hỏi đầu tiên, bạn đã trình bày ý kiến của mình về các nguyên nhân của biến đổi khí hậu.
+        </p>
+        <p>
+            Cụ thể, bạn đã viết:
+        </p>
                 {{ endif }}
                     </p>
 
@@ -67,6 +74,16 @@
 
 
 
+                {{ elif vi }}
+        <p>
+            Dựa trên lời giải thích của bạn, theo bạn chính phủ nên xem xét những <b>biện pháp</b> và <b>giải pháp</b>
+            nào để chống biến đổi khí hậu?
+        </p>
+        <p>
+            Nếu bạn cho rằng không nên thực hiện hành động nào để chống biến đổi khí hậu, hãy giải thích lý do bạn nghĩ
+            như vậy. [tối thiểu 25 từ]
+        </p>
+
                 {{ endif }}
 
 
@@ -77,7 +94,7 @@
 
 
 
-{{ next_button }}
+{{ if vi }}<button class="btn btn-primary otree-btn-next">Tiếp tục</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 
