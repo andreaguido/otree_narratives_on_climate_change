@@ -198,7 +198,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="In your opinion, do you think your country should fight climate change?",
-                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?", es="En su opinión, ¿su país debería combatir el cambio climático?"
+                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?", es="En su opinión, ¿debería su país combatir el cambio climático?"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -343,7 +343,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", es="Televisión (por ejemplo, noticieros nacionales, canales de noticias por cable)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", es="Televisión (por ejemplo, noticias nacionales, canales de noticias por cable)"
             )
         ),
         choices=range(1, 8),
@@ -403,7 +403,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", es="Televisión (por ejemplo, noticieros nacionales, canales de noticias por cable)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", es="Televisión (por ejemplo, noticias nacionales, canales de noticias por cable)"
             )
         ),
         choices=range(1, 8),
