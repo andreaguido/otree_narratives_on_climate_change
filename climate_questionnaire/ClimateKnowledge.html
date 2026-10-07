@@ -38,6 +38,9 @@
         émet le moins). Les émissions de gaz à effet de serre d'un produit sont celles émises à toutes les étapes
         impliquées dans sa production et sa distribution.
     </p>
+    {{ elif ja }}
+    次の質問では、温室効果ガス排出量に関するあなたの知識に基づいて、以下の項目を排出量の多い順に順位付けしてください（1 が最も排出量が多く、3 が最も少ないものです）。
+            製品の温室効果ガス排出量とは、その生産および流通のすべての過程で排出される量を指します。
     {{ endif }}
     {{ formfield "rank_coal" }} {{ formfield "rank_gas" }} {{ formfield "rank_nuclear" }}
     </div>
@@ -50,6 +53,8 @@
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif ja }}
+    すべての順位が重複しないようにしてください。
     {{ endif }}
 </p>
 {{ endblock }}

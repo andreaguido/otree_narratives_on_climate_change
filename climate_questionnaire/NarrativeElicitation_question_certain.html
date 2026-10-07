@@ -17,6 +17,8 @@
         On a scale from 0 (very unconfident) to 100 (very confident), how confident are you about the explanation you provided in the previous question?
     {{ elif fr }}
         Sur une échelle de 0 (très peu confiant) à 100 (très confiant), à quel point êtes-vous confiant concernant l'explication que vous avez fournie dans la question précédente ?
+    {{ elif ja }}
+        0（まったく自信がない）から100（非常に自信がある）の尺度で、前の質問で述べた説明についてどの程度自信がありますか？
     {{ endif }}
 
     {{ formfield_errors 'narrative_confidence' }}
@@ -75,7 +77,8 @@
         $(document).ready(function (event) {
             slider1 = new mgslider("narrative_confidence", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
-            if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; } 
+            if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
+            if (js_vars.pt) { slider1.yourvalue = "Seu valor"; } 
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

@@ -28,16 +28,18 @@
                 Si rien n'est fait pour limiter le changement climatique, selon vous, quelle est la probabilité que le
         changement climatique entraîne les événements suivants ?
 
+        {{ elif ja }}
+        気候変動を抑制するために何も対策が取られなかった場合、以下の出来事が気候変動によって引き起こされる可能性はどの程度あると思いますか？
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ elif ja }} 非常に起こりそうにない {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ elif ja }} あまり起こりそうにない {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ elif ja }} やや起こりそう {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ elif ja }} 非常に起こりそう {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -62,6 +64,8 @@
     Please ensure that all ranks are unique.
     {{ elif fr }}
     Veuillez vous assurer que tous les rangs sont uniques.
+    {{ elif ja }}
+    すべての順位が重複しないようにしてください。
     {{ endif }}
 </p>
 {{ endblock }}

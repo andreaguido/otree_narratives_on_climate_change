@@ -18,6 +18,9 @@
            concernant la réponse que vous avez fournie dans la question précédente sur les mesures et solutions que
            votre gouvernement devrait envisager pour lutter contre le changement climatique ?
 
+        {{ elif ja }}
+
+            0（まったく自信がない）から100（非常に自信がある）の尺度で、前の質問で述べた「政府が取るべき対策・解決策」に関する回答についてどの程度自信がありますか？
         {{ endif }}
         {{ formfield_errors 'confidence_policy' }}
         <br><br>
@@ -77,6 +80,7 @@
             slider1 = new mgslider("confidence_policy", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
             if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
+            if (js_vars.pt) { slider1.yourvalue = "Seu valor"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

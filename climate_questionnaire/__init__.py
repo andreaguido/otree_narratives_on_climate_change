@@ -7,94 +7,94 @@ doc = """
 Narratives on Climate Change
 """
 
-language = {"en": False, "fr": False, LANGUAGE_CODE: True}
+language = {"en": False, "fr": False, "ja": False, LANGUAGE_CODE: True}
 _ = lambda x: x[LANGUAGE_CODE]
 
 
 def get_scale_action():
     return [
-        [-2, _(dict(en="Not at all", fr="Pas du tout"))],
-        [-1, _(dict(en="-1", fr="-1"))],
-        [0, _(dict(en="Moderately", fr="Modérément"))],
-        [1, _(dict(en="1", fr="1"))],
-        [2, _(dict(en="A great deal", fr="Énormément"))]
+        [-2, _(dict(en="Not at all", fr="Pas du tout", ja="まったくそう思わない"))],
+        [-1, _(dict(en="-1", fr="-1", ja="-1"))],
+        [0, _(dict(en="Moderately", fr="Modérément", ja="どちらともいえない"))],
+        [1, _(dict(en="1", fr="1", ja="1"))],
+        [2, _(dict(en="A great deal", fr="Énormément", ja="とてもそう思う"))]
     ]
 
 
 def get_scale_policy():
     return [
-        [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)"))],
-        [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)"))],
-        [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)"))],
-        [1, _(dict(en="Somewhat support", fr="Plutôt favorable"))],
-        [2, _(dict(en="Strongly support", fr="Fortement favorable"))]
+        [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)", ja="強く反対する"))],
+        [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)", ja="やや反対する"))],
+        [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)", ja="賛成でも反対でもない"))],
+        [1, _(dict(en="Somewhat support", fr="Plutôt favorable", ja="やや賛成する"))],
+        [2, _(dict(en="Strongly support", fr="Fortement favorable", ja="強く賛成する"))]
     ]
 
 def get_scale_certainty():
     return [
-        [-2, _(dict(en="Very uncertain", fr="Très incertain"))],
-        [-1, _(dict(en="Uncertain", fr="Incertain"))],
-        [1, _(dict(en="Certain", fr="Certain"))],
-        [2, _(dict(en="Very certain", fr="Très certain"))],
+        [-2, _(dict(en="Very uncertain", fr="Très incertain", ja="非常に確信がない"))],
+        [-1, _(dict(en="Uncertain", fr="Incertain", ja="確信がない"))],
+        [1, _(dict(en="Certain", fr="Certain", ja="確信がある"))],
+        [2, _(dict(en="Very certain", fr="Très certain", ja="非常に確信がある"))],
     ]
 
 def get_scale_frequency_info():
     return [
-            [5, _(dict(en="Daily", fr="Quotidiennement"))],
-            [4, _(dict(en="Twice per week", fr="Deux fois par semaine"))],
-            [3, _(dict(en="Once per week", fr="Une fois par semaine"))],
-            [2, _(dict(en="Twice per month", fr="Deux fois par mois"))],
-            [1, _(dict(en="Once per month", fr="Une fois par mois"))],
-            [0, _(dict(en="Never", fr="Jamais"))]
+            [5, _(dict(en="Daily", fr="Quotidiennement", ja="毎日"))],
+            [4, _(dict(en="Twice per week", fr="Deux fois par semaine", ja="週に2回"))],
+            [3, _(dict(en="Once per week", fr="Une fois par semaine", ja="週に1回"))],
+            [2, _(dict(en="Twice per month", fr="Deux fois par mois", ja="月に2回"))],
+            [1, _(dict(en="Once per month", fr="Une fois par mois", ja="月に1回"))],
+            [0, _(dict(en="Never", fr="Jamais", ja="まったくない"))]
         ]
 
 def get_scale_expectations():
     return [
-        [-2, _(dict(en="Very unlikely", fr="Très improbable"))],
-        [-1, _(dict(en="Somewhat unlikely", fr="Plutôt improbable"))],
-        [1, _(dict(en="Somewhat likely", fr="Plutôt probable"))],
-        [2, _(dict(en="Very likely", fr="Très probable"))]
+        [-2, _(dict(en="Very unlikely", fr="Très improbable", ja="非常に起こりそうにない"))],
+        [-1, _(dict(en="Somewhat unlikely", fr="Plutôt improbable", ja="あまり起こりそうにない"))],
+        [1, _(dict(en="Somewhat likely", fr="Plutôt probable", ja="やや起こりそう"))],
+        [2, _(dict(en="Very likely", fr="Très probable", ja="非常に起こりそう"))]
     ]
 
 def get_scale_agreement():
     return [
-        [-2, _(dict(en="Strongly disagree", fr="Fortement en désaccord"))],
-        [-1, _(dict(en="Somewhat disagree", fr="Plutôt en désaccord"))],
-        [0, _(dict(en="Neither agree nor disagree", fr="Ni d'accord ni en désaccord"))],
-        [1, _(dict(en="Somewhat agree", fr="Plutôt d'accord"))],
-        [2, _(dict(en="Strongly agree", fr="Fortement d'accord"))]
+        [-2, _(dict(en="Strongly disagree", fr="Fortement en désaccord", ja="強く不同意"))],
+        [-1, _(dict(en="Somewhat disagree", fr="Plutôt en désaccord", ja="やや不同意"))],
+        [0, _(dict(en="Neither agree nor disagree", fr="Ni d'accord ni en désaccord", ja="どちらともいえない"))],
+        [1, _(dict(en="Somewhat agree", fr="Plutôt d'accord", ja="やや同意"))],
+        [2, _(dict(en="Strongly agree", fr="Fortement d'accord", ja="強く同意"))]
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From $0 to $1,250", fr="De 0€ à 1 250€"))],
-        [1, _(dict(en="From $1,250 to $2,000", fr="De 1 250€ à 2 000€"))],
-        [2, _(dict(en="From $2,000 to $4,000", fr="De 2 000€ à 4 000€"))],
-        [3, _(dict(en="From $4,000 to $6,000", fr="De 4 000€ à 6 000€"))],
-        [4, _(dict(en="From $6,000 to $8,000", fr="De 6 000€ à 8 000€"))],
-        [5, _(dict(en="From $8,000 to $12,500", fr="De 8 000€ à 12 500€"))],
-        [6, _(dict(en="More than A$12,500", fr="Plus de 12 500€"))],
-        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
+        [0, _(dict(en="From 0 to 125,000 JPY", fr="De 0€ à 1 250€", ja="0〜125,000 円"))],
+        [1, _(dict(en="From 125,000 to 200,000 JPY", fr="De 1 250€ à 2 000€", ja="125,000〜200,000 円"))],
+        [2, _(dict(en="From 200,000 to 400,000 JPY", fr="De 2 000€ à 4 000€", ja="200,000〜400,000 円"))],
+        [3, _(dict(en="From 400,000 to 600,000 JPY", fr="De 4 000€ à 6 000€", ja="400,000〜600,000 円"))],
+        [4, _(dict(en="From 600,000 to 800,000 JPY", fr="De 6 000€ à 8 000€", ja="600,000〜800,000 円"))],
+        [5, _(dict(en="From 800,000 to 1,250,000 JPY", fr="De 8 000€ à 12 500€", ja="800,000〜1,250,000 円"))],
+        [6, _(dict(en="More than 1,250,000 JPY", fr="Plus de 12 500€", ja="1,250,000 円以上"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre", ja="回答したくない"))]
     ]
 def get_scale_education():
     return [
-        [0, _(dict(en="Primary or lower secondary education", fr="Primaire ou collège"))],
-        [1, _(dict(en="Upper secondary education", fr="Lycée (Baccalauréat)"))],
-        [2, _(dict(en="Non-university post-secondary education", fr="Formation post-secondaire non universitaire"))],
-        [3, _(dict(en="Undergraduate education (bachelor)", fr="Licence (Bachelor)"))],
-        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat"))],
-        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
+        [0, _(dict(en="Primary or lower secondary education", fr="Primaire ou collège", ja="初等教育または前期中等教育"))],
+        [1, _(dict(en="Upper secondary education", fr="Lycée (Baccalauréat)", ja="後期中等教育"))],
+        [2, _(dict(en="Non-university post-secondary education", fr="Formation post-secondaire non universitaire", ja="大学以外の高等教育"))],
+        [3, _(dict(en="Undergraduate education (bachelor)", fr="Licence (Bachelor)", ja="学士課程"))],
+        [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat", ja="大学院課程（修士・博士）"))],
+        [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre", ja="回答したくない"))]
     ]
 def get_options_bdm():
     return [
-        ['A', 'Option A'],
-        ['B', 'Option B']
+        ['A', _(dict(en='Option A', fr='Option A', ja="選択肢A"))],
+        ['B', _(dict(en='Option B', fr='Option B', ja="選択肢B"))]
     ]
 class C(BaseConstants):
     NAME_IN_URL = 'clquest'
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
-    ROW_INDICES = [0,     1,    2,  3] # rows of the MPL table
-    AMOUNTS =     [0.01, 0.25, 0.5, 1] # amounts of the MPL table
+    ROW_INDICES = [0, 1, 2, 3, 4, 5, 6] # rows of the MPL table (all 7 can be drawn, as in the lab sessions)
+    AMOUNTS = [1, 25, 50, 100, 150, 200, 250] # amounts of the MPL table, in JPY, as in the Japan lab sessions (set by A. Guido 28 Apr 2026, PPP from USD [0.01, 0.25, 0.5, 1, 1.5, 2, 2.5])
 
 class Subsession(BaseSubsession):
     prolific = models.BooleanField()
@@ -133,13 +133,13 @@ class Player(BasePlayer):
     # Narrative elicitation -----------
     climate_exists = models.BooleanField(
         choices=[
-            [True, _(dict(en="Yes", fr="Oui"))],
-            [False, _(dict(en="No", fr="Non"))]
+            [True, _(dict(en="Yes", fr="Oui", ja="はい"))],
+            [False, _(dict(en="No", fr="Non", ja="いいえ"))]
         ],
         label=_(
             dict(
                 en="Do you think climate change is a real phenomenon?",
-                fr="Pensez-vous que le changement climatique soit un phénomène réel ?"
+                fr="Pensez-vous que le changement climatique soit un phénomène réel ?", ja="気候変動は実在する現象だと思いますか？"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -157,7 +157,7 @@ class Player(BasePlayer):
             "<b>expliquer</b> comment ces causes contribuent à ces faits et pourraient être liées entre elles. <br><br> "
             "Expliquez votre raisonnement avec des phrases complètes. "
             "Il n'y a pas de bonne ou de mauvaise réponse, répondez selon votre opinion sincère et personnelle. <br> "
-            "[min. 50 mots]")
+            "[min. 50 mots]"), ja="あなたの意見では、先ほどの文章で説明された事実（世界の平均気温の上昇や極端気象の増加など）は何によって説明されると思いますか？ <br><br>気候変動に起因するとされるこれらの事実の<b>原因</b>を述べ、それらの原因がどのようにこれらの事実に影響し、互いにどのようにつながっている可能性があるのかを<b>説明</b>してください。<br><br>文章で、あなたの考えを完全な文で説明してください。正しい答え・間違った答えはありません。あなたの率直で個人的な意見をお書きください。<br>[60文字以上]"
         ))
     )
     narrative_confidence = models.IntegerField(
@@ -165,7 +165,7 @@ class Player(BasePlayer):
             en=(
                 ""),
             fr=(""
-                "")
+                ""), ja=""
         ))
     )
 
@@ -191,14 +191,14 @@ class Player(BasePlayer):
     # Policy --------------------------
     policy_fight = models.IntegerField(
         choices=[
-            [1, _(dict(en="Yes", fr="Oui"))],
-            [0, _(dict(en="No", fr="Non"))],
-            [-1, _(dict(en="I don't know/I do not want to answer", fr="Je ne sais pas / souhaite pas répondre"))]
+            [1, _(dict(en="Yes", fr="Oui", ja="はい"))],
+            [0, _(dict(en="No", fr="Non", ja="いいえ"))],
+            [-1, _(dict(en="I don't know/I do not want to answer", fr="Je ne sais pas / souhaite pas répondre", ja="わからない／回答したくない"))]
         ],
         label=_(
             dict(
                 en="In your opinion, do you think your country should fight climate change?",
-                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?"
+                fr="Selon vous, votre pays doit-il lutter contre le changement climatique ?", ja="あなたの意見では、あなたの国は気候変動に取り組むべきだと思いますか？"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -207,7 +207,7 @@ class Player(BasePlayer):
     policy_narrative = models.LongStringField(
         label=_(dict(
             en=(""),
-            fr=("")
+            fr=(""), ja=""
         ))
     )
 
@@ -216,7 +216,7 @@ class Player(BasePlayer):
         label=_(dict(
             en=(
                 ""),
-            fr=("")
+            fr=(""), ja=""
         )),
     )
 
@@ -225,7 +225,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would have a positive effect on my country’s economy and employment</b>",
-                fr="<b>La solution que j’ai mentionnée aurait un effet positif sur l’économie et l’emploi de mon pays</b>"
+                fr="<b>La solution que j’ai mentionnée aurait un effet positif sur l’économie et l’emploi de mon pays</b>", ja="<b>私が述べた解決策は、国の経済や雇用に良い影響を与えると思う。</b>"
             )
         ),
         choices = get_scale_agreement(),
@@ -235,7 +235,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>The solution I mentioned would help limit and/or mitigate the consequences of climate change</b>",
-                fr="<b>La solution que j’ai mentionnée aiderait à limiter et/ou atténuer les conséquences du changement climatique</b>"
+                fr="<b>La solution que j’ai mentionnée aiderait à limiter et/ou atténuer les conséquences du changement climatique</b>", ja="<b>私が述べた解決策は、気候変動の影響を抑制または軽減するのに役立つと思う。</b>"
             )
         ),
         choices=get_scale_agreement(),
@@ -245,15 +245,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>My household will win or lose financially from the solution I mentioned</b>",
-                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>"
+                fr="<b>Mon foyer gagnera ou perdra financièrement de la solution que j’ai mentionnée</b>", ja="<b>私が述べた解決策によって、私の世帯は経済的に得をするか損をするか。</b>"
             )
         ),
         choices=[
-            [-2, _(dict(en="Lose a lot", fr="Perdre beaucoup"))],
-            [-1, _(dict(en="Lose", fr="Perdre"))],
-            [0, _(dict(en="Neither win or lose", fr="Ni gagner ni perdre"))],
-            [1, _(dict(en="Win", fr="Gagner"))],
-            [2, _(dict(en="Win a lot", fr="Gagner beaucoup"))],
+            [-2, _(dict(en="Lose a lot", fr="Perdre beaucoup", ja="大きく損をする"))],
+            [-1, _(dict(en="Lose", fr="Perdre", ja="損をする"))],
+            [0, _(dict(en="Neither win or lose", fr="Ni gagner ni perdre", ja="どちらでもない"))],
+            [1, _(dict(en="Win", fr="Gagner", ja="得をする"))],
+            [2, _(dict(en="Win a lot", fr="Gagner beaucoup", ja="大きく得をする"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -262,15 +262,15 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="<b>Do you support or oppose the solution you provided?</b>",
-                fr="<b>Êtes-vous favorable ou opposé(e) à la solution que vous avez fournie ?</b>"
+                fr="<b>Êtes-vous favorable ou opposé(e) à la solution que vous avez fournie ?</b>", ja="あなたが述べた解決策に賛成しますか、それとも反対しますか？"
             )
         ),
         choices=[
-            [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)"))],
-            [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)"))],
-            [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)"))],
-            [1, _(dict(en="Somewhat support", fr="Plutôt favorable"))],
-            [2, _(dict(en="Strongly support", fr="Fortement favorable"))],
+            [-2, _(dict(en="Strongly oppose", fr="Fortement opposé(e)", ja="強く反対する"))],
+            [-1, _(dict(en="Somewhat oppose", fr="Plutôt opposé(e)", ja="やや反対する"))],
+            [0, _(dict(en="Neither support nor oppose", fr="Ni favorable ni opposé(e)", ja="賛成でも反対でもない"))],
+            [1, _(dict(en="Somewhat support", fr="Plutôt favorable", ja="やや賛成する"))],
+            [2, _(dict(en="Strongly support", fr="Fortement favorable", ja="強く賛成する"))],
         ],
         widget=widgets.RadioSelectHorizontal
     )
@@ -280,22 +280,22 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="How knowledgeable do you consider yourself about climate change?",
-                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?",
+                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?", ja="気候変動について、あなたはどの程度知識があると思いますか？",
             )
         ),
         choices=[
-            [0, _(dict(en="Not at all", fr="Pas du tout"))],
-            [1, _(dict(en="A little", fr="Un peu"))],
-            [2, _(dict(en="Moderately", fr="Modérément"))],
-            [3, _(dict(en="A lot", fr="Beaucoup"))],
-            [4, _(dict(en="A great deal", fr="Énormément"))]
+            [0, _(dict(en="Not at all", fr="Pas du tout", ja="まったくそう思わない"))],
+            [1, _(dict(en="A little", fr="Un peu", ja="少しある"))],
+            [2, _(dict(en="Moderately", fr="Modérément", ja="どちらともいえない"))],
+            [3, _(dict(en="A lot", fr="Beaucoup", ja="かなりある"))],
+            [4, _(dict(en="A great deal", fr="Énormément", ja="とてもそう思う"))]
         ],
         widget=widgets.RadioSelectHorizontal,
     )
     rank_coal = models.IntegerField(
         label=_(dict(
             en="Rank of Coal-fired power station",
-            fr="Classement de la centrale à charbon"
+            fr="Classement de la centrale à charbon", ja="石炭火力発電所の順位"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -303,7 +303,7 @@ class Player(BasePlayer):
     rank_gas = models.IntegerField(
         label=_(dict(
             en="Rank of Gas-fired power plant",
-            fr="Classement de la centrale à gaz"
+            fr="Classement de la centrale à gaz", ja="ガス火力発電所の順位"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -311,7 +311,7 @@ class Player(BasePlayer):
     rank_nuclear = models.IntegerField(
         label=_(dict(
             en="Rank of Nuclear power plant",
-            fr="Classement de la centrale nucléaire"
+            fr="Classement de la centrale nucléaire", ja="原子力発電所の順位"
         )),
         choices=[1, 2, 3],
         widget=widgets.RadioSelectHorizontal
@@ -323,7 +323,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité.", ja="過去3か月間に、どの程度の頻度で情報やニュースを得ましたか？<br>ここでいう情報・ニュースとは、国内・国際・地域のニュースやその他のニュース事実を指します。"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -333,7 +333,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Over the past 3 months, how often did you acquire information and/or news <b>about climate change</b>? For information and news we refer to national, international, and regional/local news, as well as other news facts.",
-                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités <b>sur le changement climatique</b> ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité."
+                fr="Au cours des 3 derniers mois, à quelle fréquence avez-vous consulté des informations et/ou des actualités <b>sur le changement climatique</b> ? Par informations et actualités, nous entendons les actualités nationales, internationales, régionales/locales, ainsi que d'autres faits d'actualité.", ja="過去3か月間に、<b>気候変動</b>に関する情報やニュースをどの程度の頻度で得ましたか？<br>ここでいう情報・ニュースとは、国内・国際・地域のニュースやその他のニュース事実を指します。"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -343,7 +343,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", ja="テレビ（例：全国ニュース、ケーブルニュース）"
             )
         ),
         choices=range(1, 8),
@@ -353,7 +353,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Printed Newspapers",
-                fr="Journaux imprimés"
+                fr="Journaux imprimés", ja="新聞（紙媒体）"
             )
         ),
         choices=range(1, 8),
@@ -363,7 +363,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio ou podcasts"
+                fr="Radio ou podcasts", ja="ラジオまたはポッドキャスト"
             )
         ),
         choices=range(1, 8),
@@ -373,7 +373,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Social media platforms",
-                fr="Plateformes de médias sociaux"
+                fr="Plateformes de médias sociaux", ja="ソーシャルメディア"
             )
         ),
         choices=range(1, 8),
@@ -383,7 +383,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="News media websites or apps",
-                fr="Actualités en ligne"
+                fr="Actualités en ligne", ja="ニュースサイトまたはニュースアプリ"
             )
         ),
         choices=range(1, 8),
@@ -393,7 +393,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Newsletters or email subscriptions",
-                fr="Newsletters ou abonnements par e-mail"
+                fr="Newsletters ou abonnements par e-mail", ja="ニュースレターまたはメール購読"
             )
         ),
         choices=range(1, 8),
@@ -403,7 +403,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Television (e.g., national news, cable news)",
-                fr="Télévision (par exemple, actualités nationales, chaînes d'information)"
+                fr="Télévision (par exemple, actualités nationales, chaînes d'information)", ja="テレビ（例：全国ニュース、ケーブルニュース）"
             )
         ),
         choices=range(1, 8),
@@ -413,7 +413,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Printed Newspapers",
-                fr="Journaux imprimés"
+                fr="Journaux imprimés", ja="新聞（紙媒体）"
             )
         ),
         choices=range(1, 8),
@@ -423,7 +423,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Radio or podcasts",
-                fr="Radio ou podcasts"
+                fr="Radio ou podcasts", ja="ラジオまたはポッドキャスト"
             )
         ),
         choices=range(1, 8),
@@ -433,7 +433,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Social media platforms",
-                fr="Plateformes de médias sociaux"
+                fr="Plateformes de médias sociaux", ja="ソーシャルメディア"
             )
         ),
         choices=range(1, 8),
@@ -443,7 +443,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="News media websites or apps",
-                fr="Actualités en ligne"
+                fr="Actualités en ligne", ja="ニュースサイトまたはニュースアプリ"
             )
         ),
         choices=range(1, 8),
@@ -453,7 +453,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Newsletters or email subscriptions",
-                fr="Newsletters ou abonnements par e-mail"
+                fr="Newsletters ou abonnements par e-mail", ja="ニュースレターまたはメール購読"
             )
         ),
         choices=range(1, 8),
@@ -547,16 +547,16 @@ class Player(BasePlayer):
     # Concern -------------------------
     climate_threat = models.IntegerField(
         choices=[
-            [3, _(dict(en="Very serious threat", fr="Une menace très sérieuse"))],
-            [2, _(dict(en="Somewhat serious threat", fr="Une menace assez sérieuse"))],
-            [1, _(dict(en="Not a threat at all", fr="Pas une menace du tout"))],
-            [0, _(dict(en="Don’t know", fr="Ne sais pas"))]
+            [3, _(dict(en="Very serious threat", fr="Une menace très sérieuse", ja="非常に深刻な脅威である"))],
+            [2, _(dict(en="Somewhat serious threat", fr="Une menace assez sérieuse", ja="やや深刻な脅威である"))],
+            [1, _(dict(en="Not a threat at all", fr="Pas une menace du tout", ja="まったく脅威ではない"))],
+            [0, _(dict(en="Don’t know", fr="Ne sais pas", ja="わからない"))]
         ],
         label=_(
             dict(
                 en="Do you think climate change will be a threat to people in your country in the next 20 years?",
                 fr="Pensez-vous que le changement climatique sera une menace pour les gens de votre pays dans les "
-                   "20 prochaines années ?"
+                   "20 prochaines années ?", ja="今後20年間で、気候変動はあなたの国の人々にとって脅威になると思いますか？"
             )
         ),
         widget=widgets.RadioSelectHorizontal
@@ -566,7 +566,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit flying",
-                fr="Limiter les vols"
+                fr="Limiter les vols", ja="飛行機の利用を減らす"
             )
         ),
         choices=get_scale_action(),
@@ -576,7 +576,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit driving",
-                fr="Limiter la conduite"
+                fr="Limiter la conduite", ja="自動車の利用を減らす"
             )
         ),
         choices=get_scale_action(),
@@ -586,7 +586,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Have an electric vehicle",
-                fr="Posséder un véhicule électrique"
+                fr="Posséder un véhicule électrique", ja="電気自動車を利用する"
             )
         ),
         choices=get_scale_action(),
@@ -596,7 +596,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit beef consumption",
-                fr="Limiter la consommation de bœuf"
+                fr="Limiter la consommation de bœuf", ja="牛肉の消費を減らす"
             )
         ),
         choices=get_scale_action(),
@@ -606,7 +606,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit heating or cooling your home",
-                fr="Limiter le chauffage ou la climatisation de votre maison"
+                fr="Limiter le chauffage ou la climatisation de votre maison", ja="暖房・冷房の使用を減らす"
             )
         ),
         choices=get_scale_action(),
@@ -617,7 +617,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A tax on flying (that increases ticket prices by 20%)",
-                fr="Une taxe sur les vols (qui augmente les prix des billets de 20%)"
+                fr="Une taxe sur les vols (qui augmente les prix des billets de 20%)", ja="航空機の利用への課税（航空券価格が20%上昇）"
             )
         ),
         choices=get_scale_policy(),
@@ -627,7 +627,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A national tax on fossil fuels (increasing gasoline prices by 40 cents per gallon)",
-                fr="Une taxe nationale sur les combustibles fossiles (augmentant les prix de l'essence de 40 centimes par gallon)"
+                fr="Une taxe nationale sur les combustibles fossiles (augmentant les prix de l'essence de 40 centimes par gallon)", ja="化石燃料への国税（ガソリン価格が1ガロンあたり40セント上昇）"
             )
         ),
         choices=get_scale_policy(),
@@ -637,7 +637,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A ban of polluting vehicles in dense areas, like city centers",
-                fr="Une interdiction des véhicules polluants dans les zones denses, comme les centres-villes"
+                fr="Une interdiction des véhicules polluants dans les zones denses, comme les centres-villes", ja="都市中心部など人口密集地域での汚染車両の禁止"
             )
         ),
         choices=get_scale_policy(),
@@ -647,7 +647,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Subsidies for low-carbon technologies (renewable energy, carbon capture...)",
-                fr="Des subventions pour les technologies à faible émission de carbone (énergies renouvelables, capture de carbone...)"
+                fr="Des subventions pour les technologies à faible émission de carbone (énergies renouvelables, capture de carbone...)", ja="低炭素技術への補助金（再生可能エネルギー、炭素回収など）"
             )
         ),
         choices=get_scale_policy(),
@@ -657,7 +657,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="A contribution to a global climate fund to finance clean energy in low-income countries",
-                fr="Une contribution à un fonds climatique mondial pour financer l'énergie propre dans les pays à faible revenu"
+                fr="Une contribution à un fonds climatique mondial pour financer l'énergie propre dans les pays à faible revenu", ja="低所得国のクリーンエネルギーに資金を提供する世界気候基金への拠出"
             )
         ),
         choices=get_scale_policy(),
@@ -667,7 +667,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Severe droughts and heatwaves",
-                fr="Sécheresses sévères et vagues de chaleur"
+                fr="Sécheresses sévères et vagues de chaleur", ja="深刻な干ばつや熱波"
             )
         ),
         choices=get_scale_expectations(),
@@ -677,7 +677,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More frequent volcanic eruptions",
-                fr="Éruptions volcaniques plus fréquentes"
+                fr="Éruptions volcaniques plus fréquentes", ja="火山噴火の増加"
             )
         ),
         choices=get_scale_expectations(),
@@ -687,7 +687,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Rising sea levels",
-                fr="Montée du niveau de la mer"
+                fr="Montée du niveau de la mer", ja="海面上昇"
             )
         ),
         choices=get_scale_expectations(),
@@ -697,7 +697,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Lower agricultural production",
-                fr="Baisse de la production agricole"
+                fr="Baisse de la production agricole", ja="農業生産の低下"
             )
         ),
         choices=get_scale_expectations(),
@@ -707,7 +707,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Drop in standards of living",
-                fr="Baisse du niveau de vie"
+                fr="Baisse du niveau de vie", ja="生活水準の低下"
             )
         ),
         choices=get_scale_expectations(),
@@ -717,7 +717,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Larger migration flows",
-                fr="Flux migratoires plus importants"
+                fr="Flux migratoires plus importants", ja="移住の増加"
             )
         ),
         choices=get_scale_expectations(),
@@ -727,7 +727,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="More armed conflicts",
-                fr="Plus de conflits armés"
+                fr="Plus de conflits armés", ja="武力紛争の増加"
             )
         ),
         choices=get_scale_expectations(),
@@ -737,7 +737,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Extinction of humankind",
-                fr="Extinction de l'humanité"
+                fr="Extinction de l'humanité", ja="人類の絶滅"
             )
         ),
         choices=get_scale_expectations(),
@@ -748,7 +748,7 @@ class Player(BasePlayer):
     circadian = models.StringField(
         label= _(dict(
             en="",
-            fr=""
+            fr="", ja=""
         ))
     )
 
@@ -761,7 +761,7 @@ class Player(BasePlayer):
                "unemployment benefits, or any other regular income.",
             fr="En pensant à votre foyer, quel est selon vous son revenu net mensuel total moyen (après impôts et "
                "déductions) ? Veuillez inclure les salaires, retraites, allocations familiales, indemnités de chômage "
-               "ou tout autre revenu régulier."
+               "ou tout autre revenu régulier.", ja="あなたの世帯について、平均的な月間の手取り収入（税金・控除後）はどの程度だと思いますか？<br>給与、年金、家族手当、失業給付、その他の定期的な収入を含めてお答えください。"
         )),
         choices=get_scale_income()
     )
@@ -770,7 +770,7 @@ class Player(BasePlayer):
     education = models.IntegerField(
         label = _(dict(
           en="What is the highest education level that you have achieved?",
-          fr="Quel est le niveau d'études le plus élevé que vous ayez atteint ?"
+          fr="Quel est le niveau d'études le plus élevé que vous ayez atteint ?", ja="あなたが達成した最終学歴はどれですか？"
         )),
         choices=get_scale_education()
     )
@@ -843,6 +843,11 @@ class NarrativeElicitation_question(MyPage):
     def error_message(player, values):
         text = values['narrative_elicitation'] or ""
         word_count = len(text.split())
+        if LANGUAGE_CODE == 'ja':  # no spaces between words in Japanese: count characters (60, as in the lab)
+            char_count = len(text.strip())
+            if char_count < 60:
+                return f"60文字以上で記述してください（現在の文字数は {char_count} です）。"
+            return
 
         if word_count < 50:
             return _(dict(
@@ -898,6 +903,11 @@ class Policy(MyPage):
         #    return "Please write at least  characters."
         text = values['policy_narrative'] or ""
         word_count = len(text.split())
+        if LANGUAGE_CODE == 'ja':  # no spaces between words in Japanese: count characters (30, as in the lab)
+            char_count = len(text.strip())
+            if char_count < 30:
+                return f"30文字以上で記述してください（現在の文字数は {char_count} です）。"
+            return
 
         if word_count < 25:
             return _(dict(

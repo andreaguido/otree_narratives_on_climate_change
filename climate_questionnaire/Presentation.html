@@ -9,6 +9,8 @@
         Welcome to this survey
     {{ elif fr }}
         Bienvenue dans ce questionnaire
+    {{ elif ja }}
+        本調査へようこそ
     {{ endif }}
 </div>
 {{ endblock }}
@@ -96,6 +98,40 @@
                         If you do not wish to participate, you can click on the
                         <i>{{ if subsession.prolific }} Request return {{ else }} Skip {{ endif }}</i> button below.
                     </p>
+                    {{ elif ja }}
+                    <h3>参加者への説明</h3>
+                    <br>
+                    <p>
+                        <b>この研究では何をしますか？</b>
+                        本研究は、簡単な課題と短いアンケートで構成されています。
+
+                        あなたの回答は完全に匿名で扱われます。
+
+                        正解や不正解はありません。どのようなご意見であっても、率直なお考えをお聞かせください。
+                        <br><br>
+
+                        <b>誰が研究を実施していますか？</b>
+                        本研究は、フランスの複数の大学（Paris School of Business、モンペリエ大学）の研究チームによって実施されています。ご質問は a.guido@psbedu.paris までお問い合わせください。<br><br>
+
+                        <b>所要時間はどのくらいですか？</b>
+                        アンケートの所要時間は約5〜10分で、いつでも中止することができます。<br><br>
+
+                        <b>参加すると何が得られますか？</b>
+                        研究を最後まで完了した方には、掲載されている報酬がProlificアカウントに支払われます。本研究ではボーナスが支払われる場合があります。<br><br>
+
+                        <b>データはどのように扱われますか？</b>
+                        結果を含む研究のすべての情報は匿名で扱われ、すべての回答にアクセスできるのは研究者のみです。
+                    </p>
+                    <p>
+                        続行するには「アンケートを開始する」をクリックしてください。
+                    </p>
+
+                    <hr class="my-4">
+
+                    <p class="text-muted-small">
+                        参加を希望しない場合は、下の
+                        <i>{{ if subsession.prolific }} 参加を辞退する {{ else }} スキップ {{ endif }}</i> ボタンをクリックしてください。
+                    </p>
                     {{ endif }}
                 </div>
             </div>
@@ -106,22 +142,22 @@
             {{ if subsession.prolific }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Request return {{ elif fr }} Sortir {{ endif }}
+                    {{ if en }} Request return {{ elif fr }} Sortir {{ elif ja }} 参加を辞退する {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ endif }}
+                    {{ if en }} Start the questionnaire {{ elif fr }} Commencer le questionnaire {{ elif ja }} アンケートを開始する {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
 
             {{ else }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ endif }}
+                    {{ if en }} Do not participate {{ elif fr }} Ne pas participer {{ elif ja }} 参加しない {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
-                    {{ if en }} Participate {{ elif fr }} Participer {{ endif }}
+                    {{ if en }} Participate {{ elif fr }} Participer {{ elif ja }} 参加する {{ endif }}
                     <i class="bi bi-arrow-right ms-1"></i>
                 </button>
             {{ endif }}
