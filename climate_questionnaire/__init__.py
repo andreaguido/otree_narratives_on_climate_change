@@ -66,13 +66,13 @@ def get_scale_agreement():
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From $0 to $1,250", fr="De 0€ à 1 250€"))],
-        [1, _(dict(en="From $1,250 to $2,000", fr="De 1 250€ à 2 000€"))],
-        [2, _(dict(en="From $2,000 to $4,000", fr="De 2 000€ à 4 000€"))],
-        [3, _(dict(en="From $4,000 to $6,000", fr="De 4 000€ à 6 000€"))],
-        [4, _(dict(en="From $6,000 to $8,000", fr="De 6 000€ à 8 000€"))],
-        [5, _(dict(en="From $8,000 to $12,500", fr="De 8 000€ à 12 500€"))],
-        [6, _(dict(en="More than A$12,500", fr="Plus de 12 500€"))],
+        [0, _(dict(en="From ₹0 to ₹37,500", fr="De 0€ à 1 250€"))],
+        [1, _(dict(en="From ₹37,500 to ₹60,000", fr="De 1 250€ à 2 000€"))],
+        [2, _(dict(en="From ₹60,000 to ₹1,20,000", fr="De 2 000€ à 4 000€"))],
+        [3, _(dict(en="From ₹1,20,000 to ₹1,80,000", fr="De 4 000€ à 6 000€"))],
+        [4, _(dict(en="From ₹1,80,000 to ₹2,40,000", fr="De 6 000€ à 8 000€"))],
+        [5, _(dict(en="From ₹2,40,000 to ₹3,75,000", fr="De 8 000€ à 12 500€"))],
+        [6, _(dict(en="More than ₹3,75,000", fr="Plus de 12 500€"))],
         [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
     ]
 def get_scale_education():
@@ -94,7 +94,7 @@ class C(BaseConstants):
     PLAYERS_PER_GROUP = None
     NUM_ROUNDS = 1
     ROW_INDICES = [0,     1,    2,  3] # rows of the MPL table
-    AMOUNTS =     [0.01, 0.25, 0.5, 1] # amounts of the MPL table
+    AMOUNTS =     [0.30, 7.5, 15, 30] # amounts of the MPL table, in INR (PPP-equiv. of EUR [0.01, 0.25, 0.5, 1], World Bank 2024: 30.02 INR/EUR)
 
 class Subsession(BaseSubsession):
     prolific = models.BooleanField()

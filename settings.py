@@ -15,9 +15,9 @@ SESSION_CONFIG_DEFAULTS = dict(
 )
 DEBUG = False
 
-LANGUAGE_CODE = 'fr'
-REAL_WORLD_CURRENCY_CODE = 'USD'
-REAL_WORLD_CURRENCY_NAME = 'Euro'
+LANGUAGE_CODE = 'en'
+REAL_WORLD_CURRENCY_CODE = 'INR'
+REAL_WORLD_CURRENCY_NAME = 'Indian Rupee'
 SESSION_CONFIGS = [
     dict(
         name = 'only_climate_change',
