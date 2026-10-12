@@ -280,7 +280,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="How knowledgeable do you consider yourself about climate change?",
-                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?", de="Für wie gut informiert halten Sie sich über den Klimawandel?",
+                fr="À quel point vous considérez-vous informé(e) sur le changement climatique ?", de="Für wie gut informiert halten Sie sich in Bezug auf den Klimawandel?",
             )
         ),
         choices=[
