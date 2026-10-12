@@ -606,7 +606,7 @@ class Player(BasePlayer):
         label=_(
             dict(
                 en="Limit heating or cooling your home",
-                fr="Limiter le chauffage ou la climatisation de votre maison", de="Weniger heizen oder klimatisieren"
+                fr="Limiter le chauffage ou la climatisation de votre maison", de="Die eigene Wohnung weniger heizen oder klimatisieren"
             )
         ),
         choices=get_scale_action(),

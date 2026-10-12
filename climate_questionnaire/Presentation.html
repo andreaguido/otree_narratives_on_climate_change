@@ -130,7 +130,7 @@
 
                     <p class="text-muted-small">
                         Wenn Sie nicht teilnehmen möchten, können Sie unten auf die Schaltfläche
-                        <i>{{ if subsession.prolific }} Rückgabe anfordern {{ else }} Überspringen {{ endif }}</i> klicken.
+                        <i>{{ if subsession.prolific }} Teilnahme abbrechen {{ else }} Überspringen {{ endif }}</i> klicken.
                     </p>
                     {{ endif }}
                 </div>
@@ -142,7 +142,7 @@
             {{ if subsession.prolific }}
                 <button class="btn btn-outline-danger" name="skip" value="True">
                     <i class="bi bi-x-circle me-1"></i>
-                    {{ if en }} Request return {{ elif fr }} Sortir {{ elif de }} Rückgabe anfordern {{ endif }}
+                    {{ if en }} Request return {{ elif fr }} Sortir {{ elif de }} Teilnahme abbrechen {{ endif }}
                 </button>
 
                 <button class="btn btn-primary" name="skip" value="False">
