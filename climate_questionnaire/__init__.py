@@ -285,10 +285,10 @@ class Player(BasePlayer):
         ),
         choices=[
             [0, _(dict(en="Not at all", fr="Pas du tout", de="Überhaupt nicht"))],
-            [1, _(dict(en="A little", fr="Un peu", de="Ein wenig"))],
-            [2, _(dict(en="Moderately", fr="Modérément", de="Mäßig"))],
-            [3, _(dict(en="A lot", fr="Beaucoup", de="Viel"))],
-            [4, _(dict(en="A great deal", fr="Énormément", de="Sehr stark"))]
+            [1, _(dict(en="A little", fr="Un peu", de="Wenig"))],
+            [2, _(dict(en="Moderately", fr="Modérément", de="Einigermaßen"))],
+            [3, _(dict(en="A lot", fr="Beaucoup", de="Gut"))],
+            [4, _(dict(en="A great deal", fr="Énormément", de="Sehr gut"))]
         ],
         widget=widgets.RadioSelectHorizontal,
     )
