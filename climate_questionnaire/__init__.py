@@ -122,6 +122,14 @@ def get_scale_sex():
         ['Female', _(dict(en="Female", ro="Feminin", ru="Женский"))],
         ['Prefer not to say', _(dict(en="I prefer not to say", ro="Prefer să nu răspund", ru="Предпочитаю не отвечать"))]
     ]
+def get_scale_gender():
+    # Prolific "Gender" export codes
+    return [
+        ['Man (including Trans Male/Trans Man)', _(dict(en="Man", ro="Bărbat", ru="Мужчина"))],
+        ['Woman (including Trans Female/Trans Woman)', _(dict(en="Woman", ro="Femeie", ru="Женщина"))],
+        ['Non-binary (would like to give more detail)', _(dict(en="Non-binary", ro="Non-binar", ru="Небинарный гендер"))],
+        ['Rather not say', _(dict(en="I prefer not to say", ro="Prefer să nu răspund", ru="Предпочитаю не отвечать"))]
+    ]
 def get_scale_ethnicity():
     # Prolific "Ethnicity simplified" categories, for comparability with the online samples
     return [
@@ -861,6 +869,14 @@ class Player(BasePlayer):
         )),
         choices=get_scale_sex()
     )
+    gender = models.StringField(
+        label=_(dict(
+            en="What gender do you identify with?",
+            ro="Cu ce gen vă identificați?",
+            ru="С каким гендером вы себя идентифицируете?"
+        )),
+        choices=get_scale_gender()
+    )
     ethnicity = models.StringField(
         label=_(dict(
             en="Which of the following best describes your ethnic background?",
@@ -1176,7 +1192,7 @@ class Prolific_Page(MyPage):
 
 class Demographics(MyPage):
     form_model = 'player'
-    form_fields = ['age', 'sex', 'ethnicity', 'country_of_birth', 'nationality', 'first_language',
+    form_fields = ['age', 'sex', 'gender', 'ethnicity', 'country_of_birth', 'nationality', 'first_language',
                    'area_of_residence', 'student_status', 'employment_status', 'education', 'income']
 
     @staticmethod
