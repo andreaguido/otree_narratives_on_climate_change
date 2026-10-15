@@ -23,6 +23,8 @@
         et <b>7</b> à un type de média que vous avez utilisé <b>fréquemment</b>.
         {{ elif ro }}
         În ultimele 3 luni, ați urmărit știri din următoarele surse? Vă rugăm să răspundeți pe o scară de la 1 la 7, unde <b>1</b> corespunde unui tip de media pe care l-ați folosit <b>rar</b>, iar <b>7</b> unui tip de media pe care l-ați folosit <b>frecvent</b>.
+        {{ elif ru }}
+        За последние 3 месяца как часто вы следили за новостями из следующих источников? Пожалуйста, оцените по шкале от 1 до 7, где <b>1</b> — <b>очень редко</b>, а <b>7</b> — <b>очень часто</b>.
         {{ endif }}
     </p>
     <table class="table table-sm">
@@ -69,6 +71,8 @@
         {{ elif ro }}
         În ultimele 3 luni, ați urmărit știri <b>despre schimbările climatice</b> din următoarele surse? Vă rugăm să răspundeți pe o scară de la 1 la 7, unde <b>1</b> corespunde unui tip de media pe care l-ați folosit <b>rar</b>, iar <b>7</b> unui tip de media pe care l-ați folosit <b>frecvent</b>.
 
+        {{ elif ru }}
+        Как часто за последние 3 месяца вы следили за новостями <b>об изменении климата</b> из следующих источников? Пожалуйста, оцените частоту использования каждого источника по шкале от 1 до 7, где <b>1</b> — <b>редко</b>, а <b>7</b> — <b>часто</b>.
         {{ endif }}
     </p>
     <table class="table table-sm">
@@ -97,7 +101,7 @@
     </table>
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

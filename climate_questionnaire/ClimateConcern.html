@@ -24,17 +24,19 @@
         Dans quelle mesure seriez-vous prêt(e) à &hellip;
         {{ elif ro }}
         Mai jos sunt prezentate comportamente care, potrivit experților, ar contribui la reducerea emisiilor de gaze cu efect de seră. În ce măsură ați fi dispus(ă) să &hellip;
+        {{ elif ru }}
+        Ниже перечислены действия, которые, по мнению экспертов, могут способствовать сокращению выбросов парниковых газов. В какой степени вы были бы готовы&hellip;
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ elif ro }} Deloc {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Not at all {{ elif fr }} Pas du tout {{ elif ro }} Deloc {{ elif ru }} Совсем не готов(а) {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ elif ro }} Moderat {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Moderately {{ elif fr }} Modérément {{ elif ro }} Moderat {{ elif ru }} В умеренной степени {{ endif }}</th>
             <th class="width_perso"></th>
-            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ elif ro }} Foarte mult {{ endif }}</th>
+            <th class="width_perso">{{ if en }} A great deal {{ elif fr }} Énormément {{ elif ro }} Foarte mult {{ elif ru }} Полностью готов(а) {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -52,7 +54,7 @@
     </table>
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

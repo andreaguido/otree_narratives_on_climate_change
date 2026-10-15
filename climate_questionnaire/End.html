@@ -11,6 +11,8 @@
     End of questionnaire
     {{ elif ro }}
     Sfârșitul chestionarului
+    {{ elif ru }}
+    Завершение опроса
     {{ endif }}
 </div>
 {{ endblock }}
@@ -29,7 +31,7 @@
                 </div>
 
                 <h4 class="mb-3">
-                    {{ if fr }}Participation annulée{{ elif ro }}Participare anulată{{ else }}Participation cancelled{{ endif }}
+                    {{ if fr }}Participation annulée{{ elif ro }}Participare anulată{{ elif ru }}Участие отменено{{ else }}Participation cancelled{{ endif }}
                 </h4>
 
                 <p class="text-muted">
@@ -39,6 +41,8 @@
                     You have chosen not to participate in the questionnaire.
                     {{ elif ro }}
                     Ați ales să nu participați la chestionar.
+                    {{ elif ru }}
+                    Вы решили не участвовать в опросе.
                     {{ endif }}
                 </p>
 
@@ -52,7 +56,7 @@
                 {{ else }}
                 <p class="text-muted mt-4">
                     <em>
-                        {{ if fr }}Vous pouvez maintenant fermer cet onglet.{{ elif ro }}Acum puteți închide această filă.{{ else }}You may now close this tab.{{
+                        {{ if fr }}Vous pouvez maintenant fermer cet onglet.{{ elif ro }}Acum puteți închide această filă.{{ elif ru }}Теперь вы можете закрыть эту вкладку.{{ else }}You may now close this tab.{{
                         endif }}
                     </em>
                 </p>
@@ -64,7 +68,7 @@
                 </div>
 
                 <h4 class="mb-3">
-                    {{ if fr }}Merci !{{ elif ro }}Vă mulțumim!{{ else }}Thank you!{{ endif }}
+                    {{ if fr }}Merci !{{ elif ro }}Vă mulțumim!{{ elif ru }}Благодарим вас!{{ else }}Thank you!{{ endif }}
                 </h4>
 
                 <p class="lead">
@@ -74,6 +78,8 @@
                     Thank you for participating in this questionnaire!
                     {{ elif ro }}
                     Vă mulțumim că ați participat la acest chestionar!
+                    {{ elif ru }}
+                    Благодарим вас за участие в опросе!
                     {{ endif }}
                 </p>
 
@@ -84,6 +90,8 @@
                     Your answers have been successfully recorded.
                     {{ elif ro }}
                     Răspunsurile dumneavoastră au fost înregistrate cu succes.
+                    {{ elif ru }}
+                    Ваши ответы успешно сохранены.
                     {{ endif }}
                 </p>
 
@@ -96,7 +104,7 @@
                 </div>
                 {{ else }}
                 <div class="mt-5 d-grid gap-2 col-md-6 mx-auto">
-                    {{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+                    {{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
                 </div>
                 {{ endif }}
 

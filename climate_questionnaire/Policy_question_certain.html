@@ -21,6 +21,8 @@
         {{ elif ro }}
 
             Pe o scară de la 0 (deloc sigur) la 100 (foarte sigur), cât de sigur(ă) sunteți de răspunsul dat la întrebarea anterioară, privind măsurile și soluțiile pe care guvernul dumneavoastră ar trebui să le ia în considerare pentru a combate schimbările climatice?
+        {{ elif ru }}
+            Насколько вы уверены в своём ответе на предыдущий вопрос о мерах и решениях, которые правительству вашей страны следует рассмотреть для борьбы с изменением климата? Оцените свою уверенность по шкале от 0 (совсем не уверены) до 100 (полностью уверены).
         {{ endif }}
         {{ formfield_errors 'confidence_policy' }}
         <br><br>
@@ -30,7 +32,7 @@
     </div>
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 
@@ -81,6 +83,7 @@
             slider1.recall = true; // Optional line to remember value across errors
             if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
             if (js_vars.ro) { slider1.yourvalue = "Valoarea dumneavoastră"; }
+            if (js_vars.ru) { slider1.yourvalue = "Ваша оценка"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

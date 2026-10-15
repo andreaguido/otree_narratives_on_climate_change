@@ -13,6 +13,8 @@
     Qu'est-ce que le changement climatique ?
 {{ elif ro }}
     Ce sunt schimbările climatice?
+{{ elif ru }}
+    Что представляют собой изменение климата?
 {{ endif }}
 {{ endblock }}
 
@@ -31,7 +33,11 @@
         </p>
         {{ elif ro }}
         <p>
-            Mai jos veți citi un text care conține o definiție larg acceptată a schimbărilor climatice, precum și câteva exemple și fapte. Vă rugăm să îl citiți cu atenție. După aceea, vi se vor adresa câteva întrebări pe această temă.
+            Mai jos veți citi un text care conține o definiție mai des utilizată a schimbărilor climatice, precum și câteva exemple și fapte. Vă rugăm să îl citiți cu atenție. După aceea, vi se vor adresa câteva întrebări pe această temă.
+        </p>
+        {{ elif ru }}
+        <p>
+            Ниже представлен текст, содержащий общепринятое определение изменения климата, а также несколько примеров и фактов. Пожалуйста, внимательно прочитайте его. После этого вам будет предложено ответить на несколько вопросов по данной теме.
         </p>
         {{ endif }}
     </div>
@@ -60,16 +66,23 @@
         </p>
         {{ elif ro }}
         <p>
-            Prin schimbări climatice se înțeleg, de regulă, modificările pe termen lung ale temperaturilor și ale tiparelor evenimentelor meteorologice extreme. Poate ați observat că, în ultima vreme, schimbările climatice primesc atenție în știri și în dezbaterea publică.
+            Prin schimbări climatice se înțeleg, de regulă, modificările pe termen lung ale temperaturilor și ale tiparelor evenimentelor meteorologice extreme. Poate ați observat că, în ultima vreme, schimbările climatice beneficiază de o atenție mai mare în știri și în dezbaterea publică.
         </p>
         <p>
-            Un exemplu de fenomen asociat schimbărilor climatice este faptul că temperaturile medii sunt astăzi cu 1,34 °C până la 1,41 °C mai ridicate decât în perioada 1850-1900. Pe lângă creșterea temperaturilor, alte exemple sunt evenimentele meteorologice extreme mai frecvente și mai intense, creșterea nivelului mării și micșorarea calotelor glaciare.
+            Un exemplu de fenomen asociat schimbărilor climatice este faptul că temperaturile medii sunt astăzi cu 1,34 °C până la 1,41 °C mai ridicate decât în perioada 1850-1900. Pe lângă creșterea temperaturilor, alte exemple sunt evenimentele meteorologice extreme mai frecvente și mai intense, așa ca: creșterea nivelului mărilor și oceanelor, precum și reducerea suprafețelor acoperite de gheață.
+        </p>
+        {{ elif ru }}
+        <p>
+            Под изменением климата обычно понимают долгосрочные изменения температуры и характера экстремальных погодных явлений. Возможно, вы заметили, что в последнее время тема изменения климата привлекает всё больше внимания в новостях и общественных обсуждениях.
+        </p>
+        <p>
+            Одним из проявлений изменения климата является то, что сегодня средняя температура на Земле на 1,34–1,41 °C выше, чем в период 1850–1900 годов. Помимо повышения температуры, к другим проявлениям изменения климата относятся более частые и интенсивные экстремальные погодные явления, повышение уровня моря, а также сокращение площади ледяного покрова.
         </p>
         {{ endif }}
     </div>
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

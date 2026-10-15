@@ -106,6 +106,34 @@
     <p>Plățile vor fi efectuate la sfârșitul studiului.</p>
     <p>Indicați mai jos opțiunea pe care o preferați pentru fiecare decizie.</p>
 
+    {{ elif ru }}
+    <p>
+        Благодарим вас за то, что вы поделились своим мнением о фактах, объясняющих изменение климата.
+    </p>
+    <p>
+        Теперь мы предлагаем вам возможность <b>поделиться</b> своим мнением об изменении климата с <b>будущими участниками этого исследования</b>.
+    </p>
+    <p>
+        Будет ли ваше мнение передано другим участникам, зависит от нескольких решений, которые вам предстоит принять в рамках задания с денежным вознаграждением.
+    </p>
+    <p>
+        В ходе выполнения этого задания для каждого из представленных ниже решений вам необходимо будет выбрать один из двух предложенных вариантов.
+    </p>
+    <ul>
+        <li>Вариант A: Поделиться своим мнением с будущими участниками исследования.</li>
+        <li>Вариант B: Получить определённую сумму денег.</li>
+    </ul>
+    <p>
+        Для каждого десятого участника мы случайным образом выберем одно из принятых им решений (одну строку из таблицы ниже) и реализуем его.
+    </p>
+    <p>
+        Например, если в первой строке вы выберете «Вариант A» и эта строка будет выбрана случайным образом, мы поделимся
+        вашим мнением с будущими участниками исследования. Если же вы выберете «Вариант B» и случайный выбор выпадет на эту строку,
+        вы получите 0,10 лея.
+    </p>
+    <p>Выплаты будут произведены по завершении исследования.</p>
+    <p>Пожалуйста, укажите ниже, какой из вариантов вы предпочитаете в каждом случае.</p>
+
     {{ endif }}
 
 <style>
@@ -135,57 +163,57 @@
 
     <!-- 0.01 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ elif ru }}Поделиться мнением{{ endif }}</td>
         <td>{{ form.choice_1 }}</td>
-        <td>{{ if en }}MDL 0.10 for me{{ elif fr }}0,01 € pour moi{{ elif ro }}0,10 lei pentru mine{{ endif }}</td>
+        <td>{{ if en }}MDL 0.10 for me{{ elif fr }}0,01 € pour moi{{ elif ro }}0,10 lei pentru mine{{ elif ru }}0,10 лея для меня{{ endif }}</td>
     </tr>
 
     <!-- 0.25 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ elif ru }}Поделиться мнением{{ endif }}</td>
         <td>{{ form.choice_2 }}</td>
-        <td>{{ if en }}MDL 2.50 for me{{ elif fr }}0,25 € pour moi{{ elif ro }}2,50 lei pentru mine{{ endif }}</td>
+        <td>{{ if en }}MDL 2.50 for me{{ elif fr }}0,25 € pour moi{{ elif ro }}2,50 lei pentru mine{{ elif ru }}2,50 лея для меня{{ endif }}</td>
     </tr>
 
     <!-- 0.50 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ elif ru }}Поделиться мнением{{ endif }}</td>
         <td>{{ form.choice_3 }}</td>
-        <td>{{ if en }}MDL 5 for me{{ elif fr }}0,50 € pour moi{{ elif ro }}5 lei pentru mine{{ endif }}</td>
+        <td>{{ if en }}MDL 5 for me{{ elif fr }}0,50 € pour moi{{ elif ro }}5 lei pentru mine{{ elif ru }}5 леев для меня{{ endif }}</td>
     </tr>
 
     <!-- 1 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ elif ru }}Поделиться мнением{{ endif }}</td>
         <td>{{ form.choice_4 }}</td>
-        <td>{{ if en }}MDL 10 for me{{ elif fr }}1,00 € pour moi{{ elif ro }}10 lei pentru mine{{ endif }}</td>
+        <td>{{ if en }}MDL 10 for me{{ elif fr }}1,00 € pour moi{{ elif ro }}10 lei pentru mine{{ elif ru }}10 леев для меня{{ endif }}</td>
     </tr>
 
     <!-- 1.50 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ elif ru }}Поделиться мнением{{ endif }}</td>
         <td>{{ form.choice_5 }}</td>
-        <td>{{ if en }}MDL 15 for me{{ elif fr }}1,50 € pour moi{{ elif ro }}15 lei pentru mine{{ endif }}</td>
+        <td>{{ if en }}MDL 15 for me{{ elif fr }}1,50 € pour moi{{ elif ro }}15 lei pentru mine{{ elif ru }}15 леев для меня{{ endif }}</td>
     </tr>
 
     <!-- 2.00 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ elif ru }}Поделиться мнением{{ endif }}</td>
         <td>{{ form.choice_6 }}</td>
-        <td>{{ if en }}MDL 20 for me{{ elif fr }}2,00 € pour moi{{ elif ro }}20 lei pentru mine{{ endif }}</td>
+        <td>{{ if en }}MDL 20 for me{{ elif fr }}2,00 € pour moi{{ elif ro }}20 lei pentru mine{{ elif ru }}20 леев для меня{{ endif }}</td>
     </tr>
 
     <!-- 2.50 -->
     <tr>
-        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ endif }}</td>
+        <td>{{ if en }}Share my opinion{{ elif fr }}Partager mon opinion{{ elif ro }}Să îmi împărtășesc opinia{{ elif ru }}Поделиться мнением{{ endif }}</td>
         <td>{{ form.choice_7 }}</td>
-        <td>{{ if en }}MDL 25 for me{{ elif fr }}2,50 € pour moi{{ elif ro }}25 lei pentru mine{{ endif }}</td>
+        <td>{{ if en }}MDL 25 for me{{ elif fr }}2,50 € pour moi{{ elif ro }}25 lei pentru mine{{ elif ru }}25 леев для меня{{ endif }}</td>
     </tr>
 </table>
 
     </div>
 </div>
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 {{ endblock }}
 
 {{ block scripts }}

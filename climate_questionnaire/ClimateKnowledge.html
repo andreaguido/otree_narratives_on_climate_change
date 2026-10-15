@@ -45,12 +45,19 @@
         Emisiile de gaze cu efect de seră ale unui produs includ toate emisiile generate în toate etapele producției și
         distribuției sale.
     </p>
+    {{ elif ru }}
+    <p>
+        В следующем вопросе, пожалуйста, расположите предложенные варианты в порядке убывания объёма выбросов парниковых газов,
+        опираясь на свои знания. Присвойте номер 1 варианту с наибольшим объёмом выбросов, а номер 3 — с наименьшим.
+        При этом учитывайте, что выбросы парниковых газов, связанные с продуктом, включают все выбросы, возникающие на каждом
+        этапе его производства и доставки.
+    </p>
     {{ endif }}
     {{ formfield "rank_coal" }} {{ formfield "rank_gas" }} {{ formfield "rank_nuclear" }}
     </div>
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 <p class="form-control-errors" style="display: none;">
     {{ if en }}
@@ -59,6 +66,8 @@
     Veuillez vous assurer que tous les rangs sont uniques.
     {{ elif ro }}
     Vă rugăm să vă asigurați că fiecare rang este atribuit o singură dată.
+    {{ elif ru }}
+    Пожалуйста, убедитесь, что каждое место в рейтинге присвоено только одному варианту.
     {{ endif }}
 </p>
 {{ endblock }}

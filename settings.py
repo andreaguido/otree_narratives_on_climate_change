@@ -15,8 +15,9 @@ SESSION_CONFIG_DEFAULTS = dict(
 )
 DEBUG = False
 
-# oTree and wtforms have no Romanian locale: oTree runs in English,
-# the questionnaire text is selected by SURVEY_LANGUAGE.
+# oTree and wtforms have no Romanian locale: oTree runs in English.
+# Each participant chooses Romanian or Russian on the first page;
+# SURVEY_LANGUAGE is only the fallback before that choice.
 LANGUAGE_CODE = 'en'
 SURVEY_LANGUAGE = 'ro'
 REAL_WORLD_CURRENCY_CODE = 'MDL'

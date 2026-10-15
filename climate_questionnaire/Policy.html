@@ -44,6 +44,10 @@
                         La prima întrebare v-ați explicat opinia despre cauzele schimbărilor climatice. <br><br>
 
                         Mai exact, ați scris:
+                {{ elif ru }}
+                        В первом вопросе вы объяснили свою точку зрения относительно причин изменения климата. <br><br>
+
+                        А именно, вы написали:
                 {{ endif }}
                     </p>
 
@@ -76,6 +80,11 @@
 
                         Dacă considerați că nu ar trebui întreprins nimic împotriva schimbărilor climatice, vă rugăm să explicați de ce. [min. 25 de cuvinte]
 
+                {{ elif ru }}
+        Исходя из вашего предыдущего объяснения, какие <b>меры</b> и <b>решения</b>, должно рассмотреть правительство вашей страны для борьбы с изменением климата? <br><br>
+
+                        Если вы считаете, что никаких мер по борьбе с изменением климата предпринимать не следует, пожалуйста, объясните почему. [Не менее 25 слов]
+
                 {{ endif }}
 
 
@@ -86,7 +95,7 @@
 
 
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 

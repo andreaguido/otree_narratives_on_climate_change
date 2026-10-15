@@ -19,6 +19,8 @@
         Sur une échelle de 0 (très peu confiant) à 100 (très confiant), à quel point êtes-vous confiant concernant l'explication que vous avez fournie dans la question précédente ?
     {{ elif ro }}
         Pe o scară de la 0 (deloc sigur) la 100 (foarte sigur), cât de sigur(ă) sunteți de explicația pe care ați dat-o la întrebarea anterioară?
+    {{ elif ru }}
+        По шкале от 0 (совсем не уверены) до 100 (полностью уверены) насколько вы уверены в объяснении, которое дали в ответе на предыдущий вопрос?
     {{ endif }}
 
     {{ formfield_errors 'narrative_confidence' }}
@@ -28,7 +30,7 @@
 
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 
@@ -78,7 +80,8 @@
             slider1 = new mgslider("narrative_confidence", 0, 100, 1);
             slider1.recall = true; // Optional line to remember value across errors
             if (js_vars.fr) { slider1.yourvalue = "Votre valeur"; }
-            if (js_vars.ro) { slider1.yourvalue = "Valoarea dumneavoastră"; } 
+            if (js_vars.ro) { slider1.yourvalue = "Valoarea dumneavoastră"; }
+            if (js_vars.ru) { slider1.yourvalue = "Ваша оценка"; }
             slider1.print(document.getElementById("sliders_here"));
         });
     </script>

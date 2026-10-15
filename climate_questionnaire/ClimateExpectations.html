@@ -30,16 +30,18 @@
 
         {{ elif ro }}
         Dacă nu se întreprinde nimic pentru a limita schimbările climatice, cât de probabil credeți că este ca acestea să ducă la următoarele evenimente?
+        {{ elif ru }}
+        Если не предпринимать никаких мер по борьбе с изменением климата, насколько вероятно, по вашему мнению, что это приведёт к следующим последствиям?
         {{ endif }}
     </p>
     <table class="table table-sm">
         <thead>
         <tr>
             <th></th>
-            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ elif ro }} Foarte puțin probabil {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ elif ro }} Destul de puțin probabil {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ elif ro }} Destul de probabil {{ endif }}</th>
-            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ elif ro }} Foarte probabil {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very unlikely {{ elif fr }} Très improbable {{ elif ro }} Foarte puțin probabil {{ elif ru }} Очень маловероятно {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat unlikely {{ elif fr }} Plutôt improbable {{ elif ro }} Destul de puțin probabil {{ elif ru }} Скорее маловероятно {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Somewhat likely {{ elif fr }} Plutôt probable {{ elif ro }} Destul de probabil {{ elif ru }} Скорее вероятно {{ endif }}</th>
+            <th class="width_perso">{{ if en }} Very likely {{ elif fr }} Très probable {{ elif ro }} Foarte probabil {{ elif ru }} Очень вероятно {{ endif }}</th>
         </tr>
         </thead>
         <tbody>
@@ -57,7 +59,7 @@
     </table>
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 <p class="form-control-errors" style="display: none;">
     {{ if en }}
@@ -66,6 +68,8 @@
     Veuillez vous assurer que tous les rangs sont uniques.
     {{ elif ro }}
     Vă rugăm să vă asigurați că fiecare rang este atribuit o singură dată.
+    {{ elif ru }}
+    Пожалуйста, убедитесь, что каждое место в рейтинге присвоено только один раз.
     {{ endif }}
 </p>
 {{ endblock }}

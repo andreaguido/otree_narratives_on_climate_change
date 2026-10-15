@@ -31,6 +31,10 @@
 
             Acesta este răspunsul dumneavoastră la întrebarea <i>ce credeți că ar trebui să facă guvernul țării dumneavoastră în privința schimbărilor climatice</i>:
 
+        {{ elif ru }}
+
+            Вот ваш ответ на вопрос о том, <i>какие меры, по вашему мнению, должно предпринять правительство вашей страны в отношении изменения климата</i>:
+
         {{ endif }}
         <div class="form-control mb-1">
             {{ player.policy_narrative }}
@@ -48,6 +52,8 @@
             suivant ?
             {{ elif ro }}
             Pornind de la răspunsul dumneavoastră, în ce măsură sunteți de acord sau în dezacord cu următoarele afirmații?
+            {{ elif ru }}
+            Исходя из вашего предыдущего ответа, в какой степени вы согласны или не согласны со следующими утверждениями?
             {{ endif }}
 
 
@@ -63,7 +69,7 @@
     </div>
 </div>
 
-{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ else }}{{ next_button }}{{ endif }}
+{{ if ro }}<button class="btn btn-primary otree-btn-next">Continuați</button>{{ elif ru }}<button class="btn btn-primary otree-btn-next">Продолжить</button>{{ else }}{{ next_button }}{{ endif }}
 
 {{ endblock }}
 
