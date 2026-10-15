@@ -116,6 +116,64 @@ def get_scale_education():
         [4, _(dict(en="Postgraduate education (Master or PhD)", fr="Master ou Doctorat", ro="Studii superioare de master sau doctorat", ru="Высшее образование (магистратура или докторантура)"))],
         [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre", ro="Prefer să nu răspund", ru="Предпочитаю не отвечать"))]
     ]
+def get_scale_sex():
+    return [
+        ['Male', _(dict(en="Male", ro="Masculin", ru="Мужской"))],
+        ['Female', _(dict(en="Female", ro="Feminin", ru="Женский"))],
+        ['Prefer not to say', _(dict(en="I prefer not to say", ro="Prefer să nu răspund", ru="Предпочитаю не отвечать"))]
+    ]
+def get_scale_ethnicity():
+    # Prolific "Ethnicity simplified" categories, for comparability with the online samples
+    return [
+        ['White', _(dict(en="White", ro="Alb(ă)", ru="Белый (белая)"))],
+        ['Black', _(dict(en="Black", ro="Negru (neagră)", ru="Чернокожий (чернокожая)"))],
+        ['Asian', _(dict(en="Asian", ro="Asiatic(ă)", ru="Азиат (азиатка)"))],
+        ['Mixed', _(dict(en="Mixed", ro="Mixt(ă)", ru="Смешанное происхождение"))],
+        ['Other', _(dict(en="Other", ro="Altul", ru="Другое"))],
+        ['Prefer not to say', _(dict(en="I prefer not to say", ro="Prefer să nu răspund", ru="Предпочитаю не отвечать"))]
+    ]
+def get_scale_country():
+    return [
+        ['Moldova', _(dict(en="Republic of Moldova", ro="Republica Moldova", ru="Республика Молдова"))],
+        ['Romania', _(dict(en="Romania", ro="România", ru="Румыния"))],
+        ['Ukraine', _(dict(en="Ukraine", ro="Ucraina", ru="Украина"))],
+        ['Russia', _(dict(en="Russia", ro="Rusia", ru="Россия"))],
+        ['Other', _(dict(en="Other country", ro="Altă țară", ru="Другая страна"))]
+    ]
+def get_scale_nationality():
+    # many Moldovans hold both Moldovan and Romanian citizenship
+    return get_scale_country()[:1] + [
+        ['Moldova and Romania', _(dict(en="Republic of Moldova and Romania (dual citizenship)", ro="Republica Moldova și România (dublă cetățenie)", ru="Республика Молдова и Румыния (двойное гражданство)"))]
+    ] + get_scale_country()[1:]
+def get_scale_first_language():
+    return [
+        ['Romanian', _(dict(en="Romanian", ro="Română", ru="Румынский"))],
+        ['Russian', _(dict(en="Russian", ro="Rusă", ru="Русский"))],
+        ['Ukrainian', _(dict(en="Ukrainian", ro="Ucraineană", ru="Украинский"))],
+        ['Gagauz', _(dict(en="Gagauz", ro="Găgăuză", ru="Гагаузский"))],
+        ['Bulgarian', _(dict(en="Bulgarian", ro="Bulgară", ru="Болгарский"))],
+        ['Other', _(dict(en="Other", ro="Alta", ru="Другой"))]
+    ]
+def get_scale_area():
+    return [
+        ['Urban', _(dict(en="Urban (city or town)", ro="Urban (municipiu sau oraș)", ru="Город"))],
+        ['Rural', _(dict(en="Rural (village or commune)", ro="Rural (sat sau comună)", ru="Сельская местность (село или коммуна)"))]
+    ]
+def get_scale_yes_no():
+    return [
+        ['Yes', _(dict(en="Yes", ro="Da", ru="Да"))],
+        ['No', _(dict(en="No", ro="Nu", ru="Нет"))]
+    ]
+def get_scale_employment():
+    # Prolific "Employment status" categories
+    return [
+        ['Full-Time', _(dict(en="Full-time employment", ro="Angajat(ă) cu normă întreagă", ru="Работаю на полную ставку"))],
+        ['Part-Time', _(dict(en="Part-time employment", ro="Angajat(ă) cu normă parțială", ru="Работаю на неполную ставку"))],
+        ['Due to start a new job within the next month', _(dict(en="Due to start a new job within the next month", ro="Urmează să încep un nou loc de muncă în următoarea lună", ru="Приступаю к новой работе в течение ближайшего месяца"))],
+        ['Unemployed (and job seeking)', _(dict(en="Unemployed (and job seeking)", ro="Șomer(ă) (în căutarea unui loc de muncă)", ru="Безработный(-ая) (ищу работу)"))],
+        ['Not in paid work (e.g. homemaker, retired or disabled)', _(dict(en="Not in paid work (e.g. homemaker, retired or disabled)", ro="Nu am un loc de muncă plătit (de ex., casnic(ă), pensionar(ă) sau persoană cu dizabilități)", ru="Не работаю за плату (например, веду домашнее хозяйство, на пенсии или по инвалидности)"))],
+        ['Other', _(dict(en="Other", ro="Altă situație", ru="Другое"))]
+    ]
 def get_options_bdm():
     return [
         ['A', 'Option A'],
@@ -786,6 +844,80 @@ class Player(BasePlayer):
     )
 
     # Demographics
+    ## Prolific-equivalent demographics (lab: no Prolific export); stored values = Prolific's export codes
+    age = models.IntegerField(
+        min=18, max=100,
+        label=_(dict(
+            en="How old are you?",
+            ro="Câți ani aveți?",
+            ru="Сколько вам лет?"
+        ))
+    )
+    sex = models.StringField(
+        label=_(dict(
+            en="What is your sex?",
+            ro="Care este sexul dumneavoastră?",
+            ru="Укажите ваш пол."
+        )),
+        choices=get_scale_sex()
+    )
+    ethnicity = models.StringField(
+        label=_(dict(
+            en="Which of the following best describes your ethnic background?",
+            ro="Care dintre următoarele variante descrie cel mai bine originea dumneavoastră etnică?",
+            ru="Какой из следующих вариантов лучше всего описывает ваше этническое происхождение?"
+        )),
+        choices=get_scale_ethnicity()
+    )
+    country_of_birth = models.StringField(
+        label=_(dict(
+            en="In which country were you born?",
+            ro="În ce țară v-ați născut?",
+            ru="В какой стране вы родились?"
+        )),
+        choices=get_scale_country()
+    )
+    nationality = models.StringField(
+        label=_(dict(
+            en="What is your citizenship?",
+            ro="Ce cetățenie aveți?",
+            ru="Какое у вас гражданство?"
+        )),
+        choices=get_scale_nationality()
+    )
+    first_language = models.StringField(
+        label=_(dict(
+            en="What is your first language (mother tongue)?",
+            ro="Care este prima dumneavoastră limbă (limba maternă)?",
+            ru="Какой ваш первый (родной) язык?"
+        )),
+        choices=get_scale_first_language()
+    )
+    area_of_residence = models.StringField(
+        label=_(dict(
+            en="Where do you currently live?",
+            ro="Unde locuiți în prezent?",
+            ru="Где вы сейчас живёте?"
+        )),
+        choices=get_scale_area()
+    )
+    student_status = models.StringField(
+        label=_(dict(
+            en="Are you currently a student?",
+            ro="Sunteți în prezent student(ă)?",
+            ru="Вы сейчас учитесь (студент/студентка)?"
+        )),
+        choices=get_scale_yes_no()
+    )
+    employment_status = models.StringField(
+        label=_(dict(
+            en="What is your current employment status?",
+            ro="Care este situația dumneavoastră profesională actuală?",
+            ru="Каков ваш текущий статус занятости?"
+        )),
+        choices=get_scale_employment()
+    )
+
     ## Income
     income = models.IntegerField(
         label= _(dict(
@@ -1044,7 +1176,8 @@ class Prolific_Page(MyPage):
 
 class Demographics(MyPage):
     form_model = 'player'
-    form_fields = ['income', 'education']
+    form_fields = ['age', 'sex', 'ethnicity', 'country_of_birth', 'nationality', 'first_language',
+                   'area_of_residence', 'student_status', 'employment_status', 'education', 'income']
 
     @staticmethod
     def is_displayed(player: Player):
