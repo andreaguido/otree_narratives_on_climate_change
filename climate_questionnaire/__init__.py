@@ -66,13 +66,13 @@ def get_scale_agreement():
     ]
 def get_scale_income():
     return [
-        [0, _(dict(en="From ₹0 to ₹37,500", fr="De 0€ à 1 250€"))],
-        [1, _(dict(en="From ₹37,500 to ₹60,000", fr="De 1 250€ à 2 000€"))],
-        [2, _(dict(en="From ₹60,000 to ₹1,20,000", fr="De 2 000€ à 4 000€"))],
-        [3, _(dict(en="From ₹1,20,000 to ₹1,80,000", fr="De 4 000€ à 6 000€"))],
-        [4, _(dict(en="From ₹1,80,000 to ₹2,40,000", fr="De 6 000€ à 8 000€"))],
-        [5, _(dict(en="From ₹2,40,000 to ₹3,75,000", fr="De 8 000€ à 12 500€"))],
-        [6, _(dict(en="More than ₹3,75,000", fr="Plus de 12 500€"))],
+        [0, _(dict(en="From ₹0 to ₹20,000", fr="De 0€ à 1 250€"))],
+        [1, _(dict(en="From ₹20,000 to ₹40,000", fr="De 1 250€ à 2 000€"))],
+        [2, _(dict(en="From ₹40,000 to ₹75,000", fr="De 2 000€ à 4 000€"))],
+        [3, _(dict(en="From ₹75,000 to ₹1,20,000", fr="De 4 000€ à 6 000€"))],
+        [4, _(dict(en="From ₹1,20,000 to ₹2,40,000", fr="De 6 000€ à 8 000€"))],
+        [5, _(dict(en="From ₹2,40,000 to ₹5,00,000", fr="De 8 000€ à 12 500€"))],
+        [6, _(dict(en="More than ₹5,00,000", fr="Plus de 12 500€"))],
         [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
     ]
 def get_scale_education():
