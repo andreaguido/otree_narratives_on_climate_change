@@ -39,5 +39,9 @@ ROOMS = [
     dict(
             name='moldova_lab',
             display_name='Moldova - Lab'
+        ),
+    dict(
+            name='moldova_online',
+            display_name='Moldova - Online'
         )
 ]
