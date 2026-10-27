@@ -72,7 +72,7 @@ def get_scale_income():
         [3, _(dict(en="From $4,000 to $6,000", fr="De 4 000€ à 6 000€"))],
         [4, _(dict(en="From $6,000 to $8,000", fr="De 6 000€ à 8 000€"))],
         [5, _(dict(en="From $8,000 to $12,500", fr="De 8 000€ à 12 500€"))],
-        [6, _(dict(en="More than A$12,500", fr="Plus de 12 500€"))],
+        [6, _(dict(en="More than $12,500", fr="Plus de 12 500€"))],
         [999, _(dict(en="I prefer not to say", fr="Je préfère ne pas répondre"))]
     ]
 def get_scale_education():
