@@ -32,10 +32,25 @@ SESSION_CONFIGS = [
         url_validate = "",
         url_return = ""
 
-)
+),
+    # Vietnam adults on Prolific, hosted on this server (2026-11-04). Same app as the `vietnam` branch,
+    # copied as climate_questionnaire_vn. Remove it (config, room, app folder) once the Vietnam collection ends.
+    dict(
+        name='vietnam_prolific',
+        display_name='Vietnam - Prolific',
+        app_sequence=['climate_questionnaire_vn'],
+        num_demo_participants=1,
+        prolific=True,
+        url_validate="",
+        url_return=""
+    ),
 ]
 
 ROOMS = [
+    dict(
+            name='vietnam_prolific',
+            display_name='Vietnam - Prolific (adults)'
+        ),
     dict(
             name='moldova_lab',
             display_name='Moldova - Lab'
